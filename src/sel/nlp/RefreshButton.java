@@ -21,7 +21,7 @@ public class RefreshButton extends JPanel implements ActionListener{
 
 		public RefreshButton() {
 			Button btn1 = new Button("更新");
-			btn1.setSize(20, 10);
+			btn1.setSize(20,12);
 			btn1.addActionListener(this);
 			add(btn1);
 	    setSize(30,15);
