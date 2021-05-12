@@ -85,6 +85,7 @@ public static void main(String[] args) {
 }
 
 public void show_result(String text) {
+	System.out.println(text);
 	label2 result_label = new label2(text);
 	frontpanel.add(result_label);
 	frm.setVisible(true);
