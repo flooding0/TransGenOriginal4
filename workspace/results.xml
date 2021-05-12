@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sentences>
+ <sentence id="2">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo phraseId="51"/>
+   <subinfo phraseId="42"/>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
+ <sentence id="6">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo phraseId="44"/>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
+ <sentence id="7">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo phraseId="31"/>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
+ <sentence id="8">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo phraseId="34"/>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
+ <sentence id="10">
+  <variables>
+   <variable phraseId="16"/>
+  </variables>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo phraseId="37"/>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations>
+   <inner-operation phraseId="28"/>
+  </inner-operations>
+ </sentence>
+ <sentence id="12">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo phraseId="31"/>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
+ <sentence id="13">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo phraseId="31"/>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
+</sentences>

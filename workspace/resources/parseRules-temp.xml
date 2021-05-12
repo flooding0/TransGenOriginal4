@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset>
+<rules>
+<!--
+  CYKアルゴリズムにおける合成文法ルールと文法用語の日本語から英語への変換ルール(alias)を与えている。
+
+  各ルールは平等に評価される。
+
+  2つcodition tag のbody で指定される品詞がともにみたされる(matching)ときに、goal tagで表される
+  品詞のノードにまとめれる
+
+  seq attribute は2つのconditionの前後関係を(念のため)区別するために使われる
+  seq=0 が前方、seq=1は後方
+
+  他の attribute (オプション)は品詞情報のみで判定できない場合にもちいられる。
+
+  morphemeは「品詞の副情報」を指定する
+  morphemeが指定されている場合は、その「品詞の副情報」を込にして
+  matchingがとられる。
+
+  これでもマッチングルールをうまく指定できない場合は
+  text attributeで当該単語を指定する。
+
+  text attributeを指定する際は morpheme attributeも併せて指定する必要がある
+
+  matchingの優先順序
+  1. codition tag のbody
+  2. morpheme attribute
+  3. text
+
+
+*** Important NOTE ****
+  一般に品詞情報からだけで構文合成されるほうがよい。
+  そのルールだけでは正確に指定できないばあいは morphemeをもちい
+  最後の手段として text attribute を用いる。
+
+aliasは現状 morphemeの各値には対応していない
+(対応する英単語が不明なため、あるいは無理やり対応させる意義が薄いため)
+
+-->
+  <rule>
+    <goal>名詞</goal>
+    <condition seq="0">名詞</condition>
+    <condition seq="1">名詞</condition>
+  </rule>
+  <rule>
+    <goal>名詞句</goal>
+    <condition seq="0">名詞</condition>
+    <condition seq="1">名詞句</condition>
+  </rule>
+  <rule>
+    <goal>名詞句</goal>
+    <condition seq="0">名詞</condition>
+    <condition seq="1">助詞</condition>
+  </rule>
+  <rule>
+    <goal>動詞句</goal>
+    <condition seq="0">動詞</condition>
+    <condition seq="1">助動詞</condition>
+  </rule>
+  <rule>
+    <goal>動詞句</goal>
+    <condition seq="0">動詞</condition>
+    <condition seq="1">動詞句</condition>
+  </rule>
+  <rule>
+    <goal>文</goal>
+    <condition seq="0">名詞句</condition>
+    <condition seq="1">動詞句</condition>
+  </rule>
+  <rule>
+    <goal>文</goal>
+    <condition seq="0">名詞</condition>
+    <condition seq="1">動詞</condition>
+  </rule>
+  <rule>
+    <goal>文</goal>
+    <condition seq="0">名詞句</condition>
+    <condition seq="1">動詞</condition>
+  </rule>
+  <rule>
+    <goal>文</goal>
+    <condition seq="0">名詞句</condition>
+    <condition seq="1">文</condition>
+  </rule>
+  <rule>
+    <goal>文</goal>
+    <condition seq="0">名詞</condition>
+    <condition seq="1">動詞句</condition>
+  </rule>
+  <rule>
+    <goal>修飾節</goal>
+    <condition seq="0">文</condition>
+    <condition seq="1">助詞</condition>
+  </rule>
+  <rule>
+    <goal>修飾節</goal>
+    <condition seq="0">文</condition>
+    <condition seq="1" morpheme="非自立" text="とき">名詞</condition>
+  </rule>
+  <rule>
+    <goal>文</goal>
+    <condition seq="0">修飾節</condition>
+    <condition seq="1">文</condition>
+  </rule>
+  <rule>
+    <goal>文</goal>
+    <condition seq="0">文継続</condition>
+    <condition seq="1">文</condition>
+  </rule>
+  <rule>
+    <!-- 、 -->
+    <goal>文継続</goal>
+    <condition seq="0">文</condition>
+    <condition seq="1" morpheme="読点">記号</condition>
+  </rule>
+  <rule>
+    <!-- 。 -->
+    <goal>文</goal>
+    <condition seq="0">文</condition>
+    <condition seq="1" morpheme="句点">記号</condition>
+  </rule>
+  <rule>
+    <goal>動詞</goal>
+    <condition seq="0" morpheme="自立">動詞</condition>
+    <condition seq="1" morpheme="接尾">動詞</condition>
+  </rule>
+  <rule>
+    <goal>動詞継続</goal>
+    <condition seq="0">動詞</condition>
+    <condition seq="1" morpheme="接続助詞">助詞</condition>
+  </rule>
+  <rule>
+    <goal>動詞</goal>
+    <condition seq="0">動詞継続</condition>
+    <condition seq="1">動詞</condition>
+  </rule>
+  <rule>
+    <goal>動詞</goal>
+    <condition seq="0" morpheme="サ変接続">名詞</condition>
+    <condition seq="1" morpheme="自立" text="する">動詞</condition>
+  </rule>
+</rules>
+  <aliases>
+    <alias japanese="文" english="sentence"/>
+    <alias japanese="文継続" english="sentence-contd"/>
+    <alias japanese="修飾節" english="modification-phrase"/>
+    <alias japanese="名詞句" english="noun-phrase"/>
+    <alias japanese="動詞句" english="verb-phrase"/>
+    <alias japanese="動詞継続" english="verb-contd"/>
+    <alias japanese="動詞" english="verb"/>
+    <alias japanese="名詞" english="noun"/>
+    <alias japanese="助詞" english="particle"/>
+    <alias japanese="助動詞" english="auxiliary-verb"/>
+    <alias japanese="記号" english="punctuation"/>
+  </aliases>
+</ruleset>

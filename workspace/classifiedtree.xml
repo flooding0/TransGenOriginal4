@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sentences>
+  <sentence id="2" decision="processing, definition">
+    <phrase id="53" type="sentence">
+      <phrase id="51" type="trigger" subinfo="連立">
+        <phrase id="42" type="trigger" subinfo="主格付き">
+          <phrase id="15" type="nominative">
+            <token id="1">
+              <word>蓋</word>
+              <part-of-speech>noun</part-of-speech>
+              <morpheme>一般</morpheme>
+            </token>
+            <token id="2">
+              <word>は</word>
+              <part-of-speech>particle</part-of-speech>
+              <morpheme>係助詞</morpheme>
+            </token>
+          </phrase>
+          <phrase id="36" type="trigger-end">
+            <phrase id="31" type="trigger-end">
+              <phrase id="24" type="verb">
+                <token id="3">
+                  <word>開い</word>
+                  <part-of-speech>verb</part-of-speech>
+                  <morpheme>自立</morpheme>
+                </token>
+                <phrase id="17" type="verb">
+                  <token id="4">
+                    <word>て</word>
+                    <part-of-speech>particle</part-of-speech>
+                    <morpheme>接続助詞</morpheme>
+                  </token>
+                  <token id="5">
+                    <word>いる</word>
+                    <part-of-speech>verb</part-of-speech>
+                    <morpheme>非自立</morpheme>
+                  </token>
+                </phrase>
+              </phrase>
+              <token id="6">
+                <word>時</word>
+                <part-of-speech>noun</part-of-speech>
+                <morpheme>非自立</morpheme>
+              </token>
+            </phrase>
+            <token id="7">
+              <word>に</word>
+              <part-of-speech>particle</part-of-speech>
+              <morpheme>格助詞</morpheme>
+            </token>
+          </phrase>
+        </phrase>
+        <phrase id="38" type="trigger" subinfo="主格付き">
+          <phrase id="20" type="nominative">
+            <token id="8">
+              <word>ユーザー</word>
+              <part-of-speech>noun</part-of-speech>
+              <morpheme>一般</morpheme>
+            </token>
+            <token id="9">
+              <word>が</word>
+              <part-of-speech>particle</part-of-speech>
+              <morpheme>格助詞</morpheme>
+            </token>
+          </phrase>
+          <phrase id="21" type="trigger-end">
+            <token id="10">
+              <word>閉めれ</word>
+              <part-of-speech>verb</part-of-speech>
+              <morpheme>自立</morpheme>
+            </token>
+            <token id="11">
+              <word>ば</word>
+              <part-of-speech>particle</part-of-speech>
+              <morpheme>接続助詞</morpheme>
+            </token>
+          </phrase>
+        </phrase>
+      </phrase>
+      <token id="13">
+        <word>閉まる</word>
+        <part-of-speech>verb</part-of-speech>
+        <morpheme>自立</morpheme>
+      </token>
+    </phrase>
+  </sentence>
+  <sentence id="6" decision="processing, definition">
+    <phrase id="47" type="sentence">
+      <phrase id="44" type="trigger" subinfo="主格付き">
+        <phrase id="25" type="nominative">
+          <phrase id="17" type="noun">
+            <token id="1">
+              <word>セーフティ</word>
+              <part-of-speech>noun</part-of-speech>
+              <morpheme>固有名詞</morpheme>
+            </token>
+            <token id="2">
+              <word>ロック</word>
+              <part-of-speech>noun</part-of-speech>
+              <morpheme>サ変接続</morpheme>
+            </token>
+          </phrase>
+          <token id="3">
+            <word>は</word>
+            <part-of-speech>particle</part-of-speech>
+            <morpheme>係助詞</morpheme>
+          </token>
+        </phrase>
+        <phrase id="38" type="trigger" subinfo="主格付き">
+          <phrase id="19" type="nominative">
+            <token id="4">
+              <word>ユーザー</word>
+              <part-of-speech>noun</part-of-speech>
+              <morpheme>一般</morpheme>
+            </token>
+            <token id="5">
+              <word>が</word>
+              <part-of-speech>particle</part-of-speech>
+              <morpheme>格助詞</morpheme>
+            </token>
+          </phrase>
+          <phrase id="36" type="trigger" subinfo="動作対象付き">
+            <phrase id="29" type="target" subinfo="並列">
+              <phrase id="20" type="target">
+                <token id="6">
+                  <word>セーフティロックボタン</word>
+                  <part-of-speech>noun</part-of-speech>
+                  <morpheme>一般</morpheme>
+                </token>
+                <token id="7">
+                  <word>を</word>
+                  <part-of-speech>particle</part-of-speech>
+                  <morpheme>格助詞</morpheme>
+                </token>
+              </phrase>
+              <phrase id="21" type="target">
+                <token id="8">
+                  <word>オン</word>
+                  <part-of-speech>noun</part-of-speech>
+                  <morpheme>サ変接続</morpheme>
+                </token>
+                <token id="9">
+                  <word>に</word>
+                  <part-of-speech>particle</part-of-speech>
+                  <morpheme>格助詞</morpheme>
+                </token>
+              </phrase>
+            </phrase>
+            <phrase id="22" type="trigger-end">
+              <token id="10">
+                <word>し</word>
+                <part-of-speech>verb</part-of-speech>
+                <morpheme>自立</morpheme>
+              </token>
+              <token id="11">
+                <word>たら</word>
+                <part-of-speech>接続詞</part-of-speech>
+                <morpheme>条件</morpheme>
+              </token>
+            </phrase>
+          </phrase>
+        </phrase>
+      </phrase>
+      <phrase id="28" type="verb">
+        <phrase id="23" type="target">
+          <token id="13">
+            <word>オン</word>
+            <part-of-speech>noun</part-of-speech>
+            <morpheme>一般</morpheme>
+          </token>
+          <token id="14">
+            <word>に</word>
+            <part-of-speech>particle</part-of-speech>
+            <morpheme>格助詞</morpheme>
+          </token>
+        </phrase>
+        <token id="15">
+          <word>なる</word>
+          <part-of-speech>verb</part-of-speech>
+          <morpheme>自立</morpheme>
+        </token>
+      </phrase>
+    </phrase>
+  </sentence>
+  <sentence id="7" decision="processing, definition">
+    <phrase id="34" type="sentence">
+      <phrase id="31" type="trigger" subinfo="主格付き">
+        <phrase id="13" type="nominative">
+          <token id="1">
+            <word>ユーザー</word>
+            <part-of-speech>noun</part-of-speech>
+            <morpheme>一般</morpheme>
+          </token>
+          <token id="2">
+            <word>が</word>
+            <part-of-speech>particle</part-of-speech>
+            <morpheme>格助詞</morpheme>
+          </token>
+        </phrase>
+        <phrase id="29" type="trigger" subinfo="動作対象付き">
+          <phrase id="19" type="target">
+            <phrase id="14" type="noun">
+              <token id="3">
+                <word>給湯</word>
+                <part-of-speech>noun</part-of-speech>
+                <morpheme>一般</morpheme>
+              </token>
+              <token id="4">
+                <word>ボタン</word>
+                <part-of-speech>noun</part-of-speech>
+                <morpheme>一般</morpheme>
+              </token>
+            </phrase>
+            <token id="5">
+              <word>を</word>
+              <part-of-speech>particle</part-of-speech>
+              <morpheme>格助詞</morpheme>
+            </token>
+          </phrase>
+          <phrase id="16" type="trigger-end">
+            <token id="6">
+              <word>離し</word>
+              <part-of-speech>verb</part-of-speech>
+              <morpheme>自立</morpheme>
+            </token>
+            <token id="7">
+              <word>たら</word>
+              <part-of-speech>接続詞</part-of-speech>
+              <morpheme>条件</morpheme>
+            </token>
+          </phrase>
+        </phrase>
+      </phrase>
+      <phrase id="22" type="verb">
+        <phrase id="17" type="target">
+          <token id="9">
+            <word>オン</word>
+            <part-of-speech>noun</part-of-speech>
+            <morpheme>一般</morpheme>
+          </token>
+          <token id="10">
+            <word>に</word>
+            <part-of-speech>particle</part-of-speech>
+            <morpheme>格助詞</morpheme>
+          </token>
+        </phrase>
+        <token id="11">
+          <word>なる</word>
+          <part-of-speech>verb</part-of-speech>
+          <morpheme>自立</morpheme>
+        </token>
+      </phrase>
+    </phrase>
+  </sentence>
+  <sentence id="8" decision="processing, definition">
+    <phrase id="37" type="sentence">
+      <phrase id="34" type="trigger" subinfo="主格付き">
+        <phrase id="14" type="nominative">
+          <token id="1">
+            <word>ユーザー</word>
+            <part-of-speech>noun</part-of-speech>
+            <morpheme>一般</morpheme>
+          </token>
+          <token id="2">
+            <word>が</word>
+            <part-of-speech>particle</part-of-speech>
+            <morpheme>格助詞</morpheme>
+          </token>
+        </phrase>
+        <phrase id="32" type="trigger" subinfo="動作対象付き">
+          <phrase id="24" type="target" subinfo="並列">
+            <phrase id="15" type="target">
+              <token id="3">
+                <word>セーフティロックボタン</word>
+                <part-of-speech>noun</part-of-speech>
+                <morpheme>一般</morpheme>
+              </token>
+              <token id="4">
+                <word>を</word>
+                <part-of-speech>particle</part-of-speech>
+                <morpheme>格助詞</morpheme>
+              </token>
+            </phrase>
+            <phrase id="16" type="target">
+              <token id="5">
+                <word>オフ</word>
+                <part-of-speech>noun</part-of-speech>
+                <morpheme>一般</morpheme>
+              </token>
+              <token id="6">
+                <word>に</word>
+                <part-of-speech>particle</part-of-speech>
+                <morpheme>格助詞</morpheme>
+              </token>
+            </phrase>
+          </phrase>
+          <phrase id="17" type="trigger-end">
+            <token id="7">
+              <word>し</word>
+              <part-of-speech>verb</part-of-speech>
+              <morpheme>自立</morpheme>
+            </token>
+            <token id="8">
+              <word>たら</word>
+              <part-of-speech>接続詞</part-of-speech>
+              <morpheme>条件</morpheme>
+            </token>
+          </phrase>
+        </phrase>
+      </phrase>
+      <phrase id="23" type="verb">
+        <phrase id="18" type="target">
+          <token id="10">
+            <word>オフ</word>
+            <part-of-speech>noun</part-of-speech>
+            <morpheme>一般</morpheme>
+          </token>
+          <token id="11">
+            <word>に</word>
+            <part-of-speech>particle</part-of-speech>
+            <morpheme>格助詞</morpheme>
+          </token>
+        </phrase>
+        <token id="12">
+          <word>なる</word>
+          <part-of-speech>verb</part-of-speech>
+          <morpheme>自立</morpheme>
+        </token>
+      </phrase>
+    </phrase>
+  </sentence>
+  <sentence id="10" decision="processing, definition">
+    <phrase id="45" type="sentence">
+      <phrase id="42" type="Aパート">
+        <phrase id="24" type="state-set">
+          <phrase id="16" type="state-noun">
+            <token id="1">
+              <word>給湯</word>
+              <part-of-speech>noun</part-of-speech>
+              <morpheme>一般</morpheme>
+            </token>
+            <token id="2">
+              <word>中</word>
+              <part-of-speech>noun</part-of-speech>
+              <morpheme>接尾</morpheme>
+            </token>
+          </phrase>
+          <token id="3">
+            <word>に</word>
+            <part-of-speech>particle</part-of-speech>
+            <morpheme>格助詞</morpheme>
+          </token>
+        </phrase>
+        <phrase id="37" type="trigger" subinfo="主格付き">
+          <phrase id="18" type="nominative">
+            <token id="5">
+              <word>ユーザー</word>
+              <part-of-speech>noun</part-of-speech>
+              <morpheme>一般</morpheme>
+            </token>
+            <token id="6">
+              <word>が</word>
+              <part-of-speech>particle</part-of-speech>
+              <morpheme>格助詞</morpheme>
+            </token>
+          </phrase>
+          <phrase id="35" type="trigger" subinfo="動作対象付き">
+            <phrase id="26" type="target">
+              <phrase id="19" type="noun">
+                <token id="7">
+                  <word>給湯</word>
+                  <part-of-speech>noun</part-of-speech>
+                  <morpheme>一般</morpheme>
+                </token>
+                <token id="8">
+                  <word>ボタン</word>
+                  <part-of-speech>noun</part-of-speech>
+                  <morpheme>一般</morpheme>
+                </token>
+              </phrase>
+              <token id="9">
+                <word>を</word>
+                <part-of-speech>particle</part-of-speech>
+                <morpheme>格助詞</morpheme>
+              </token>
+            </phrase>
+            <phrase id="21" type="trigger-end">
+              <token id="10">
+                <word>離す</word>
+                <part-of-speech>verb</part-of-speech>
+                <morpheme>自立</morpheme>
+              </token>
+              <token id="11">
+                <word>と</word>
+                <part-of-speech>particle</part-of-speech>
+                <morpheme>接続助詞</morpheme>
+              </token>
+            </phrase>
+          </phrase>
+        </phrase>
+      </phrase>
+      <phrase id="28" type="targeted-action">
+        <phrase id="22" type="target">
+          <token id="12">
+            <word>給湯</word>
+            <part-of-speech>noun</part-of-speech>
+            <morpheme>一般</morpheme>
+          </token>
+          <token id="13">
+            <word>を</word>
+            <part-of-speech>particle</part-of-speech>
+            <morpheme>格助詞</morpheme>
+          </token>
+        </phrase>
+        <token id="14">
+          <word>止める</word>
+          <part-of-speech>verb</part-of-speech>
+          <morpheme>自立</morpheme>
+        </token>
+      </phrase>
+    </phrase>
+  </sentence>
+  <sentence id="12" decision="processing, definition">
+    <phrase id="33" type="sentence">
+      <phrase id="31" type="trigger" subinfo="主格付き">
+        <phrase id="13" type="nominative">
+          <token id="1">
+            <word>ユーザー</word>
+            <part-of-speech>noun</part-of-speech>
+            <morpheme>一般</morpheme>
+          </token>
+          <token id="2">
+            <word>が</word>
+            <part-of-speech>particle</part-of-speech>
+            <morpheme>格助詞</morpheme>
+          </token>
+        </phrase>
+        <phrase id="28" type="trigger" subinfo="動作対象付き">
+          <phrase id="14" type="target">
+            <token id="3">
+              <word>プラグ</word>
+              <part-of-speech>noun</part-of-speech>
+              <morpheme>一般</morpheme>
+            </token>
+            <token id="4">
+              <word>を</word>
+              <part-of-speech>particle</part-of-speech>
+              <morpheme>格助詞</morpheme>
+            </token>
+          </phrase>
+          <phrase id="15" type="trigger-end">
+            <token id="5">
+              <word>挿す</word>
+              <part-of-speech>verb</part-of-speech>
+              <morpheme>自立</morpheme>
+            </token>
+            <token id="6">
+              <word>と</word>
+              <part-of-speech>particle</part-of-speech>
+              <morpheme>接続助詞</morpheme>
+            </token>
+          </phrase>
+        </phrase>
+      </phrase>
+      <phrase id="24" type="verb">
+        <token id="8">
+          <word>使用</word>
+          <part-of-speech>noun</part-of-speech>
+          <morpheme>サ変接続</morpheme>
+        </token>
+        <phrase id="22" type="verb">
+          <phrase id="17" type="target">
+            <token id="9">
+              <word>可能</word>
+              <part-of-speech>noun</part-of-speech>
+              <morpheme>形容動詞語幹</morpheme>
+            </token>
+            <token id="10">
+              <word>に</word>
+              <part-of-speech>particle</part-of-speech>
+              <morpheme>格助詞</morpheme>
+            </token>
+          </phrase>
+          <token id="11">
+            <word>なる</word>
+            <part-of-speech>verb</part-of-speech>
+            <morpheme>自立</morpheme>
+          </token>
+        </phrase>
+      </phrase>
+    </phrase>
+  </sentence>
+  <sentence id="13" decision="processing, definition">
+    <phrase id="33" type="sentence">
+      <phrase id="31" type="trigger" subinfo="主格付き">
+        <phrase id="13" type="nominative">
+          <token id="1">
+            <word>ユーザー</word>
+            <part-of-speech>noun</part-of-speech>
+            <morpheme>一般</morpheme>
+          </token>
+          <token id="2">
+            <word>が</word>
+            <part-of-speech>particle</part-of-speech>
+            <morpheme>格助詞</morpheme>
+          </token>
+        </phrase>
+        <phrase id="28" type="trigger" subinfo="動作対象付き">
+          <phrase id="14" type="target">
+            <token id="3">
+              <word>プラグ</word>
+              <part-of-speech>noun</part-of-speech>
+              <morpheme>一般</morpheme>
+            </token>
+            <token id="4">
+              <word>を</word>
+              <part-of-speech>particle</part-of-speech>
+              <morpheme>格助詞</morpheme>
+            </token>
+          </phrase>
+          <phrase id="15" type="trigger-end">
+            <token id="5">
+              <word>抜く</word>
+              <part-of-speech>verb</part-of-speech>
+              <morpheme>自立</morpheme>
+            </token>
+            <token id="6">
+              <word>と</word>
+              <part-of-speech>particle</part-of-speech>
+              <morpheme>接続助詞</morpheme>
+            </token>
+          </phrase>
+        </phrase>
+      </phrase>
+      <phrase id="24" type="verb">
+        <token id="8">
+          <word>使用</word>
+          <part-of-speech>noun</part-of-speech>
+          <morpheme>サ変接続</morpheme>
+        </token>
+        <phrase id="22" type="verb">
+          <phrase id="17" type="target">
+            <token id="9">
+              <word>不可能</word>
+              <part-of-speech>noun</part-of-speech>
+              <morpheme>形容動詞語幹</morpheme>
+            </token>
+            <token id="10">
+              <word>に</word>
+              <part-of-speech>particle</part-of-speech>
+              <morpheme>格助詞</morpheme>
+            </token>
+          </phrase>
+          <token id="11">
+            <word>なる</word>
+            <part-of-speech>verb</part-of-speech>
+            <morpheme>自立</morpheme>
+          </token>
+        </phrase>
+      </phrase>
+    </phrase>
+  </sentence>
+</sentences>

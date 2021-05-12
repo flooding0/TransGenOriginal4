@@ -1,0 +1,69 @@
+<project  name="nlp" default ="jar" basedir=".">
+  <property name="classes" location="classes"/>
+  <property name="lib"      location="lib"/>
+  <property name="jar"      location="workspace/jar"/>
+  <property name="src"     location="src"/>
+
+
+  <path id="libraries">
+    <fileset dir="${lib}"    includes="*.jar" />
+  </path>
+
+<!-- for jar manifest -->
+  <property name="runtime.classpath"
+            value=".
+                  kuromoji-0.7.7.jar
+                  commons-beanutils-1.8.3.jar
+                  commons-digester3-3.2.jar
+                  commons-logging-1.1.1.jar
+                  commons-collections4-4.4.jar
+                  commons-compress-1.20.jar
+                  jaxen-1.1.6.jar
+                  dom4j-2.1.1.jar
+                  xercesImpl.jar
+                  poi-5.0.0.jar
+                  poi-ooxml-5.0.0.jar
+                  xmlbeans-4.0.0.jar
+                  poi-ooxml-full-5.0.0.jar
+                  "/>
+
+  <target name="init">
+    <mkdir dir="${classes}"/>
+  </target>
+
+
+  <target name="compile" depends="init">
+    <javac srcdir="${src}"
+           destdir="${classes}"
+           encoding="UTF-8"
+           classpathref="libraries"
+           includeAntRuntime="false">
+           <compilerarg value="-Xlint:unchecked" />
+    </javac>
+  </target>
+
+
+  <target name="jar" depends="compile">
+    <jar jarfile="${jar}/nlp.jar">
+      <fileset dir="${classes}" includes="**/*.class"/>
+      <fileset dir="${src}" includes="sel/nlp/xml/parserulesxml.xml"/>
+      <fileset dir="${src}" includes="sel/nlp/xml/prerulesxml.xml"/>
+      <fileset dir="${src}" includes="sel/nlp/xml/decisionrulesxml.xml"/>
+     <manifest>
+       <attribute name="Class-Path" value="${runtime.classpath}"/>
+     </manifest>
+    </jar>
+    <copy todir="${jar}">
+      <fileset dir="${lib}" includes="**/*.jar"/>
+    </copy>
+  </target>
+
+  <target name="cleanclass">
+    <delete dir="${classes}" />
+  </target>
+
+  <target name="clean">
+    <delete dir="${classes}" />
+    <delete dir="${jar}" />
+  </target>
+</project>

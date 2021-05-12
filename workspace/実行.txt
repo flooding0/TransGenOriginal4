@@ -1,0 +1,14 @@
+analyse [input] [output] 構文解析
+buildTree [input] [output] 文のみ構文再構築
+classify [input] [output] 定義と処理の分類
+annotate [input] [output] 状態変数の同定
+extract [input] [output] 状態変数の抽出
+
+all   すべて実行 中間結果保存    入力 input.txt 出力 results.xml 固定
+all2  すべて実行 中間結果非保存  入力 input.txt 出力 results.xml 固定
+
+例えば
+bin/all
+
+bin/analysis input.txt analysis.xml
+のように実行する。

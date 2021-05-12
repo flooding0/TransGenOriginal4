@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+処理文、定義文の判定論理を XPATHを使って記述する
+
+target tag sentenceの位置をXPATHで指定する
+
+condition
+ sentence 以下の子ノードで適合する構文をXPATHで記述する
+ conditionは複数記すことができる
+ 複数ある場合はすべて満たすようなときにルールが適用されるとする (AND)
+
+
+decision
+ condition で指定する部分木があれば
+ 当該 sentenceがこのタグでしてされた 属性 decisionに対する値として持つ
+
+-->
+
+<rules>
+  <target>//sentence</target>
+  <!-- ↓処理文になる条件 -->
+  <rule><!-- 処理文条件1 -->
+    <decision>processing</decision>
+    <condition expression=".//phrase[@type='sentence']//phrase[@type='trigger-end' or @type='a-trigger-end']"/>
+  </rule>
+
+  <!-- ↓定義文になる条件 -->
+  <rule>  <!-- 定義文条件1 -->
+    <decision>definition</decision>
+    <condition expression=".//phrase[@type='sentence']//phrase[@type='nominative']"/>
+  </rule>
+  <rule>  <!-- 定義文条件1 -->
+    <decision>definition</decision>
+    <condition expression=".//phrase[@type='sentence']/phrase[@type='with']"/>
+  </rule>
+
+
+</rules>

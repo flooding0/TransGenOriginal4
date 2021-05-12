@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sentences>
+ <sentence id="2">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo>蓋は開いている時にユーザーが閉めれば</subinfo>
+   <subinfo>蓋は開いている時に</subinfo>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
+ <sentence id="6">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo>セーフティロックはユーザーがセーフティロックボタンをオンにしたら</subinfo>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
+ <sentence id="7">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo>ユーザーが給湯ボタンを離したら</subinfo>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
+ <sentence id="8">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo>ユーザーがセーフティロックボタンをオフにしたら</subinfo>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
+ <sentence id="10">
+  <variables>
+   <variable>給湯中</variable>
+  </variables>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo>ユーザーが給湯ボタンを離すと</subinfo>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations>
+   <inner-operation>給湯を止める</inner-operation>
+  </inner-operations>
+ </sentence>
+ <sentence id="12">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo>ユーザーがプラグを挿すと</subinfo>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
+ <sentence id="13">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo>ユーザーがプラグを抜くと</subinfo>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
+</sentences>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE digester-rules PUBLIC
+  "-//Apache Commons //DTD digester-rules XML V1.0//EN"
+  "http://commons.apache.org/digester/dtds/digester-rules-3.0.dtd">
+<digester-rules>
+  <pattern value="sentences">
+    <object-create-rule classname="java.util.ArrayList"/>
+    <pattern value="sentence">
+      <object-create-rule classname="sel.nlp.parsemain.Sentence"/>
+      <set-properties-rule>
+        <alias attr-name="id" prop-name="id"/>
+      </set-properties-rule>
+      <pattern value="token">
+        <object-create-rule classname="sel.nlp.parsemain.Token"/>
+        <set-properties-rule>
+          <alias attr-name="id" prop-name="id"/>
+        </set-properties-rule>
+        <pattern value="part-of-speech">
+          <bean-property-setter-rule propertyname="pos"/>
+        </pattern><!-- part-of-speech -->
+        <pattern value="morpheme">
+          <bean-property-setter-rule propertyname="morpheme"/>
+        </pattern><!-- morpheme -->
+        <pattern value="word">
+          <bean-property-setter-rule propertyname="word"/>
+        </pattern><!-- word -->
+        <set-next-rule methodname="addToken"/>
+      </pattern><!-- token -->
+      <pattern value="phrase">
+        <object-create-rule classname="sel.nlp.parsemain.Phrase"/>
+        <set-properties-rule>
+          <alias attr-name="id" prop-name="id"/>
+          <alias attr-name="type" prop-name="type"/>
+        </set-properties-rule>
+        <pattern value="phrase">
+          <object-create-rule classname="sel.nlp.parsemain.Phrase"/>
+          <set-properties-rule>
+            <alias attr-name="id" prop-name="id"/>
+          </set-properties-rule>
+          <call-method-rule methodname="setValue" paramcount="0"/>
+          <set-next-rule methodname="addNode"/>
+        </pattern><!-- phrase -->
+        <set-next-rule methodname="addPhrase"/>
+      </pattern><!-- phrase -->
+      <set-next-rule methodname="add"/>
+    </pattern><!-- sentence -->
+  </pattern><!-- sentences -->
+</digester-rules>

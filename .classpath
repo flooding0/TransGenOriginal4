@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="lib/commons-digester3-3.2.jar" sourcepath="C:/Users/esun0/AppData/Local/Temp/.org.sf.feeling.decompiler1600218222145/source/commons-digester3-3.2-sources.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/dom4j-2.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/jaxen-1.1.6.jar"/>
+	<classpathentry kind="lib" path="lib/kuromoji-0.7.7.jar"/>
+	<classpathentry kind="lib" path="lib/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="workspace/jar/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="workspace/jar/commons-digester3-3.2.jar"/>
+	<classpathentry kind="lib" path="workspace/jar/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="workspace/jar/dom4j-2.1.1.jar"/>
+	<classpathentry kind="lib" path="workspace/jar/jaxen-1.1.6.jar"/>
+	<classpathentry kind="lib" path="workspace/jar/kuromoji-0.7.7.jar"/>
+	<classpathentry kind="lib" path="workspace/jar/nlp.jar"/>
+	<classpathentry kind="lib" path="workspace/jar/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="C:/pleiades-2019-09-ultimate-win-64bit-jre_20191007/pleiades/workspace/TransGenOriginal4/lib/poi-5.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/pleiades-2019-09-ultimate-win-64bit-jre_20191007/pleiades/workspace/TransGenOriginal4/lib/poi-ooxml-5.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/pleiades-2019-09-ultimate-win-64bit-jre_20191007/pleiades/workspace/TransGenOriginal4/lib/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="C:/pleiades-2019-09-ultimate-win-64bit-jre_20191007/pleiades/workspace/TransGenOriginal4/lib/commons-collections4-4.4.jar"/>
+	<classpathentry kind="lib" path="C:/pleiades-2019-09-ultimate-win-64bit-jre_20191007/pleiades/workspace/TransGenOriginal4/lib/commons-compress-1.20.jar"/>
+	<classpathentry kind="lib" path="C:/pleiades-2019-09-ultimate-win-64bit-jre_20191007/pleiades/workspace/TransGenOriginal4/lib/commons-digester3-3.2.jar"/>
+	<classpathentry kind="lib" path="C:/pleiades-2019-09-ultimate-win-64bit-jre_20191007/pleiades/workspace/TransGenOriginal4/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/pleiades-2019-09-ultimate-win-64bit-jre_20191007/pleiades/workspace/TransGenOriginal4/lib/xmlbeans-4.0.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

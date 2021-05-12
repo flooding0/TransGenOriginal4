@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE digester-rules PUBLIC
+  "-//Apache Commons //DTD digester-rules XML V1.0//EN"
+  "http://commons.apache.org/digester/dtds/digester-rules-3.0.dtd">
+<digester-rules>
+  <pattern value="rules">
+    <object-create-rule classname="sel.nlp.decisionrule.Rules"/>
+      <pattern value="target">
+        <bean-property-setter-rule propertyname="target"/>
+      </pattern><!-- target -->
+      <pattern value="rule">
+        <object-create-rule classname="sel.nlp.decisionrule.Rule"/>
+        <pattern value="decision">
+          <bean-property-setter-rule propertyname="decision"/>
+        </pattern><!-- dicision -->
+        <pattern value="condition">
+          <call-method-rule methodname="addCondition" paramcount="1"/>
+          <call-param-rule paramnumber="0" attrname="expression"/>
+        </pattern><!-- condition -->
+        <pattern value="condition2">
+          <call-method-rule methodname="addCondition2" paramcount="1"/>
+          <call-param-rule paramnumber="0" attrname="expression"/>
+        </pattern><!-- condition2 -->
+        <pattern value="match">
+          <object-create-rule classname="sel.nlp.decisionrule.Match"/>
+          <set-properties-rule>
+            <alias attr-name="expression" prop-name="expression"/>
+            <alias attr-name="decision" prop-name="decision"/>
+          </set-properties-rule>
+          <set-next-rule methodname="addMatch"/>
+        </pattern><!-- match -->
+        <pattern value="common">
+          <call-method-rule methodname="setCommon" paramcount="1"/>
+          <call-param-rule paramnumber="0" attrname="expression"/>
+        </pattern><!-- match -->
+        <set-next-rule methodname="addRule"/>
+    </pattern><!-- rule -->
+  </pattern><!-- rules -->
+</digester-rules>

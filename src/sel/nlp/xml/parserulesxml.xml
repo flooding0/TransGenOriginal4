@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE digester-rules PUBLIC
+  "-//Apache Commons //DTD digester-rules XML V1.0//EN"
+  "http://commons.apache.org/digester/dtds/digester-rules-3.0.dtd">
+<digester-rules>
+  <pattern value="ruleset">
+    <object-create-rule classname="sel.nlp.parserule.RuleSet"/>
+    <pattern value="rules">
+      <pattern value="rule">
+        <object-create-rule classname="sel.nlp.parserule.Rule"/>
+          <pattern value="goal">
+          <!-- 要素の処理↓ -->
+            <bean-property-setter-rule propertyname="goal"/>
+          </pattern><!-- goal -->
+          <pattern value="subinfo">
+          <!-- 要素の処理↓ -->
+            <bean-property-setter-rule propertyname="subinfo"/>
+          </pattern><!-- subinfo -->
+          <pattern value="condition">
+            <object-create-rule classname="sel.nlp.parserule.Condition"/>
+            <set-properties-rule><!-- refer to attribute -->
+              <alias attr-name="text" prop-name="text"/><!-- change according to attribute-name -->
+              <alias attr-name="morpheme" prop-name="morpheme"/>
+              <alias attr-name="seq" prop-name="seq"/>
+              <alias attr-name="subinfo" prop-name="subinfo"/>
+            </set-properties-rule>
+            <!-- ここで属性の処理が終わったので要素の処理に移る -->
+            <call-method-rule methodname="setValue" paramcount="0"/>
+            <set-next-rule methodname="addCondition"/><!-- Parent class method(Rule) is performed -->
+          </pattern><!-- condition -->
+        <set-next-rule methodname="addRule"/>
+      </pattern><!-- rule -->
+    </pattern><!-- rules -->
+
+    <pattern value="aliases">
+      <object-create-rule classname="java.util.HashMap"/>
+      <pattern value="alias">
+        <call-method-rule methodname="put" paramcount="2"/>
+        <call-param-rule paramnumber="0" attrname="japanese"/>
+        <call-param-rule paramnumber="1" attrname="english"/> <!-- put(japanese,english) -->
+      </pattern><!-- alias -->
+      <set-next-rule methodname="setAliases"/> <!-- object is add to Ruleset -->
+    </pattern><!-- aliases -->
+
+  </pattern><!-- ruleset -->
+</digester-rules>

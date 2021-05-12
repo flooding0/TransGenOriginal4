@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+	<states>
+		<state>
+			<state_variable>水温</state_variable>
+			<state_value>100℃</state_value>
+			<id>100℃</id>
+		</state>
+
+		<state>
+			<state_variable>ポット</state_variable>
+			<state_value>保温状態</state_value>
+			<id>保温状態</id>
+		</state>
+
+		<state>
+			<state_variable>沸騰ランプ</state_variable>
+			<state_value>点灯</state_value>
+			<id>点灯状態</id>
+		</state>
+
+		<state>
+			<state_variable>沸騰ランプ</state_variable>
+			<state_value>消灯</state_value>
+			<id>消灯状態</id>
+		</state>
+	</states>
+
+	<start_point_id>taiki</start_point_id>
+
+	<transitions>
+		<transition>
+  		<variables>
+   			<value word="水温"/>
+   		</variables>
+  		<variable-values>
+   			<value word="100"/>
+   			<value word="℃"/>
+  		</variable-values>
+  		<sub_infos></sub_infos>
+  		<trans>
+   			<transition place="保温"/>
+   			<transition place="状態"/>
+  		</trans>
+		</transition>
+		<transition>
+  			<variables>
+   				<value word="水温"/>
+   			</variables>
+  			<variable-values>
+   				<value word="100"/>
+   				<value word="℃"/>
+  			</variable-values>
+  			<sub_infos>
+     			<sub_info>
+     				<info word="加熱"/>
+     				<info word="を"/>
+     				<info word="3"/>
+     				<info word="分"/>
+     				<info word="間"/>
+     				<info word="続け"/>
+     				<info word="る"/>
+     			</sub_info>
+  			</sub_infos>
+  		</transition>
+
+
+	</transitions>
+
+
+</result>
