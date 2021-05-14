@@ -91,7 +91,7 @@ public void show_result(String text) {
 }
 
 public void print() {
-	System.out.println("set result.");
+	System.out.println("set result");
 }
 
 }
