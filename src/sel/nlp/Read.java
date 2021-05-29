@@ -4,8 +4,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import javax.swing.JScrollPane;
-
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -32,7 +30,6 @@ public static void main(String[] args) {
 			data_size ++;
 	}
 		Gridpanel gridpanel = new Gridpanel(data_size + 1);
-
 	for (int i=2 ; sheet.getRow(i).getCell(1).getStringCellValue()!="" ;i++) {
 		Row row0 = sheet.getRow(i);
 		Row row1 = sheet.getRow(i);
@@ -56,8 +53,6 @@ public static void main(String[] args) {
 		frontpanel.add(gridpanel);
 		RefreshButton refresh_btn = new RefreshButton();
 	    frontpanel.add(refresh_btn);
-	    JScrollPane scrollPane = new JScrollPane(frontpanel);
-	    scrollPane.setBounds(10,10,150,300);
 	    frm.add(frontpanel);
 	    frm.setVisible(true);
 	    writer.close();
