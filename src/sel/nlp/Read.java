@@ -64,7 +64,7 @@ public static void main(String[] args) {
 		gridpanel.add(p4);
 	}
 	for (Textfield1 tx : txmap.values()) {
-		texts.add(tx.getText());
+		texts.add("");
 	}
 
 		frontpanel.add(gridpanel);
@@ -114,5 +114,10 @@ public void extraword() {
 		}
 		i++;
 	}
+	texts.clear();
+	for (Textfield1 tx : txmap.values()) {
+		texts.add(tx.getText());
+	}
+
 }
 }
