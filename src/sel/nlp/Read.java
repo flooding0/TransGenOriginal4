@@ -3,6 +3,8 @@ package sel.nlp;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -30,6 +32,8 @@ public static void main(String[] args) {
 			data_size ++;
 	}
 		Gridpanel gridpanel = new Gridpanel(data_size + 1);
+		//Textfield1[] text = new Textfield1[data_size + 1];
+		Map<label2,Textfield1> txmap = new HashMap<>();
 	for (int i=2 ; sheet.getRow(i).getCell(1).getStringCellValue()!="" ;i++) {
 		Row row0 = sheet.getRow(i);
 		Row row1 = sheet.getRow(i);
@@ -42,14 +46,21 @@ public static void main(String[] args) {
 //		System.out.println(cell1.getStringCellValue());
 //		label2 label = new label2(variable+" : "+cell1.getStringCellValue());
 //		p1.add(label);
-		panel4 p4 = new panel4();
 		Textfield1 tb = new Textfield1(cell1.getStringCellValue());
 		writer.write(cell1.getStringCellValue() + "\n");
 		label2 variable_name = new label2(variable+" ");
-		p4.add(variable_name);
-		p4.add(tb);
+		txmap.put(variable_name,tb);
+//		p4.add(variable_name);
+//		p4.add(tb);
+//		gridpanel.add(p4);
+	}
+	for (label2 variables:txmap.keySet()) {
+		panel4 p4 = new panel4();
+		p4.add(variables);
+		p4.add(txmap.get(variables));
 		gridpanel.add(p4);
 	}
+
 		frontpanel.add(gridpanel);
 		RefreshButton refresh_btn = new RefreshButton();
 	    frontpanel.add(refresh_btn);
