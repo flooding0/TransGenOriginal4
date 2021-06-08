@@ -74,7 +74,7 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
-	    	  read.show_result(word);
+	    	  read.add_result(word);
 	    	  variable.addText(word);
 	    	  variables.add(variable);
 	      }
@@ -89,7 +89,7 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
-	    	  read.show_result(word);
+	    	  read.add_result(word);
 	    	  value.addText(word);
 	    	  variable_variables.add(value);
 	      }
@@ -105,7 +105,7 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
-	    	  read.show_result(word);
+	    	  read.add_result(word);
 	    	  subinfoE.addText(word);
 	          set_of_subinfo.add(subinfoE);
 	      }
@@ -121,7 +121,7 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
-	    	  read.show_result(word);
+	    	  read.add_result(word);
 	    	  TE.addText(word);
 	    	  transitionsE.add(TE);
 	      }
@@ -137,7 +137,7 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 		    	  }
-	    	  read.show_result(word);
+	    	  read.add_result(word);
 	    	  IE.addText(word);
 	    	  inneroperationsE.add(IE);
 	      }

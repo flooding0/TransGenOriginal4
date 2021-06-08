@@ -21,7 +21,8 @@ public class Read {
 	static Frontpanel frontpanel = new Frontpanel();
 	static Map<label2,Textfield1> txmap = new LinkedHashMap<>();
 	static List<String> texts = new ArrayList<String>();
-
+	static resultlabel result_label =  new resultlabel();
+	static List<String> result = new ArrayList<String>();
 
 public static void main(String[] args) {
     String excelread = "read.xlsx";
@@ -96,10 +97,18 @@ public static void main(String[] args) {
 	}
 }
 
-public void show_result(String text) {
-	label2 result_label = new label2(text);
+public void add_result(String text) {
+	result.add(text);
+//	result_label.setText(text);
+//	frontpanel.add(result_label);
+//	frm.setVisible(true);
+}
+public void show_result() {
+	for(String result : result) {
+		result_label.setText(result);
+	}
 	frontpanel.add(result_label);
-	frm.setVisible(true);
+	System.out.println(result);
 }
 
 public void print() {
@@ -118,6 +127,8 @@ public void extraword() {
 	for (Textfield1 tx : txmap.values()) {
 		texts.add(tx.getText());
 	}
-
+	show_result();
+	frm.setVisible(true);
+	result.clear();
 }
 }
