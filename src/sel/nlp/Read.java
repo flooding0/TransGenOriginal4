@@ -3,8 +3,11 @@ package sel.nlp;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -16,6 +19,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class Read {
 	static Frame frm = new Frame();
 	static Frontpanel frontpanel = new Frontpanel();
+	static Map<label2,Textfield1> txmap = new LinkedHashMap<>();
+	static List<String> texts = new ArrayList<String>();
 
 
 public static void main(String[] args) {
@@ -33,15 +38,13 @@ public static void main(String[] args) {
 	}
 		Gridpanel gridpanel = new Gridpanel(data_size + 1);
 		//Textfield1[] text = new Textfield1[data_size + 1];
-		Map<label2,Textfield1> txmap = new HashMap<>();
 	for (int i=2 ; sheet.getRow(i).getCell(1).getStringCellValue()!="" ;i++) {
 		Row row0 = sheet.getRow(i);
-		Row row1 = sheet.getRow(i);
 		Cell cell0 = row0.getCell(0);
 		if(cell0.getStringCellValue()!="") {
 			variable = cell0.getStringCellValue();
 		}
-		Cell cell1 = row1.getCell(1);
+		Cell cell1 = row0.getCell(1);
 //		System.out.println(variable);
 //		System.out.println(cell1.getStringCellValue());
 //		label2 label = new label2(variable+" : "+cell1.getStringCellValue());
@@ -54,11 +57,14 @@ public static void main(String[] args) {
 //		p4.add(tb);
 //		gridpanel.add(p4);
 	}
-	for (label2 variables:txmap.keySet()) {
+	for (Entry<label2, Textfield1> entry : txmap.entrySet()) {
 		panel4 p4 = new panel4();
-		p4.add(variables);
-		p4.add(txmap.get(variables));
+		p4.add(entry.getKey());
+		p4.add(entry.getValue());
 		gridpanel.add(p4);
+	}
+	for (Textfield1 tx : txmap.values()) {
+		texts.add(tx.getText());
 	}
 
 		frontpanel.add(gridpanel);
@@ -100,4 +106,13 @@ public void print() {
 	System.out.println("set result");
 }
 
+public void extraword() {
+	int i=0;
+	for (Entry<label2, Textfield1> entry : txmap.entrySet()) {
+		if(!texts.get(i).equals(entry.getValue().getText())) {
+			System.out.println(entry.getValue().getText());
+		}
+		i++;
+	}
+}
 }
