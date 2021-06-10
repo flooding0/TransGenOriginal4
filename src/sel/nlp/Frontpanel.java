@@ -38,7 +38,6 @@ public class Frontpanel extends Panel{
 		this.text = this.text + text;
 		label.setText(this.text);
 		add(scrollpane, BorderLayout.EAST);
-		read.print();
 	}
 
 }

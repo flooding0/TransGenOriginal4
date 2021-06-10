@@ -19,11 +19,11 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class Read {
 	static Frame frm = new Frame();
 	static Frontpanel frontpanel = new Frontpanel();
+	static ResultSpace resultspase = new ResultSpace();
 	static Map<label2,Textfield1> txmap = new LinkedHashMap<>();
 	static List<String> texts = new ArrayList<String>();
-	static resultlabel result_label =  new resultlabel();
 	static List<String> result = new ArrayList<String>();
-
+	static List<resultlabel> resultlabellist = new ArrayList<resultlabel>();
 public static void main(String[] args) {
     String excelread = "read.xlsx";
 	XSSFWorkbook workbook  = null;
@@ -71,6 +71,9 @@ public static void main(String[] args) {
 		frontpanel.add(gridpanel);
 		RefreshButton refresh_btn = new RefreshButton();
 	    frontpanel.add(refresh_btn);
+	    label2 l2 = new label2("うんち");
+	    resultspase.add(l2);
+		frontpanel.add(resultspase);
 	    frm.add(frontpanel);
 	    frm.setVisible(true);
 	    writer.close();
@@ -104,15 +107,18 @@ public void add_result(String text) {
 //	frm.setVisible(true);
 }
 public void show_result() {
+	resultspase.removeAll();
 	for(String result : result) {
+		resultlabel result_label =  new resultlabel();
 		result_label.setText(result);
+		resultlabellist.add(result_label);
 	}
-	frontpanel.add(result_label);
-	System.out.println(result);
-}
+	for(resultlabel resultlabel : resultlabellist) {
+		resultspase.add(resultlabel);
+	}
 
-public void print() {
-	System.out.println("set result");
+	frontpanel.add(resultspase);
+	System.out.println(result);
 }
 
 public void extraword() {
@@ -130,5 +136,6 @@ public void extraword() {
 	show_result();
 	frm.setVisible(true);
 	result.clear();
+	resultlabellist.clear();
 }
 }

@@ -14,5 +14,4 @@ public class resultlabel extends JLabel{
 		setPreferredSize(new Dimension(130, 20));
 		setBackground(Color.WHITE);
 	}
-
 }
