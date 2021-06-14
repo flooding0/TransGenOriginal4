@@ -40,6 +40,7 @@ public class RefreshButton extends JPanel implements ActionListener{
 //			    } catch (IOException | InterruptedException e1) {
 //			      e1.printStackTrace();
 //			    }
+			read.rewrite_input2();
 			analyse.analysis();
 			buildtree.buildtree();
 			classify.classify();

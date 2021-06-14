@@ -24,11 +24,11 @@ public class Read {
 	static List<String> texts = new ArrayList<String>();
 	static List<String> result = new ArrayList<String>();
 	static List<resultlabel> resultlabellist = new ArrayList<resultlabel>();
+	static File input_file = new File("input2.txt");
 public static void main(String[] args) {
     String excelread = "read.xlsx";
 	XSSFWorkbook workbook  = null;
 	try{
-		File input_file = new File("input2.txt");
 		int data_size = 0 ;
 		workbook = new XSSFWorkbook(excelread);
 		Sheet sheet = workbook.getSheetAt(0);
@@ -71,7 +71,7 @@ public static void main(String[] args) {
 		frontpanel.add(gridpanel);
 		RefreshButton refresh_btn = new RefreshButton();
 	    frontpanel.add(refresh_btn);
-	    label2 l2 = new label2("うんち");
+	    label2 l2 = new label2("");
 	    resultspase.add(l2);
 		frontpanel.add(resultspase);
 	    frm.add(frontpanel);
@@ -137,5 +137,21 @@ public void extraword() {
 	frm.setVisible(true);
 	result.clear();
 	resultlabellist.clear();
+}
+
+public void rewrite_input2() {
+	//input2ファイルを新しく入力されたテキストフィールドの文章に書き直す
+
+		try {
+			FileWriter rewriter = new FileWriter(input_file);
+			for (Entry<label2, Textfield1> entry : txmap.entrySet()) {
+					rewriter.write(entry.getValue().getText()+"\n");
+			}
+			rewriter.close();
+		} catch (IOException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+
 }
 }
