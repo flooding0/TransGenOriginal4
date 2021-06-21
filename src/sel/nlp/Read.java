@@ -24,6 +24,7 @@ public class Read {
 	static List<String> texts = new ArrayList<String>();
 	static List<String> result = new ArrayList<String>();
 	static List<resultlabel> resultlabellist = new ArrayList<resultlabel>();
+	static Gridpanel gridpanel = new Gridpanel();
 	static File input_file = new File("input2.txt");
 public static void main(String[] args) {
     String excelread = "read.xlsx";
@@ -37,8 +38,7 @@ public static void main(String[] args) {
 	for (int i=2 ; sheet.getRow(i).getCell(1).getStringCellValue()!="" ;i++) {
 			data_size ++;
 	}
-		Gridpanel gridpanel = new Gridpanel(data_size + 1);
-		//Textfield1[] text = new Textfield1[data_size + 1];
+		gridpanel.set_size(data_size);
 	for (int i=2 ; sheet.getRow(i).getCell(1).getStringCellValue()!="" ;i++) {
 		Row row0 = sheet.getRow(i);
 		Cell cell0 = row0.getCell(0);
@@ -46,17 +46,11 @@ public static void main(String[] args) {
 			variable = cell0.getStringCellValue();
 		}
 		Cell cell1 = row0.getCell(1);
-//		System.out.println(variable);
-//		System.out.println(cell1.getStringCellValue());
-//		label2 label = new label2(variable+" : "+cell1.getStringCellValue());
-//		p1.add(label);
-		Textfield1 tb = new Textfield1(cell1.getStringCellValue());
 		writer.write(cell1.getStringCellValue() + "\n");
+		//input_fileにexcelのデータをぶち込む
+		Textfield1 tb = new Textfield1(cell1.getStringCellValue());
 		label2 variable_name = new label2(variable+" ");
 		txmap.put(variable_name,tb);
-//		p4.add(variable_name);
-//		p4.add(tb);
-//		gridpanel.add(p4);
 	}
 	for (Entry<label2, Textfield1> entry : txmap.entrySet()) {
 		panel4 p4 = new panel4();
@@ -100,13 +94,21 @@ public static void main(String[] args) {
 	}
 }
 
+public void create_input_label(Entry<label2, Textfield1> entry) {
+		panel4 p4 = new panel4();
+		p4.add(entry.getKey());
+		p4.add(entry.getValue());
+		gridpanel.add(p4);
+}
+
 public void add_result(String text) {
 	result.add(text);
 //	result_label.setText(text);
 //	frontpanel.add(result_label);
 //	frm.setVisible(true);
 }
-public void show_result() {
+public void show_result_below() {
+	//resultspaceを更新する
 	resultspase.removeAll();
 	for(String result : result) {
 		resultlabel result_label =  new resultlabel();
@@ -116,12 +118,16 @@ public void show_result() {
 	for(resultlabel resultlabel : resultlabellist) {
 		resultspase.add(resultlabel);
 	}
-
 	frontpanel.add(resultspase);
 	System.out.println(result);
 }
 
+public void show_result_with_txf() {
+
+}
+
 public void extraword() {
+	//変更のある文を特定して、show_resultを呼び出してresultspaceを更新する
 	int i=0;
 	for (Entry<label2, Textfield1> entry : txmap.entrySet()) {
 		if(!texts.get(i).equals(entry.getValue().getText())) {
@@ -133,7 +139,8 @@ public void extraword() {
 	for (Textfield1 tx : txmap.values()) {
 		texts.add(tx.getText());
 	}
-	show_result();
+	//この時点でtextsの中にtextfieldの新情報がぶち込まれる
+	show_result_below();
 	frm.setVisible(true);
 	result.clear();
 	resultlabellist.clear();
