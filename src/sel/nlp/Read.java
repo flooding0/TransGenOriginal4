@@ -26,6 +26,7 @@ public class Read {
 	static List<resultlabel> resultlabellist = new ArrayList<resultlabel>();
 	static Gridpanel gridpanel = new Gridpanel();
 	static File input_file = new File("input2.txt");
+
 public static void main(String[] args) {
     String excelread = "read.xlsx";
 	XSSFWorkbook workbook  = null;
@@ -85,7 +86,7 @@ public static void main(String[] args) {
 
 	File log= new File("log.txt");
     try {
-		FileWriter log_writer = new FileWriter(log,true);
+		FileWriter log_writer = new FileWriter(log);
 		log_writer.write("Read Finish" + "\n");
 		log_writer.close();
 	} catch (IOException e) {
@@ -94,12 +95,7 @@ public static void main(String[] args) {
 	}
 }
 
-public void create_input_label(Entry<label2, Textfield1> entry) {
-		panel4 p4 = new panel4();
-		p4.add(entry.getKey());
-		p4.add(entry.getValue());
-		gridpanel.add(p4);
-}
+
 
 public void add_result(String text) {
 	result.add(text);
@@ -122,11 +118,11 @@ public void show_result_below() {
 	System.out.println(result);
 }
 
-public void show_result_with_txf() {
+public void show_result2() {
 
 }
 
-public void extraword() {
+public void extract_difference() {
 	//変更のある文を特定して、show_resultを呼び出してresultspaceを更新する
 	int i=0;
 	for (Entry<label2, Textfield1> entry : txmap.entrySet()) {

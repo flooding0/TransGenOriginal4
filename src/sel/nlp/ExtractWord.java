@@ -171,7 +171,7 @@ public class ExtractWord {
 
 	  public void extractword() {
 		    ExtractWord extractor = new ExtractWord();
-		    String[] filenames = {"results.xml", "annotatedtreeaction.xml", "result2.xml"};
+		    String[] filenames = {"results.xml", "annotatedtree.xml", "result2.xml"};
 			extractor.init(filenames);
 		    extractor.perform();
 		    extractor.write();
