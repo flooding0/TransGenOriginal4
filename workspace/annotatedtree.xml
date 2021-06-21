@@ -2,8 +2,8 @@
 <sentences>
    <sentence id="2" decision="processing, definition">
       <phrase id="53" type="sentence">
-         <phrase id="51" type="trigger" subinfo="連立">
-            <phrase id="42" type="trigger" subinfo="主格付き">
+         <phrase id="51" type="trigger" subinfo="連立" decision="subinfo">
+            <phrase id="42" type="trigger" subinfo="主格付き" decision="subinfo">
                <phrase id="15" type="nominative">
                   <token id="1">
                      <word>蓋</word>
@@ -86,7 +86,7 @@
    </sentence>
    <sentence id="6" decision="processing, definition">
       <phrase id="47" type="sentence">
-         <phrase id="44" type="trigger" subinfo="主格付き">
+         <phrase id="44" type="trigger" subinfo="主格付き" decision="subinfo">
             <phrase id="25" type="nominative">
                <phrase id="17" type="noun">
                   <token id="1">
@@ -184,7 +184,7 @@
    </sentence>
    <sentence id="7" decision="processing, definition">
       <phrase id="34" type="sentence">
-         <phrase id="31" type="trigger" subinfo="主格付き">
+         <phrase id="31" type="trigger" subinfo="主格付き" decision="subinfo">
             <phrase id="13" type="nominative">
                <token id="1">
                   <word>ユーザー</word>
@@ -254,7 +254,7 @@
    </sentence>
    <sentence id="8" decision="processing, definition">
       <phrase id="37" type="sentence">
-         <phrase id="34" type="trigger" subinfo="主格付き">
+         <phrase id="34" type="trigger" subinfo="主格付き" decision="subinfo">
             <phrase id="14" type="nominative">
                <token id="1">
                   <word>ユーザー</word>
@@ -351,7 +351,7 @@
                   <morpheme>格助詞</morpheme>
                </token>
             </phrase>
-            <phrase id="37" type="trigger" subinfo="主格付き">
+            <phrase id="37" type="trigger" subinfo="主格付き" decision="subinfo">
                <phrase id="18" type="nominative">
                   <token id="5">
                      <word>ユーザー</word>
@@ -399,7 +399,7 @@
                </phrase>
             </phrase>
          </phrase>
-         <phrase id="28" type="targeted-action">
+         <phrase id="28" type="targeted-action" decision="inner-operation">
             <phrase id="22" type="target">
                <token id="12">
                   <word>給湯</word>
@@ -422,7 +422,7 @@
    </sentence>
    <sentence id="12" decision="processing, definition">
       <phrase id="33" type="sentence">
-         <phrase id="31" type="trigger" subinfo="主格付き">
+         <phrase id="31" type="trigger" subinfo="主格付き" decision="subinfo">
             <phrase id="13" type="nominative">
                <token id="1">
                   <word>ユーザー</word>
@@ -492,7 +492,7 @@
    </sentence>
    <sentence id="13" decision="processing, definition">
       <phrase id="33" type="sentence">
-         <phrase id="31" type="trigger" subinfo="主格付き">
+         <phrase id="31" type="trigger" subinfo="主格付き" decision="subinfo">
             <phrase id="13" type="nominative">
                <token id="1">
                   <word>ユーザー</word>

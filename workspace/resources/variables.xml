@@ -25,8 +25,8 @@ match は複数記述できない
  	 当該 tokenがこのタグで指定された 属性 decisiosn に対する値として持つ
 
 -->
-<!-- variableは"遷移後の状態"、variable-valueは"イベント"を示す。イベントとは、遷移に必要な動作のことである。 -->
-<!-- 頭の中で変換してほしい。variable,valiable-valueという名称に意味はない。プログラムとの関係で名称変更がめんどくさいので変更していない -->
+<!-- variableは"状態変数"、variable-valueは"変数値"を示す。 -->
+<!-- sub-infoは遷移条件、transitionは遷移後の変数値を示す。 -->
 <!-- processing -->
 <rules>
   <rule> <!--  -->
