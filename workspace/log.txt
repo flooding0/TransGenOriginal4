@@ -1,9 +1,1 @@
 Read Finish
-178
-Analyse Finish
-BuildTree Finish
-Classify Finish
-Annotate Finish
-Extract Finish
-Extract word Finish
-******************************

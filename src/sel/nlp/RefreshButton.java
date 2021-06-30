@@ -45,7 +45,7 @@ public class RefreshButton extends JPanel implements ActionListener{
 			buildtree.buildtree();
 			classify.classify();
 			annotate.annotate();
-//			annotateaction.annotateaction();
+      		annotateaction.annotateaction();
 			extract.extract();
 			extractword.extractword();
 			read.extract_difference();

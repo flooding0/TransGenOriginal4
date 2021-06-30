@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <sentences>
- <sentence id="2">
-  <variables/>
-  <variable-values/>
-  <set_of_subinfo>
-   <subinfo>蓋は開いている時にユーザーが閉めれば</subinfo>
-   <subinfo>蓋は開いている時に</subinfo>
-  </set_of_subinfo>
-  <transitions/>
-  <inner-operations/>
- </sentence>
  <sentence id="6">
   <variables/>
   <variable-values/>

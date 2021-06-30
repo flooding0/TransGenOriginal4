@@ -1,0 +1,7 @@
+MODULE main
+	VAR
+		x: 0..10;
+	ASSIGN
+		init(x) := 0;
+		next(x) := x=10 ? 10 : x+1;
+	LTLSPEC G (x=10);

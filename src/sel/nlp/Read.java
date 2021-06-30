@@ -3,10 +3,6 @@ package sel.nlp;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.Map.Entry;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -17,14 +13,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
 public class Read {
-	static Frame frm = new Frame();
-	static Frontpanel frontpanel = new Frontpanel();
-	static ResultSpace resultspase = new ResultSpace();
-	static Map<label2,Textfield1> txmap = new LinkedHashMap<>();
-	static List<String> texts = new ArrayList<String>();
-	static List<String> result = new ArrayList<String>();
-	static List<resultlabel> resultlabellist = new ArrayList<resultlabel>();
-	static Gridpanel gridpanel = new Gridpanel();
+
 	static File input_file = new File("input2.txt");
 
 public static void main(String[] args) {
@@ -39,7 +28,7 @@ public static void main(String[] args) {
 	for (int i=2 ; sheet.getRow(i).getCell(1).getStringCellValue()!="" ;i++) {
 			data_size ++;
 	}
-		gridpanel.set_size(data_size);
+		window_data.gridpanel.set_size(data_size);
 	for (int i=2 ; sheet.getRow(i).getCell(1).getStringCellValue()!="" ;i++) {
 		Row row0 = sheet.getRow(i);
 		Cell cell0 = row0.getCell(0);
@@ -51,26 +40,25 @@ public static void main(String[] args) {
 		//input_fileにexcelのデータをぶち込む
 		Textfield1 tb = new Textfield1(cell1.getStringCellValue());
 		label2 variable_name = new label2(variable+" ");
-		txmap.put(variable_name,tb);
+		window_data.txmap.put(variable_name,tb);
 	}
-	for (Entry<label2, Textfield1> entry : txmap.entrySet()) {
+	for (Entry<label2, Textfield1> entry : window_data.txmap.entrySet()) {
 		panel4 p4 = new panel4();
 		p4.add(entry.getKey());
 		p4.add(entry.getValue());
-		gridpanel.add(p4);
+		window_data.gridpanel.add(p4);
 	}
-	for (Textfield1 tx : txmap.values()) {
-		texts.add("");
+	for (Textfield1 tx : window_data.txmap.values()) {
+		result_data.texts.add("");
 	}
-
-		frontpanel.add(gridpanel);
+		window_data.frontpanel.add(window_data.gridpanel);
 		RefreshButton refresh_btn = new RefreshButton();
-	    frontpanel.add(refresh_btn);
+	    window_data.frontpanel.add(refresh_btn);
 	    label2 l2 = new label2("");
-	    resultspase.add(l2);
-		frontpanel.add(resultspase);
-	    frm.add(frontpanel);
-	    frm.setVisible(true);
+	    window_data.resultspase.add(l2);
+		window_data.frontpanel.add(window_data.resultspase);
+	    window_data.frm.add(window_data.frontpanel);
+	    window_data.frm.setVisible(true);
 	    writer.close();
     }catch(IOException e){
       System.out.println(e.toString());
@@ -98,24 +86,24 @@ public static void main(String[] args) {
 
 
 public void add_result(String text) {
-	result.add(text);
+	result_data.result.add(text);
 //	result_label.setText(text);
 //	frontpanel.add(result_label);
 //	frm.setVisible(true);
 }
 public void show_result_below() {
 	//resultspaceを更新する
-	resultspase.removeAll();
-	for(String result : result) {
+	window_data.resultspase.removeAll();
+	for(String result : result_data.result) {
 		resultlabel result_label =  new resultlabel();
 		result_label.setText(result);
-		resultlabellist.add(result_label);
+		window_data.resultlabellist.add(result_label);
 	}
-	for(resultlabel resultlabel : resultlabellist) {
-		resultspase.add(resultlabel);
+	for(resultlabel resultlabel : window_data.resultlabellist) {
+		window_data.resultspase.add(resultlabel);
 	}
-	frontpanel.add(resultspase);
-	System.out.println(result);
+	window_data.frontpanel.add(window_data.resultspase);
+	System.out.println(result_data.result);
 }
 
 public void show_result2() {
@@ -125,21 +113,21 @@ public void show_result2() {
 public void extract_difference() {
 	//変更のある文を特定して、show_resultを呼び出してresultspaceを更新する
 	int i=0;
-	for (Entry<label2, Textfield1> entry : txmap.entrySet()) {
-		if(!texts.get(i).equals(entry.getValue().getText())) {
+	for (Entry<label2, Textfield1> entry : window_data.txmap.entrySet()) {
+		if(!result_data.texts.get(i).equals(entry.getValue().getText())) {
 			System.out.println(entry.getValue().getText());
 		}
 		i++;
 	}
-	texts.clear();
-	for (Textfield1 tx : txmap.values()) {
-		texts.add(tx.getText());
+	result_data.texts.clear();
+	for (Textfield1 tx : window_data.txmap.values()) {
+		result_data.texts.add(tx.getText());
 	}
 	//この時点でtextsの中にtextfieldの新情報がぶち込まれる
 	show_result_below();
-	frm.setVisible(true);
-	result.clear();
-	resultlabellist.clear();
+	window_data.frm.setVisible(true);
+	result_data.result.clear();
+	window_data.resultlabellist.clear();
 }
 
 public void rewrite_input2() {
@@ -147,7 +135,7 @@ public void rewrite_input2() {
 
 		try {
 			FileWriter rewriter = new FileWriter(input_file);
-			for (Entry<label2, Textfield1> entry : txmap.entrySet()) {
+			for (Entry<label2, Textfield1> entry : window_data.txmap.entrySet()) {
 					rewriter.write(entry.getValue().getText()+"\n");
 			}
 			rewriter.close();
