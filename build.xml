@@ -24,7 +24,8 @@
                   poi-5.0.0.jar
                   poi-ooxml-5.0.0.jar
                   xmlbeans-4.0.0.jar
-                  poi-ooxml-full-5.0.0.jar
+  		  poi-ooxml-full-5.0.0.jar
+		  xml-apis.jar
                   "/>
 
   <target name="init">
