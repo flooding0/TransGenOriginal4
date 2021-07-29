@@ -74,7 +74,8 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
-	    	  read.add_result(word);
+	    	  Result_data.result.add(word);
+	    	  Result_data.results.put("variable", word);
 	    	  variable.addText(word);
 	    	  variables.add(variable);
 	      }
@@ -89,7 +90,8 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
-	    	  read.add_result(word);
+	    	  Result_data.result.add(word);
+	    	  Result_data.results.put("variable_value", word);
 	    	  value.addText(word);
 	    	  variable_variables.add(value);
 	      }
@@ -105,7 +107,8 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
-	    	  read.add_result(word);
+	    	  Result_data.result.add(word);
+	    	  Result_data.results.put("subinfos", word);
 	    	  subinfoE.addText(word);
 	          set_of_subinfo.add(subinfoE);
 	      }
@@ -121,7 +124,8 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
-	    	  read.add_result(word);
+	    	  Result_data.result.add(word);
+	    	  Result_data.results.put("transitions", word);
 	    	  TE.addText(word);
 	    	  transitionsE.add(TE);
 	      }
@@ -137,7 +141,8 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 		    	  }
-	    	  read.add_result(word);
+	    	  Result_data.result.add(word);
+	    	  Result_data.results.put("inneroperation", word);
 	    	  IE.addText(word);
 	    	  inneroperationsE.add(IE);
 	      }

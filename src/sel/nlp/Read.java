@@ -28,7 +28,7 @@ public static void main(String[] args) {
 	for (int i=2 ; sheet.getRow(i).getCell(1).getStringCellValue()!="" ;i++) {
 			data_size ++;
 	}
-		window_data.gridpanel.set_size(data_size);
+		Window_data.gridpanel.set_size(data_size);
 	for (int i=2 ; sheet.getRow(i).getCell(1).getStringCellValue()!="" ;i++) {
 		Row row0 = sheet.getRow(i);
 		Cell cell0 = row0.getCell(0);
@@ -39,26 +39,26 @@ public static void main(String[] args) {
 		writer.write(cell1.getStringCellValue() + "\n");
 		//input_fileにexcelのデータをぶち込む
 		Textfield1 tb = new Textfield1(cell1.getStringCellValue());
-		label2 variable_name = new label2(variable+" ");
-		window_data.txmap.put(variable_name,tb);
+		Label2 variable_name = new Label2(variable+" ");
+		Window_data.txmap.put(variable_name,tb);
 	}
-	for (Entry<label2, Textfield1> entry : window_data.txmap.entrySet()) {
-		panel4 p4 = new panel4();
+	for (Entry<Label2, Textfield1> entry : Window_data.txmap.entrySet()) {
+		XboxrayoutPanel p4 = new XboxrayoutPanel();
 		p4.add(entry.getKey());
 		p4.add(entry.getValue());
-		window_data.gridpanel.add(p4);
+		Window_data.gridpanel.add(p4);
 	}
-	for (Textfield1 tx : window_data.txmap.values()) {
-		result_data.texts.add("");
+	for (Textfield1 tx : Window_data.txmap.values()) {
+		Result_data.texts.add("");
 	}
-		window_data.frontpanel.add(window_data.gridpanel);
+		Window_data.frontpanel.add(Window_data.gridpanel);
 		RefreshButton refresh_btn = new RefreshButton();
-	    window_data.frontpanel.add(refresh_btn);
-	    label2 l2 = new label2("");
-	    window_data.resultspase.add(l2);
-		window_data.frontpanel.add(window_data.resultspase);
-	    window_data.frm.add(window_data.frontpanel);
-	    window_data.frm.setVisible(true);
+	    Window_data.frontpanel.add(refresh_btn);
+	    Label2 l2 = new Label2("");
+	    Window_data.resultspase.add(l2);
+		Window_data.frontpanel.add(Window_data.resultspase);
+	    Window_data.frm.add(Window_data.frontpanel);
+	    Window_data.frm.setVisible(true);
 	    writer.close();
     }catch(IOException e){
       System.out.println(e.toString());
@@ -84,26 +84,21 @@ public static void main(String[] args) {
 }
 
 
-
-public void add_result(String text) {
-	result_data.result.add(text);
-//	result_label.setText(text);
-//	frontpanel.add(result_label);
-//	frm.setVisible(true);
-}
 public void show_result_below() {
 	//resultspaceを更新する
-	window_data.resultspase.removeAll();
-	for(String result : result_data.result) {
-		resultlabel result_label =  new resultlabel();
+	//window_data.gridpanel.removeAll();
+	Window_data.resultspase.removeAll();
+	for(String result : Result_data.result) {
+		Resultlabel result_label =  new Resultlabel();
 		result_label.setText(result);
-		window_data.resultlabellist.add(result_label);
+		Window_data.resultlabellist.add(result_label);
 	}
-	for(resultlabel resultlabel : window_data.resultlabellist) {
-		window_data.resultspase.add(resultlabel);
+	for(Resultlabel resultlabel : Window_data.resultlabellist) {
+		Window_data.resultspase.add(resultlabel);
 	}
-	window_data.frontpanel.add(window_data.resultspase);
-	System.out.println(result_data.result);
+	Window_data.frontpanel.add(Window_data.resultspase);
+	System.out.println(Result_data.result);
+	System.out.println(Result_data.results);
 }
 
 public void show_result2() {
@@ -113,21 +108,21 @@ public void show_result2() {
 public void extract_difference() {
 	//変更のある文を特定して、show_resultを呼び出してresultspaceを更新する
 	int i=0;
-	for (Entry<label2, Textfield1> entry : window_data.txmap.entrySet()) {
-		if(!result_data.texts.get(i).equals(entry.getValue().getText())) {
+	for (Entry<Label2, Textfield1> entry : Window_data.txmap.entrySet()) {
+		if(!Result_data.texts.get(i).equals(entry.getValue().getText())) {
 			System.out.println(entry.getValue().getText());
 		}
 		i++;
 	}
-	result_data.texts.clear();
-	for (Textfield1 tx : window_data.txmap.values()) {
-		result_data.texts.add(tx.getText());
+	Result_data.texts.clear();
+	for (Textfield1 tx : Window_data.txmap.values()) {
+		Result_data.texts.add(tx.getText());
 	}
 	//この時点でtextsの中にtextfieldの新情報がぶち込まれる
 	show_result_below();
-	window_data.frm.setVisible(true);
-	result_data.result.clear();
-	window_data.resultlabellist.clear();
+	Window_data.frm.setVisible(true);
+	Result_data.result.clear();
+	Window_data.resultlabellist.clear();
 }
 
 public void rewrite_input2() {
@@ -135,7 +130,7 @@ public void rewrite_input2() {
 
 		try {
 			FileWriter rewriter = new FileWriter(input_file);
-			for (Entry<label2, Textfield1> entry : window_data.txmap.entrySet()) {
+			for (Entry<Label2, Textfield1> entry : Window_data.txmap.entrySet()) {
 					rewriter.write(entry.getValue().getText()+"\n");
 			}
 			rewriter.close();

@@ -10,8 +10,8 @@ import javax.swing.JScrollPane;
 public class Frontpanel extends Panel{
 	Read read = new Read();
 	String text = "";
-	label2 label = new label2(text);
-	label2 label2 = new label2("bbbbb");
+	Label2 label = new Label2(text);
+	Label2 label2 = new Label2("bbbbb");
 	BoxLayout layout = new BoxLayout(this, BoxLayout.Y_AXIS);
 	Textfield1 tb = new Textfield1("aa");
 	JScrollPane scrollpane = new JScrollPane(label);

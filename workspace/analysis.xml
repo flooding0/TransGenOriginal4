@@ -47,37 +47,284 @@
    <part-of-speech>verb</part-of-speech>
    <morpheme>自立</morpheme>
   </token>
-  <phrase id="10" type="noun">
+  <token id="10">
+   <word>こと</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>非自立</morpheme>
+  </token>
+  <token id="11">
+   <word>で</word>
+   <part-of-speech>auxiliary-verb</part-of-speech>
+   <morpheme>*</morpheme>
+  </token>
+  <token id="12">
+   <word>、</word>
+   <part-of-speech>punctuation</part-of-speech>
+   <morpheme>comma</morpheme>
+  </token>
+  <token id="13">
+   <word>適正</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>形容動詞語幹</morpheme>
+  </token>
+  <token id="14">
+   <word>に</word>
+   <part-of-speech>particle</part-of-speech>
+   <morpheme>格助詞</morpheme>
+  </token>
+  <token id="15">
+   <word>なる</word>
+   <part-of-speech>verb</part-of-speech>
+   <morpheme>自立</morpheme>
+  </token>
+  <token id="16">
+   <word>。</word>
+   <part-of-speech>punctuation</part-of-speech>
+   <morpheme>period</morpheme>
+  </token>
+  <phrase id="17" type="noun">
    <phrase id="1">水位</phrase>
    <phrase id="2">センサ</phrase>
   </phrase>
-  <phrase id="11" type="nominative">
+  <phrase id="18" type="nominative">
    <phrase id="2">センサ</phrase>
    <phrase id="3">は</phrase>
   </phrase>
-  <phrase id="12" type="nominative">
+  <phrase id="19" type="nominative">
    <phrase id="4">ユーザー</phrase>
    <phrase id="5">が</phrase>
   </phrase>
-  <phrase id="13" type="target">
+  <phrase id="20" type="target">
    <phrase id="6">水位</phrase>
    <phrase id="7">を</phrase>
   </phrase>
-  <phrase id="14" type="verb">
+  <phrase id="21" type="verb">
    <phrase id="8">調整</phrase>
    <phrase id="9">する</phrase>
   </phrase>
-  <phrase id="15" type="nominative">
-   <phrase id="10">水位センサ</phrase>
+  <phrase id="22" type="noun">
+   <phrase id="9">する</phrase>
+   <phrase id="10">こと</phrase>
+  </phrase>
+  <phrase id="23" type="with">
+   <phrase id="10">こと</phrase>
+   <phrase id="11">で</phrase>
+  </phrase>
+  <phrase id="24" type="target">
+   <phrase id="13">適正</phrase>
+   <phrase id="14">に</phrase>
+  </phrase>
+  <phrase id="25" type="trans">
+   <phrase id="15">なる</phrase>
+   <phrase id="16">。</phrase>
+  </phrase>
+  <phrase id="26" type="nominative">
+   <phrase id="17">水位センサ</phrase>
    <phrase id="3">は</phrase>
   </phrase>
-  <phrase id="16" type="targeted-action">
-   <phrase id="13">水位を</phrase>
-   <phrase id="14">調整する</phrase>
+  <phrase id="27" type="noun">
+   <phrase id="21">調整する</phrase>
+   <phrase id="10">こと</phrase>
   </phrase>
-  <phrase id="17" type="ab-verb">
-   <phrase id="12">ユーザーが</phrase>
-   <phrase id="16">水位を調整する</phrase>
+  <phrase id="28" type="with">
+   <phrase id="22">すること</phrase>
+   <phrase id="11">で</phrase>
+  </phrase>
+  <phrase id="29" type="with">
+   <phrase id="23">ことで</phrase>
+   <phrase id="12">、</phrase>
+  </phrase>
+  <phrase id="30" type="verb">
+   <phrase id="24">適正に</phrase>
+   <phrase id="15">なる</phrase>
+  </phrase>
+  <phrase id="31" type="targeted-action">
+   <phrase id="20">水位を</phrase>
+   <phrase id="21">調整する</phrase>
+  </phrase>
+  <phrase id="32" type="with">
+   <phrase id="27">調整すること</phrase>
+   <phrase id="11">で</phrase>
+  </phrase>
+  <phrase id="33" type="with">
+   <phrase id="28">することで</phrase>
+   <phrase id="12">、</phrase>
+  </phrase>
+  <phrase id="34" type="verb-end">
+   <phrase id="30">適正になる</phrase>
+   <phrase id="16">。</phrase>
+  </phrase>
+  <phrase id="35" type="noun">
+   <phrase id="31">水位を調整する</phrase>
+   <phrase id="10">こと</phrase>
+  </phrase>
+  <phrase id="36" type="with">
+   <phrase id="32">調整することで</phrase>
+   <phrase id="12">、</phrase>
+  </phrase>
+  <phrase id="37" type="target">
+   <phrase id="29">ことで、</phrase>
+   <phrase id="24">適正に</phrase>
+  </phrase>
+  <phrase id="38" type="ab-verb">
+   <phrase id="19">ユーザーが</phrase>
+   <phrase id="31">水位を調整する</phrase>
+  </phrase>
+  <phrase id="39" type="target">
+   <phrase id="20">水位を</phrase>
+   <phrase id="32">調整することで</phrase>
+  </phrase>
+  <phrase id="40" type="with">
+   <phrase id="35">水位を調整すること</phrase>
+   <phrase id="11">で</phrase>
+  </phrase>
+  <phrase id="41" type="target">
+   <phrase id="33">することで、</phrase>
+   <phrase id="24">適正に</phrase>
+  </phrase>
+  <phrase id="42" type="targeted-action">
+   <phrase id="29">ことで、</phrase>
+   <phrase id="30">適正になる</phrase>
+  </phrase>
+  <phrase id="43" type="verb">
+   <phrase id="37">ことで、適正に</phrase>
+   <phrase id="15">なる</phrase>
+  </phrase>
+  <phrase id="44" type="target">
+   <phrase id="20">水位を</phrase>
+   <phrase id="36">調整することで、</phrase>
+  </phrase>
+  <phrase id="45" type="target">
+   <phrase id="39">水位を調整することで</phrase>
+   <phrase id="12">、</phrase>
+  </phrase>
+  <phrase id="46" type="target">
+   <phrase id="36">調整することで、</phrase>
+   <phrase id="24">適正に</phrase>
+  </phrase>
+  <phrase id="47" type="verb">
+   <phrase id="9">する</phrase>
+   <phrase id="43">ことで、適正になる</phrase>
+  </phrase>
+  <phrase id="48" type="targeted-action">
+   <phrase id="33">することで、</phrase>
+   <phrase id="30">適正になる</phrase>
+  </phrase>
+  <phrase id="49" type="verb">
+   <phrase id="41">することで、適正に</phrase>
+   <phrase id="15">なる</phrase>
+  </phrase>
+  <phrase id="50" type="verb-end">
+   <phrase id="42">ことで、適正になる</phrase>
+   <phrase id="16">。</phrase>
+  </phrase>
+  <phrase id="51" type="verb">
+   <phrase id="8">調整</phrase>
+   <phrase id="47">することで、適正になる</phrase>
+  </phrase>
+  <phrase id="52" type="verb">
+   <phrase id="8">調整</phrase>
+   <phrase id="49">することで、適正になる</phrase>
+  </phrase>
+  <phrase id="53" type="verb">
+   <phrase id="21">調整する</phrase>
+   <phrase id="43">ことで、適正になる</phrase>
+  </phrase>
+  <phrase id="54" type="targeted-action">
+   <phrase id="36">調整することで、</phrase>
+   <phrase id="30">適正になる</phrase>
+  </phrase>
+  <phrase id="55" type="verb">
+   <phrase id="46">調整することで、適正に</phrase>
+   <phrase id="15">なる</phrase>
+  </phrase>
+  <phrase id="56" type="verb-end">
+   <phrase id="47">することで、適正になる</phrase>
+   <phrase id="16">。</phrase>
+  </phrase>
+  <phrase id="57" type="target" subinfo="並列">
+   <phrase id="20">水位を</phrase>
+   <phrase id="46">調整することで、適正に</phrase>
+  </phrase>
+  <phrase id="58" type="target" subinfo="並列">
+   <phrase id="44">水位を調整することで、</phrase>
+   <phrase id="24">適正に</phrase>
+  </phrase>
+  <phrase id="59" type="verb-end">
+   <phrase id="51">調整することで、適正になる</phrase>
+   <phrase id="16">。</phrase>
+  </phrase>
+  <phrase id="60" type="targeted-action">
+   <phrase id="20">水位を</phrase>
+   <phrase id="51">調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="61" type="targeted-action">
+   <phrase id="20">水位を</phrase>
+   <phrase id="52">調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="62" type="targeted-action">
+   <phrase id="20">水位を</phrase>
+   <phrase id="53">調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="63" type="targeted-action">
+   <phrase id="20">水位を</phrase>
+   <phrase id="55">調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="64" type="targeted-action">
+   <phrase id="44">水位を調整することで、</phrase>
+   <phrase id="30">適正になる</phrase>
+  </phrase>
+  <phrase id="65" type="verb">
+   <phrase id="57">水位を調整することで、適正に</phrase>
+   <phrase id="15">なる</phrase>
+  </phrase>
+  <phrase id="66" type="verb-end">
+   <phrase id="60">水位を調整することで、適正になる</phrase>
+   <phrase id="16">。</phrase>
+  </phrase>
+  <phrase id="67" type="ab-verb">
+   <phrase id="19">ユーザーが</phrase>
+   <phrase id="60">水位を調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="68" type="ab-verb">
+   <phrase id="19">ユーザーが</phrase>
+   <phrase id="61">水位を調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="69" type="ab-verb">
+   <phrase id="19">ユーザーが</phrase>
+   <phrase id="62">水位を調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="70" type="ab-verb">
+   <phrase id="19">ユーザーが</phrase>
+   <phrase id="63">水位を調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="71" type="ab-verb">
+   <phrase id="19">ユーザーが</phrase>
+   <phrase id="64">水位を調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="72" type="targeted-action">
+   <phrase id="19">ユーザーが</phrase>
+   <phrase id="65">水位を調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="73" type="verb-end">
+   <phrase id="67">ユーザーが水位を調整することで、適正になる</phrase>
+   <phrase id="16">。</phrase>
+  </phrase>
+  <phrase id="74" type="ab-verb">
+   <phrase id="18">センサは</phrase>
+   <phrase id="72">ユーザーが水位を調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="75" type="ab-verb">
+   <phrase id="26">水位センサは</phrase>
+   <phrase id="72">ユーザーが水位を調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="76" type="verb-end">
+   <phrase id="74">センサはユーザーが水位を調整することで、適正になる</phrase>
+   <phrase id="16">。</phrase>
+  </phrase>
+  <phrase id="77" type="verb-end">
+   <phrase id="75">水位センサはユーザーが水位を調整することで、適正になる</phrase>
+   <phrase id="16">。</phrase>
   </phrase>
  </sentence>
  <sentence id="2">
@@ -131,105 +378,181 @@
    <part-of-speech>verb</part-of-speech>
    <morpheme>自立</morpheme>
   </token>
-  <phrase id="11" type="nominative">
+  <token id="11">
+   <word>ば</word>
+   <part-of-speech>particle</part-of-speech>
+   <morpheme>接続助詞</morpheme>
+  </token>
+  <token id="12">
+   <word>、</word>
+   <part-of-speech>punctuation</part-of-speech>
+   <morpheme>comma</morpheme>
+  </token>
+  <token id="13">
+   <word>閉まる</word>
+   <part-of-speech>verb</part-of-speech>
+   <morpheme>自立</morpheme>
+  </token>
+  <token id="14">
+   <word>。</word>
+   <part-of-speech>punctuation</part-of-speech>
+   <morpheme>period</morpheme>
+  </token>
+  <phrase id="15" type="nominative">
    <phrase id="1">蓋</phrase>
    <phrase id="2">は</phrase>
   </phrase>
-  <phrase id="12" type="sentence-continue">
+  <phrase id="16" type="sentence-continue">
    <phrase id="3">開い</phrase>
    <phrase id="4">て</phrase>
   </phrase>
-  <phrase id="13" type="verb">
+  <phrase id="17" type="verb">
    <phrase id="4">て</phrase>
    <phrase id="5">いる</phrase>
   </phrase>
-  <phrase id="14" type="trigger-end">
+  <phrase id="18" type="trigger-end">
    <phrase id="5">いる</phrase>
    <phrase id="6">時</phrase>
   </phrase>
-  <phrase id="15" type="target">
+  <phrase id="19" type="target">
    <phrase id="6">時</phrase>
    <phrase id="7">に</phrase>
   </phrase>
-  <phrase id="16" type="nominative">
+  <phrase id="20" type="nominative">
    <phrase id="8">ユーザー</phrase>
    <phrase id="9">が</phrase>
   </phrase>
-  <phrase id="17" type="targeted-action">
-   <phrase id="11">蓋は</phrase>
-   <phrase id="3">開い</phrase>
-  </phrase>
-  <phrase id="18" type="verb">
-   <phrase id="3">開い</phrase>
-   <phrase id="13">ている</phrase>
-  </phrase>
-  <phrase id="19" type="trigger-end">
-   <phrase id="13">ている</phrase>
-   <phrase id="6">時</phrase>
-  </phrase>
-  <phrase id="20" type="trigger-end">
-   <phrase id="14">いる時</phrase>
-   <phrase id="7">に</phrase>
-  </phrase>
-  <phrase id="21" type="noun">
-   <phrase id="15">時に</phrase>
-   <phrase id="8">ユーザー</phrase>
-  </phrase>
-  <phrase id="22" type="targeted-action">
-   <phrase id="16">ユーザーが</phrase>
+  <phrase id="21" type="trigger-end">
    <phrase id="10">閉めれ</phrase>
+   <phrase id="11">ば</phrase>
   </phrase>
-  <phrase id="23" type="sentence-continue">
-   <phrase id="11">蓋は</phrase>
-   <phrase id="12">開いて</phrase>
+  <phrase id="22" type="verb-end">
+   <phrase id="13">閉まる</phrase>
+   <phrase id="14">。</phrase>
   </phrase>
-  <phrase id="24" type="trigger-end">
-   <phrase id="18">開いている</phrase>
-   <phrase id="6">時</phrase>
+  <phrase id="23" type="targeted-action">
+   <phrase id="15">蓋は</phrase>
+   <phrase id="3">開い</phrase>
+  </phrase>
+  <phrase id="24" type="verb">
+   <phrase id="3">開い</phrase>
+   <phrase id="17">ている</phrase>
   </phrase>
   <phrase id="25" type="trigger-end">
-   <phrase id="19">ている時</phrase>
-   <phrase id="7">に</phrase>
-  </phrase>
-  <phrase id="26" type="nominative">
-   <phrase id="21">時にユーザー</phrase>
-   <phrase id="9">が</phrase>
-  </phrase>
-  <phrase id="27" type="targeted-action">
-   <phrase id="11">蓋は</phrase>
-   <phrase id="18">開いている</phrase>
-  </phrase>
-  <phrase id="28" type="trigger-end">
-   <phrase id="24">開いている時</phrase>
-   <phrase id="7">に</phrase>
-  </phrase>
-  <phrase id="29" type="targeted-action">
-   <phrase id="26">時にユーザーが</phrase>
-   <phrase id="10">閉めれ</phrase>
-  </phrase>
-  <phrase id="30" type="trigger" subinfo="主格付き">
-   <phrase id="11">蓋は</phrase>
-   <phrase id="24">開いている時</phrase>
-  </phrase>
-  <phrase id="31" type="noun">
-   <phrase id="27">蓋は開いている</phrase>
+   <phrase id="17">ている</phrase>
    <phrase id="6">時</phrase>
   </phrase>
-  <phrase id="32" type="trigger" subinfo="主格付き">
-   <phrase id="11">蓋は</phrase>
-   <phrase id="28">開いている時に</phrase>
+  <phrase id="26" type="trigger-end">
+   <phrase id="18">いる時</phrase>
+   <phrase id="7">に</phrase>
   </phrase>
-  <phrase id="33" type="noun">
-   <phrase id="27">蓋は開いている</phrase>
-   <phrase id="21">時にユーザー</phrase>
+  <phrase id="27" type="noun">
+   <phrase id="19">時に</phrase>
+   <phrase id="8">ユーザー</phrase>
   </phrase>
-  <phrase id="34" type="nominative">
-   <phrase id="33">蓋は開いている時にユーザー</phrase>
+  <phrase id="28" type="targeted-action">
+   <phrase id="20">ユーザーが</phrase>
+   <phrase id="10">閉めれ</phrase>
+  </phrase>
+  <phrase id="29" type="trigger-end">
+   <phrase id="21">閉めれば</phrase>
+   <phrase id="12">、</phrase>
+  </phrase>
+  <phrase id="30" type="sentence-continue">
+   <phrase id="15">蓋は</phrase>
+   <phrase id="16">開いて</phrase>
+  </phrase>
+  <phrase id="31" type="trigger-end">
+   <phrase id="24">開いている</phrase>
+   <phrase id="6">時</phrase>
+  </phrase>
+  <phrase id="32" type="trigger-end">
+   <phrase id="25">ている時</phrase>
+   <phrase id="7">に</phrase>
+  </phrase>
+  <phrase id="33" type="nominative">
+   <phrase id="27">時にユーザー</phrase>
    <phrase id="9">が</phrase>
   </phrase>
+  <phrase id="34" type="trigger" subinfo="主格付き">
+   <phrase id="20">ユーザーが</phrase>
+   <phrase id="21">閉めれば</phrase>
+  </phrase>
   <phrase id="35" type="targeted-action">
-   <phrase id="34">蓋は開いている時にユーザーが</phrase>
+   <phrase id="15">蓋は</phrase>
+   <phrase id="24">開いている</phrase>
+  </phrase>
+  <phrase id="36" type="trigger-end">
+   <phrase id="31">開いている時</phrase>
+   <phrase id="7">に</phrase>
+  </phrase>
+  <phrase id="37" type="targeted-action">
+   <phrase id="33">時にユーザーが</phrase>
    <phrase id="10">閉めれ</phrase>
+  </phrase>
+  <phrase id="38" type="trigger" subinfo="主格付き">
+   <phrase id="20">ユーザーが</phrase>
+   <phrase id="29">閉めれば、</phrase>
+  </phrase>
+  <phrase id="39" type="trigger" subinfo="主格付き">
+   <phrase id="15">蓋は</phrase>
+   <phrase id="31">開いている時</phrase>
+  </phrase>
+  <phrase id="40" type="noun">
+   <phrase id="35">蓋は開いている</phrase>
+   <phrase id="6">時</phrase>
+  </phrase>
+  <phrase id="41" type="trigger" subinfo="主格付き">
+   <phrase id="33">時にユーザーが</phrase>
+   <phrase id="21">閉めれば</phrase>
+  </phrase>
+  <phrase id="42" type="trigger" subinfo="主格付き">
+   <phrase id="15">蓋は</phrase>
+   <phrase id="36">開いている時に</phrase>
+  </phrase>
+  <phrase id="43" type="trigger" subinfo="主格付き">
+   <phrase id="33">時にユーザーが</phrase>
+   <phrase id="29">閉めれば、</phrase>
+  </phrase>
+  <phrase id="44" type="sentence">
+   <phrase id="38">ユーザーが閉めれば、</phrase>
+   <phrase id="22">閉まる。</phrase>
+  </phrase>
+  <phrase id="45" type="noun">
+   <phrase id="35">蓋は開いている</phrase>
+   <phrase id="27">時にユーザー</phrase>
+  </phrase>
+  <phrase id="46" type="nominative">
+   <phrase id="45">蓋は開いている時にユーザー</phrase>
+   <phrase id="9">が</phrase>
+  </phrase>
+  <phrase id="47" type="sentence">
+   <phrase id="43">時にユーザーが閉めれば、</phrase>
+   <phrase id="22">閉まる。</phrase>
+  </phrase>
+  <phrase id="48" type="targeted-action">
+   <phrase id="46">蓋は開いている時にユーザーが</phrase>
+   <phrase id="10">閉めれ</phrase>
+  </phrase>
+  <phrase id="49" type="trigger" subinfo="連立">
+   <phrase id="42">蓋は開いている時に</phrase>
+   <phrase id="34">ユーザーが閉めれば</phrase>
+  </phrase>
+  <phrase id="50" type="trigger" subinfo="主格付き">
+   <phrase id="46">蓋は開いている時にユーザーが</phrase>
+   <phrase id="21">閉めれば</phrase>
+  </phrase>
+  <phrase id="51" type="trigger" subinfo="連立">
+   <phrase id="42">蓋は開いている時に</phrase>
+   <phrase id="38">ユーザーが閉めれば、</phrase>
+  </phrase>
+  <phrase id="52" type="trigger" subinfo="主格付き">
+   <phrase id="46">蓋は開いている時にユーザーが</phrase>
+   <phrase id="29">閉めれば、</phrase>
+  </phrase>
+  <phrase id="53" type="sentence">
+   <phrase id="51">蓋は開いている時にユーザーが閉めれば、</phrase>
+   <phrase id="22">閉まる。</phrase>
   </phrase>
  </sentence>
  <sentence id="3">

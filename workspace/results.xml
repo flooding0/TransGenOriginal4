@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <sentences>
+ <sentence id="2">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo phraseId="51"/>
+   <subinfo phraseId="42"/>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
  <sentence id="6">
   <variables/>
   <variable-values/>

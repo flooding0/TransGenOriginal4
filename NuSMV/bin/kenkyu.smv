@@ -1,6 +1,6 @@
 MODULE main
 VAR
- 	Controller : {supply, supply_stop, boil, can_use, cann_use, idle};
+ 	Controller : {supply, supply_stop, boil, can_use, cannot_use, idle};
  	Human : {kp_s, p_b, wait, i_o, u_o, c_r, o_r,r_s, on_slb, off_slb, adj_wl};
  	Water_level : {proper,not_proper};
  	Rid : {open, close};
@@ -21,11 +21,11 @@ ASSIGN
  		init(S_L):= on;
 
  		next(Controller) := case
- 			Human = kp_s & Temp = high & Controller != cann_use & Rid = close & S_L = off : supply;
+ 					
  			Controller = supply & Human = r_s : supply_stop;
  			Human = p_b  & Water_level = proper & Temp = low & Rid = close: boil;
  			Human = i_o  : can_use;
- 			Human = u_o  : cann_use;
+ 			Human = u_o  : cannot_use;
  			Human = c_r & Controller = idle & Water_level = proper : boil;
  			Controller = can_use : idle;
  			Controller = supply & Human != kp_s : supply_stop;
@@ -35,8 +35,8 @@ ASSIGN
  		next(Human) := case
 			Rid = open & Water_level= not_proper : adj_wl;
  			Human = kp_s : {kp_s, r_s};
- 			Controller != cann_use & Controller != supply: {kp_s, wait,p_b, u_o, c_r, o_r, on_slb, off_slb} ;
-			Controller = cann_use : {i_o, o_r, c_r};
+ 			Controller != cannot_use & Controller != supply: {kp_s, wait,p_b, u_o, c_r, o_r, on_slb, off_slb} ;
+			Controller = cannot_use : {i_o, o_r, c_r};
  			otherwise : Human;
  		esac;
 --***********************************************************************
