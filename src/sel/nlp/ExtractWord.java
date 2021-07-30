@@ -64,6 +64,9 @@ public class ExtractWord {
 	      List<Node> transitions = node.selectNodes("./transitions/transition");//transition
 	      List<Node> inneroperations = node.selectNodes("./inner-operations/inner-operation");//inner-operation
 	      Element variables = DocumentHelper.createElement("variables");
+
+	      Result_data result = new Result_data();
+
 	      for(Node var:varNodes) {
 	    	  String phraseid = ((Element)var).attribute("phraseId").getValue();
 	    	  Element variable = DocumentHelper.createElement("variable");
@@ -74,8 +77,11 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
+	    	  //1
 	    	  Result_data.result.add(word);
-	    	  Result_data.results.put("variable", word);
+	    	  //2
+	    	  Label2 label = new Label2("状態変数");
+	    	  Result_data.results.put(label, word);
 	    	  variable.addText(word);
 	    	  variables.add(variable);
 	      }
@@ -91,7 +97,8 @@ public class ExtractWord {
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
 	    	  Result_data.result.add(word);
-	    	  Result_data.results.put("variable_value", word);
+	    	  Label2 label = new Label2("変数値");
+	    	  Result_data.results.put(label, word);
 	    	  value.addText(word);
 	    	  variable_variables.add(value);
 	      }
@@ -108,7 +115,8 @@ public class ExtractWord {
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
 	    	  Result_data.result.add(word);
-	    	  Result_data.results.put("subinfos", word);
+	    	  Label2 label = new Label2("条件");
+	    	  Result_data.results.put(label, word);
 	    	  subinfoE.addText(word);
 	          set_of_subinfo.add(subinfoE);
 	      }
@@ -125,7 +133,8 @@ public class ExtractWord {
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
 	    	  Result_data.result.add(word);
-	    	  Result_data.results.put("transitions", word);
+	    	  Label2 label = new Label2("状態遷移");
+	    	  Result_data.results.put(label, word);
 	    	  TE.addText(word);
 	    	  transitionsE.add(TE);
 	      }
@@ -142,7 +151,8 @@ public class ExtractWord {
 	    		  word = word + tokenE.get(0).getText();
 		    	  }
 	    	  Result_data.result.add(word);
-	    	  Result_data.results.put("inneroperation", word);
+	    	  Label2 label = new Label2("内部動作");
+	    	  Result_data.results.put(label, word);
 	    	  IE.addText(word);
 	    	  inneroperationsE.add(IE);
 	      }

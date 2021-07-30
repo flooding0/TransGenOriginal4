@@ -8,6 +8,5 @@ import java.util.Map;
 public class Result_data {
 	static List<String> texts = new ArrayList<String>();
 	static List<String> result = new ArrayList<String>();
-	static Map<String,String> results= new LinkedHashMap<String, String>();
-	static LinkedHashMap<String,LinkedHashMap<Label2,Label2>> resultmap = new LinkedHashMap<String, LinkedHashMap<Label2,Label2>>();
+	static Map<Label2,String> results= new LinkedHashMap<Label2, String>();
 }

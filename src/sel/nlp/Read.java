@@ -97,8 +97,8 @@ public void show_result_below() {
 		Window_data.resultspase.add(resultlabel);
 	}
 	Window_data.frontpanel.add(Window_data.resultspase);
-	System.out.println(Result_data.result);
-	System.out.println(Result_data.results);
+//	System.out.println(Result_data.result);
+//	System.out.println(Result_data.results);
 }
 
 public void show_result2() {
@@ -122,6 +122,7 @@ public void extract_difference() {
 	show_result_below();
 	Window_data.frm.setVisible(true);
 	Result_data.result.clear();
+	Result_data.results.clear();
 	Window_data.resultlabellist.clear();
 }
 

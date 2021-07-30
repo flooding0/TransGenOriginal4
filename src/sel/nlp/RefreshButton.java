@@ -50,5 +50,6 @@ public class RefreshButton extends JPanel implements ActionListener{
 			extractword.extractword();
 			read.extract_difference();
 			System.out.println("Complete");
+			System.out.println("***************************************");
 		}
 }
