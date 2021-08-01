@@ -99,11 +99,17 @@ public void show_result_below() {
 	Window_data.frontpanel.add(Window_data.resultspase);
 //	System.out.println(Result_data.result);
 //	System.out.println(Result_data.results);
+
+//	for (String str : Resultdataset.resultmap.keySet()) {
+//		System.out.println(str + " : ");
+//		for (Label2 label : Resultdataset.resultmap.get(str).keySet()) {
+//			System.out.print(label.getText() + " : ");
+//			System.out.println(Resultdataset.resultmap.get(str).get(label).getText());
+//		}
+//	}
 }
 
-public void show_result2() {
 
-}
 
 public void extract_difference() {
 	//変更のある文を特定して、show_resultを呼び出してresultspaceを更新する

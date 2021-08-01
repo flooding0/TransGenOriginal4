@@ -65,7 +65,6 @@ public class ExtractWord {
 	      List<Node> inneroperations = node.selectNodes("./inner-operations/inner-operation");//inner-operation
 	      Element variables = DocumentHelper.createElement("variables");
 
-	      Result_data result = new Result_data();
 
 	      for(Node var:varNodes) {
 	    	  String phraseid = ((Element)var).attribute("phraseId").getValue();
@@ -77,11 +76,13 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
-	    	  //1
-	    	  Result_data.result.add(word);
-	    	  //2
-	    	  Label2 label = new Label2("状態変数");
-	    	  Result_data.results.put(label, word);
+//	    	  //1
+//	    	  Result_data.result.add(word);
+//	    	  //2
+//	    	  Label2 label_compornent = new Label2("状態変数");
+//	    	  Label2 label_word = new Label2(word);
+//	    	  Result_data.results.put(label_compornent, label_word);
+//	    	  Resultdataset.resultmap.put(Integer.valueOf(i).toString(), Result_data.results);
 	    	  variable.addText(word);
 	    	  variables.add(variable);
 	      }
@@ -96,9 +97,11 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
-	    	  Result_data.result.add(word);
-	    	  Label2 label = new Label2("変数値");
-	    	  Result_data.results.put(label, word);
+//	    	  Result_data.result.add(word);
+//	    	  Label2 label_compornent = new Label2("変数値");
+//	    	  Label2 label_word = new Label2(word);
+//	    	  Result_data.results.put(label_compornent, label_word);
+//	    	  Resultdataset.resultmap.put(Integer.valueOf(i).toString(), Result_data.results);
 	    	  value.addText(word);
 	    	  variable_variables.add(value);
 	      }
@@ -114,9 +117,11 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
-	    	  Result_data.result.add(word);
-	    	  Label2 label = new Label2("条件");
-	    	  Result_data.results.put(label, word);
+//	    	  Result_data.result.add(word);
+//	    	  Label2 label_compornent = new Label2("条件");
+//	    	  Label2 label_word = new Label2(word);
+//	    	  Result_data.results.put(label_compornent, label_word);
+//	    	  Resultdataset.resultmap.put(Integer.valueOf(i).toString(), Result_data.results);
 	    	  subinfoE.addText(word);
 	          set_of_subinfo.add(subinfoE);
 	      }
@@ -132,9 +137,11 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
-	    	  Result_data.result.add(word);
-	    	  Label2 label = new Label2("状態遷移");
-	    	  Result_data.results.put(label, word);
+//	    	  Result_data.result.add(word);
+//	    	  Label2 label_compornent = new Label2("状態遷移");
+//	    	  Label2 label_word = new Label2(word);
+//	    	  Result_data.results.put(label_compornent, label_word);
+//	    	  Resultdataset.resultmap.put(Integer.valueOf(i).toString(), Result_data.results);
 	    	  TE.addText(word);
 	    	  transitionsE.add(TE);
 	      }
@@ -150,9 +157,11 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 		    	  }
-	    	  Result_data.result.add(word);
-	    	  Label2 label = new Label2("内部動作");
-	    	  Result_data.results.put(label, word);
+//	    	  Result_data.result.add(word);
+//	    	  Label2 label_compornent = new Label2("内部動作");
+//	    	  Label2 label_word = new Label2(word);
+//	    	  Result_data.results.put(label_compornent, label_word);
+//	    	  Resultdataset.resultmap.put(Integer.valueOf(i).toString(), Result_data.results);
 	    	  IE.addText(word);
 	    	  inneroperationsE.add(IE);
 	      }
