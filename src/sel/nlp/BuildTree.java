@@ -77,6 +77,7 @@ public class BuildTree {
 
   void perform () {
     int n = sentences.size();
+    System.out.println(n+"個の文があるよ");
 //    System.err.println("文の数は = "+n);
 
    for (int i=0; i< n; i++) {//sentenceの数だけループ(i=1から始めてもよいがfor文の始まりの数が右往左往するのは可読性が低いので0に統一)

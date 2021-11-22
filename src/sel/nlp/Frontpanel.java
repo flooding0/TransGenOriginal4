@@ -1,7 +1,6 @@
 package sel.nlp;
 
 import java.awt.BorderLayout;
-import java.awt.Dimension;
 import java.awt.Panel;
 
 import javax.swing.BoxLayout;
@@ -20,19 +19,6 @@ public class Frontpanel extends Panel{
 		setLayout(layout);
 	}
 
-	public void create_textfield() {
-		this.add(tb);
-	}
-
-	public void create_label() {
-		label.setPreferredSize( new Dimension(500,40));
-		this.add(label);
-	}
-
-	public void create_label2() {
-		label2.setPreferredSize(new Dimension (100,100));
-		this.add(label2);
-	}
 
 	public void set_text(String text) {
 		this.text = this.text + text;

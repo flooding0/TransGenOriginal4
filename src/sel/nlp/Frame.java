@@ -11,7 +11,7 @@ public class Frame extends JFrame{
 
 	        // ウィンドウの閉じ方
 	        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		    setBounds(80, 50, 1200, 600);
+		    setBounds(80, 50, 1200, 2000);
 		    setTitle("試作");
 		    setBackground(Color.BLUE);
 	        ImageIcon icon = new ImageIcon("./oma.png");

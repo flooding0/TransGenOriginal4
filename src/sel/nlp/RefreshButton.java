@@ -29,7 +29,6 @@ public class RefreshButton extends JPanel implements ActionListener{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			System.out.println("push button");
 //			String batpath= "analyse2.bat";
 //			try {
 //				Runtime run = Runtime.getRuntime();

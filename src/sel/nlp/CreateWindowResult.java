@@ -1,11 +1,13 @@
 package sel.nlp;
 
 import java.io.File;
+import java.util.List;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
+import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
 
 import sel.nlp.xml.XMLBuilder;
@@ -50,9 +52,16 @@ public class CreateWindowResult {
 		  newDocument.add(newSentences);
 	  }
 
+	  public void perform() {
+		  List<Node> sentenceNodes = document.selectNodes("//sentence");
+		  for (int i = 0 ; sentenceNodes.size()<0 ; i++) {
+			  }
+		  }
+
 	  public void CWR() {
 		  CreateWindowResult cwr = new CreateWindowResult();
-		  String[] input = {"",""};
+		  String[] input = {"result2.xml"};
 		  cwr.init(input);
+		  cwr.perform();
 	  }
 }

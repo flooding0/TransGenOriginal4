@@ -1,7 +1,7 @@
 cls
 @echo off
 set PATH=%~dp0;%PATH%
-java -Dfile.encoding=UFT-8 -classpath jar/nlp.jar sel.nlp.Analyse input.txt analysis.xml
+java -Dfile.encoding=UFT-8 -classpath jar/nlp.jar sel.nlp.Analyse input3.txt analysis.xml
 java -Dfile.encoding=UFT-8 -classpath jar/nlp.jar sel.nlp.BuildTree analysis.xml tree.xml
 java -Dfile.encoding=UFT-8 -classpath jar/nlp.jar sel.nlp.Classify tree.xml classifiedtree.xml
 java -Dfile.encoding=UFT-8 -classpath jar/nlp.jar sel.nlp.Annotate classifiedtree.xml annotatedtree.xml
