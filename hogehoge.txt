@@ -1,0 +1,39 @@
+Buildfile: G:\workspace\kenkyu\nlp\workspace\TransGenOriginal4\build.xml
+
+init:
+
+compile:
+    [javac] Compiling 1 source file to G:\workspace\kenkyu\nlp\workspace\TransGenOriginal4\classes
+    [javac] コンパイラで例外が発生しました(1.8.0_202)。Bug Database (http://bugs.java.com)で重複がないかをご確認のうえ、Java bugレポート・ページ(http://bugreport.java.com)でJavaコンパイラに対するbugの登録をお願いいたします。レポートには、そのプログラムと下記の診断内容を含めてください。ご協力ありがとうございます。
+    [javac] java.lang.AssertionError: the -J flag should be caught by the launcher.
+    [javac] 	at com.sun.tools.javac.main.Option$20.process(Option.java:331)
+    [javac] 	at com.sun.tools.javac.main.Main.processArgs(Main.java:260)
+    [javac] 	at com.sun.tools.javac.main.Main.compile(Main.java:414)
+    [javac] 	at com.sun.tools.javac.main.Main.compile(Main.java:381)
+    [javac] 	at com.sun.tools.javac.main.Main.compile(Main.java:370)
+    [javac] 	at com.sun.tools.javac.main.Main.compile(Main.java:361)
+    [javac] 	at com.sun.tools.javac.Main.compile(Main.java:56)
+    [javac] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [javac] 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [javac] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [javac] 	at java.lang.reflect.Method.invoke(Method.java:498)
+    [javac] 	at org.apache.tools.ant.taskdefs.compilers.Javac13.execute(Javac13.java:58)
+    [javac] 	at org.apache.tools.ant.taskdefs.Javac.compile(Javac.java:1404)
+    [javac] 	at org.apache.tools.ant.taskdefs.Javac.execute(Javac.java:1130)
+    [javac] 	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:293)
+    [javac] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [javac] 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [javac] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [javac] 	at java.lang.reflect.Method.invoke(Method.java:498)
+    [javac] 	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+    [javac] 	at org.apache.tools.ant.Task.perform(Task.java:352)
+    [javac] 	at org.apache.tools.ant.Target.execute(Target.java:437)
+    [javac] 	at org.apache.tools.ant.Target.performTasks(Target.java:458)
+    [javac] 	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1406)
+    [javac] 	at org.apache.tools.ant.Project.executeTarget(Project.java:1377)
+    [javac] 	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+    [javac] 	at org.apache.tools.ant.Project.executeTargets(Project.java:1261)
+    [javac] 	at org.apache.tools.ant.Main.runBuild(Main.java:857)
+    [javac] 	at org.apache.tools.ant.Main.startAnt(Main.java:236)
+    [javac] 	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:287)
+    [javac] 	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:112)

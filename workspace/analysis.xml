@@ -3,6 +3,160 @@
 <sentences>
  <sentence id="1">
   <token id="1">
+   <word>ユーザー</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>一般</morpheme>
+  </token>
+  <token id="2">
+   <word>が</word>
+   <part-of-speech>particle</part-of-speech>
+   <morpheme>格助詞</morpheme>
+  </token>
+  <token id="3">
+   <word>ボタン</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>一般</morpheme>
+  </token>
+  <token id="4">
+   <word>を</word>
+   <part-of-speech>particle</part-of-speech>
+   <morpheme>格助詞</morpheme>
+  </token>
+  <token id="5">
+   <word>押す</word>
+   <part-of-speech>verb</part-of-speech>
+   <morpheme>自立</morpheme>
+  </token>
+  <token id="6">
+   <word>と</word>
+   <part-of-speech>particle</part-of-speech>
+   <morpheme>接続助詞</morpheme>
+  </token>
+  <token id="7">
+   <word>、</word>
+   <part-of-speech>punctuation</part-of-speech>
+   <morpheme>comma</morpheme>
+  </token>
+  <token id="8">
+   <word>給湯</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>一般</morpheme>
+  </token>
+  <token id="9">
+   <word>状態</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>一般</morpheme>
+  </token>
+  <token id="10">
+   <word>に</word>
+   <part-of-speech>particle</part-of-speech>
+   <morpheme>格助詞</morpheme>
+  </token>
+  <token id="11">
+   <word>なる</word>
+   <part-of-speech>verb</part-of-speech>
+   <morpheme>自立</morpheme>
+  </token>
+  <token id="12">
+   <word>。</word>
+   <part-of-speech>punctuation</part-of-speech>
+   <morpheme>period</morpheme>
+  </token>
+  <phrase id="13" type="nominative">
+   <phrase id="1">ユーザー</phrase>
+   <phrase id="2">が</phrase>
+  </phrase>
+  <phrase id="14" type="target">
+   <phrase id="3">ボタン</phrase>
+   <phrase id="4">を</phrase>
+  </phrase>
+  <phrase id="15" type="trigger-end">
+   <phrase id="5">押す</phrase>
+   <phrase id="6">と</phrase>
+  </phrase>
+  <phrase id="16" type="state-noun">
+   <phrase id="8">給湯</phrase>
+   <phrase id="9">状態</phrase>
+  </phrase>
+  <phrase id="17" type="target">
+   <phrase id="9">状態</phrase>
+   <phrase id="10">に</phrase>
+  </phrase>
+  <phrase id="18" type="trans">
+   <phrase id="11">なる</phrase>
+   <phrase id="12">。</phrase>
+  </phrase>
+  <phrase id="19" type="targeted-action">
+   <phrase id="14">ボタンを</phrase>
+   <phrase id="5">押す</phrase>
+  </phrase>
+  <phrase id="20" type="trigger-end">
+   <phrase id="15">押すと</phrase>
+   <phrase id="7">、</phrase>
+  </phrase>
+  <phrase id="21" type="state-set">
+   <phrase id="16">給湯状態</phrase>
+   <phrase id="10">に</phrase>
+  </phrase>
+  <phrase id="22" type="verb">
+   <phrase id="17">状態に</phrase>
+   <phrase id="11">なる</phrase>
+  </phrase>
+  <phrase id="23" type="trigger" subinfo="動作対象付き">
+   <phrase id="14">ボタンを</phrase>
+   <phrase id="15">押すと</phrase>
+  </phrase>
+  <phrase id="24" type="verb">
+   <phrase id="8">給湯</phrase>
+   <phrase id="22">状態になる</phrase>
+  </phrase>
+  <phrase id="25" type="verb-end">
+   <phrase id="22">状態になる</phrase>
+   <phrase id="12">。</phrase>
+  </phrase>
+  <phrase id="26" type="ab-verb">
+   <phrase id="13">ユーザーが</phrase>
+   <phrase id="19">ボタンを押す</phrase>
+  </phrase>
+  <phrase id="27" type="trigger" subinfo="動作対象付き">
+   <phrase id="14">ボタンを</phrase>
+   <phrase id="20">押すと、</phrase>
+  </phrase>
+  <phrase id="28" type="transaction">
+   <phrase id="21">給湯状態に</phrase>
+   <phrase id="18">なる。</phrase>
+  </phrase>
+  <phrase id="29" type="verb-end">
+   <phrase id="24">給湯状態になる</phrase>
+   <phrase id="12">。</phrase>
+  </phrase>
+  <phrase id="30" type="trigger" subinfo="主格付き">
+   <phrase id="13">ユーザーが</phrase>
+   <phrase id="23">ボタンを押すと</phrase>
+  </phrase>
+  <phrase id="31" type="trigger" subinfo="主格付き">
+   <phrase id="13">ユーザーが</phrase>
+   <phrase id="27">ボタンを押すと、</phrase>
+  </phrase>
+  <phrase id="32" type="sentence">
+   <phrase id="27">ボタンを押すと、</phrase>
+   <phrase id="28">給湯状態になる。</phrase>
+  </phrase>
+  <phrase id="33" type="sentence">
+   <phrase id="27">ボタンを押すと、</phrase>
+   <phrase id="29">給湯状態になる。</phrase>
+  </phrase>
+  <phrase id="34" type="sentence">
+   <phrase id="31">ユーザーがボタンを押すと、</phrase>
+   <phrase id="28">給湯状態になる。</phrase>
+  </phrase>
+  <phrase id="35" type="sentence">
+   <phrase id="31">ユーザーがボタンを押すと、</phrase>
+   <phrase id="29">給湯状態になる。</phrase>
+  </phrase>
+ </sentence>
+ <sentence id="2">
+  <token id="1">
    <word>水位</word>
    <part-of-speech>noun</part-of-speech>
    <morpheme>一般</morpheme>
@@ -47,192 +201,433 @@
    <part-of-speech>verb</part-of-speech>
    <morpheme>自立</morpheme>
   </token>
-  <phrase id="10" type="noun">
-   <phrase id="1">水位</phrase>
-   <phrase id="2">センサ</phrase>
-  </phrase>
-  <phrase id="11" type="nominative">
-   <phrase id="2">センサ</phrase>
-   <phrase id="3">は</phrase>
-  </phrase>
-  <phrase id="12" type="nominative">
-   <phrase id="4">ユーザー</phrase>
-   <phrase id="5">が</phrase>
-  </phrase>
-  <phrase id="13" type="target">
-   <phrase id="6">水位</phrase>
-   <phrase id="7">を</phrase>
-  </phrase>
-  <phrase id="14" type="verb">
-   <phrase id="8">調整</phrase>
-   <phrase id="9">する</phrase>
-  </phrase>
-  <phrase id="15" type="nominative">
-   <phrase id="10">水位センサ</phrase>
-   <phrase id="3">は</phrase>
-  </phrase>
-  <phrase id="16" type="targeted-action">
-   <phrase id="13">水位を</phrase>
-   <phrase id="14">調整する</phrase>
-  </phrase>
-  <phrase id="17" type="ab-verb">
-   <phrase id="12">ユーザーが</phrase>
-   <phrase id="16">水位を調整する</phrase>
-  </phrase>
- </sentence>
- <sentence id="2">
-  <token id="1">
-   <word>蓋</word>
-   <part-of-speech>noun</part-of-speech>
-   <morpheme>一般</morpheme>
-  </token>
-  <token id="2">
-   <word>は</word>
-   <part-of-speech>particle</part-of-speech>
-   <morpheme>係助詞</morpheme>
-  </token>
-  <token id="3">
-   <word>開い</word>
-   <part-of-speech>verb</part-of-speech>
-   <morpheme>自立</morpheme>
-  </token>
-  <token id="4">
-   <word>て</word>
-   <part-of-speech>particle</part-of-speech>
-   <morpheme>接続助詞</morpheme>
-  </token>
-  <token id="5">
-   <word>いる</word>
-   <part-of-speech>verb</part-of-speech>
-   <morpheme>非自立</morpheme>
-  </token>
-  <token id="6">
-   <word>時</word>
+  <token id="10">
+   <word>こと</word>
    <part-of-speech>noun</part-of-speech>
    <morpheme>非自立</morpheme>
   </token>
-  <token id="7">
+  <token id="11">
+   <word>で</word>
+   <part-of-speech>auxiliary-verb</part-of-speech>
+   <morpheme>*</morpheme>
+  </token>
+  <token id="12">
+   <word>、</word>
+   <part-of-speech>punctuation</part-of-speech>
+   <morpheme>comma</morpheme>
+  </token>
+  <token id="13">
+   <word>適正</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>形容動詞語幹</morpheme>
+  </token>
+  <token id="14">
    <word>に</word>
    <part-of-speech>particle</part-of-speech>
    <morpheme>格助詞</morpheme>
   </token>
-  <token id="8">
-   <word>ユーザー</word>
-   <part-of-speech>noun</part-of-speech>
-   <morpheme>一般</morpheme>
-  </token>
-  <token id="9">
-   <word>が</word>
-   <part-of-speech>particle</part-of-speech>
-   <morpheme>格助詞</morpheme>
-  </token>
-  <token id="10">
-   <word>閉めれ</word>
+  <token id="15">
+   <word>なる</word>
    <part-of-speech>verb</part-of-speech>
    <morpheme>自立</morpheme>
   </token>
-  <phrase id="11" type="nominative">
-   <phrase id="1">蓋</phrase>
-   <phrase id="2">は</phrase>
+  <token id="16">
+   <word>。</word>
+   <part-of-speech>punctuation</part-of-speech>
+   <morpheme>period</morpheme>
+  </token>
+  <phrase id="17" type="noun">
+   <phrase id="1">水位</phrase>
+   <phrase id="2">センサ</phrase>
   </phrase>
-  <phrase id="12" type="sentence-continue">
-   <phrase id="3">開い</phrase>
-   <phrase id="4">て</phrase>
+  <phrase id="18" type="nominative">
+   <phrase id="2">センサ</phrase>
+   <phrase id="3">は</phrase>
   </phrase>
-  <phrase id="13" type="verb">
-   <phrase id="4">て</phrase>
-   <phrase id="5">いる</phrase>
+  <phrase id="19" type="nominative">
+   <phrase id="4">ユーザー</phrase>
+   <phrase id="5">が</phrase>
   </phrase>
-  <phrase id="14" type="trigger-end">
-   <phrase id="5">いる</phrase>
-   <phrase id="6">時</phrase>
+  <phrase id="20" type="target">
+   <phrase id="6">水位</phrase>
+   <phrase id="7">を</phrase>
   </phrase>
-  <phrase id="15" type="target">
-   <phrase id="6">時</phrase>
-   <phrase id="7">に</phrase>
+  <phrase id="21" type="verb">
+   <phrase id="8">調整</phrase>
+   <phrase id="9">する</phrase>
   </phrase>
-  <phrase id="16" type="nominative">
-   <phrase id="8">ユーザー</phrase>
-   <phrase id="9">が</phrase>
+  <phrase id="22" type="noun">
+   <phrase id="9">する</phrase>
+   <phrase id="10">こと</phrase>
   </phrase>
-  <phrase id="17" type="targeted-action">
-   <phrase id="11">蓋は</phrase>
-   <phrase id="3">開い</phrase>
+  <phrase id="23" type="with">
+   <phrase id="10">こと</phrase>
+   <phrase id="11">で</phrase>
   </phrase>
-  <phrase id="18" type="verb">
-   <phrase id="3">開い</phrase>
-   <phrase id="13">ている</phrase>
+  <phrase id="24" type="target">
+   <phrase id="13">適正</phrase>
+   <phrase id="14">に</phrase>
   </phrase>
-  <phrase id="19" type="trigger-end">
-   <phrase id="13">ている</phrase>
-   <phrase id="6">時</phrase>
-  </phrase>
-  <phrase id="20" type="trigger-end">
-   <phrase id="14">いる時</phrase>
-   <phrase id="7">に</phrase>
-  </phrase>
-  <phrase id="21" type="noun">
-   <phrase id="15">時に</phrase>
-   <phrase id="8">ユーザー</phrase>
-  </phrase>
-  <phrase id="22" type="targeted-action">
-   <phrase id="16">ユーザーが</phrase>
-   <phrase id="10">閉めれ</phrase>
-  </phrase>
-  <phrase id="23" type="sentence-continue">
-   <phrase id="11">蓋は</phrase>
-   <phrase id="12">開いて</phrase>
-  </phrase>
-  <phrase id="24" type="trigger-end">
-   <phrase id="18">開いている</phrase>
-   <phrase id="6">時</phrase>
-  </phrase>
-  <phrase id="25" type="trigger-end">
-   <phrase id="19">ている時</phrase>
-   <phrase id="7">に</phrase>
+  <phrase id="25" type="trans">
+   <phrase id="15">なる</phrase>
+   <phrase id="16">。</phrase>
   </phrase>
   <phrase id="26" type="nominative">
-   <phrase id="21">時にユーザー</phrase>
-   <phrase id="9">が</phrase>
+   <phrase id="17">水位センサ</phrase>
+   <phrase id="3">は</phrase>
   </phrase>
-  <phrase id="27" type="targeted-action">
-   <phrase id="11">蓋は</phrase>
-   <phrase id="18">開いている</phrase>
+  <phrase id="27" type="noun">
+   <phrase id="21">調整する</phrase>
+   <phrase id="10">こと</phrase>
   </phrase>
-  <phrase id="28" type="trigger-end">
-   <phrase id="24">開いている時</phrase>
-   <phrase id="7">に</phrase>
+  <phrase id="28" type="with">
+   <phrase id="22">すること</phrase>
+   <phrase id="11">で</phrase>
   </phrase>
-  <phrase id="29" type="targeted-action">
-   <phrase id="26">時にユーザーが</phrase>
-   <phrase id="10">閉めれ</phrase>
+  <phrase id="29" type="with">
+   <phrase id="23">ことで</phrase>
+   <phrase id="12">、</phrase>
   </phrase>
-  <phrase id="30" type="trigger" subinfo="主格付き">
-   <phrase id="11">蓋は</phrase>
-   <phrase id="24">開いている時</phrase>
+  <phrase id="30" type="verb">
+   <phrase id="24">適正に</phrase>
+   <phrase id="15">なる</phrase>
   </phrase>
-  <phrase id="31" type="noun">
-   <phrase id="27">蓋は開いている</phrase>
-   <phrase id="6">時</phrase>
+  <phrase id="31" type="targeted-action">
+   <phrase id="20">水位を</phrase>
+   <phrase id="21">調整する</phrase>
   </phrase>
-  <phrase id="32" type="trigger" subinfo="主格付き">
-   <phrase id="11">蓋は</phrase>
-   <phrase id="28">開いている時に</phrase>
+  <phrase id="32" type="with">
+   <phrase id="27">調整すること</phrase>
+   <phrase id="11">で</phrase>
   </phrase>
-  <phrase id="33" type="noun">
-   <phrase id="27">蓋は開いている</phrase>
-   <phrase id="21">時にユーザー</phrase>
+  <phrase id="33" type="with">
+   <phrase id="28">することで</phrase>
+   <phrase id="12">、</phrase>
   </phrase>
-  <phrase id="34" type="nominative">
-   <phrase id="33">蓋は開いている時にユーザー</phrase>
-   <phrase id="9">が</phrase>
+  <phrase id="34" type="verb-end">
+   <phrase id="30">適正になる</phrase>
+   <phrase id="16">。</phrase>
   </phrase>
-  <phrase id="35" type="targeted-action">
-   <phrase id="34">蓋は開いている時にユーザーが</phrase>
-   <phrase id="10">閉めれ</phrase>
+  <phrase id="35" type="noun">
+   <phrase id="31">水位を調整する</phrase>
+   <phrase id="10">こと</phrase>
+  </phrase>
+  <phrase id="36" type="with">
+   <phrase id="32">調整することで</phrase>
+   <phrase id="12">、</phrase>
+  </phrase>
+  <phrase id="37" type="target">
+   <phrase id="29">ことで、</phrase>
+   <phrase id="24">適正に</phrase>
+  </phrase>
+  <phrase id="38" type="ab-verb">
+   <phrase id="19">ユーザーが</phrase>
+   <phrase id="31">水位を調整する</phrase>
+  </phrase>
+  <phrase id="39" type="target">
+   <phrase id="20">水位を</phrase>
+   <phrase id="32">調整することで</phrase>
+  </phrase>
+  <phrase id="40" type="with">
+   <phrase id="35">水位を調整すること</phrase>
+   <phrase id="11">で</phrase>
+  </phrase>
+  <phrase id="41" type="target">
+   <phrase id="33">することで、</phrase>
+   <phrase id="24">適正に</phrase>
+  </phrase>
+  <phrase id="42" type="targeted-action">
+   <phrase id="29">ことで、</phrase>
+   <phrase id="30">適正になる</phrase>
+  </phrase>
+  <phrase id="43" type="verb">
+   <phrase id="37">ことで、適正に</phrase>
+   <phrase id="15">なる</phrase>
+  </phrase>
+  <phrase id="44" type="target">
+   <phrase id="20">水位を</phrase>
+   <phrase id="36">調整することで、</phrase>
+  </phrase>
+  <phrase id="45" type="target">
+   <phrase id="39">水位を調整することで</phrase>
+   <phrase id="12">、</phrase>
+  </phrase>
+  <phrase id="46" type="target">
+   <phrase id="36">調整することで、</phrase>
+   <phrase id="24">適正に</phrase>
+  </phrase>
+  <phrase id="47" type="verb">
+   <phrase id="9">する</phrase>
+   <phrase id="43">ことで、適正になる</phrase>
+  </phrase>
+  <phrase id="48" type="targeted-action">
+   <phrase id="33">することで、</phrase>
+   <phrase id="30">適正になる</phrase>
+  </phrase>
+  <phrase id="49" type="verb">
+   <phrase id="41">することで、適正に</phrase>
+   <phrase id="15">なる</phrase>
+  </phrase>
+  <phrase id="50" type="verb-end">
+   <phrase id="42">ことで、適正になる</phrase>
+   <phrase id="16">。</phrase>
+  </phrase>
+  <phrase id="51" type="verb">
+   <phrase id="8">調整</phrase>
+   <phrase id="47">することで、適正になる</phrase>
+  </phrase>
+  <phrase id="52" type="verb">
+   <phrase id="8">調整</phrase>
+   <phrase id="49">することで、適正になる</phrase>
+  </phrase>
+  <phrase id="53" type="verb">
+   <phrase id="21">調整する</phrase>
+   <phrase id="43">ことで、適正になる</phrase>
+  </phrase>
+  <phrase id="54" type="targeted-action">
+   <phrase id="36">調整することで、</phrase>
+   <phrase id="30">適正になる</phrase>
+  </phrase>
+  <phrase id="55" type="verb">
+   <phrase id="46">調整することで、適正に</phrase>
+   <phrase id="15">なる</phrase>
+  </phrase>
+  <phrase id="56" type="verb-end">
+   <phrase id="47">することで、適正になる</phrase>
+   <phrase id="16">。</phrase>
+  </phrase>
+  <phrase id="57" type="target" subinfo="並列">
+   <phrase id="20">水位を</phrase>
+   <phrase id="46">調整することで、適正に</phrase>
+  </phrase>
+  <phrase id="58" type="target" subinfo="並列">
+   <phrase id="44">水位を調整することで、</phrase>
+   <phrase id="24">適正に</phrase>
+  </phrase>
+  <phrase id="59" type="verb-end">
+   <phrase id="51">調整することで、適正になる</phrase>
+   <phrase id="16">。</phrase>
+  </phrase>
+  <phrase id="60" type="targeted-action">
+   <phrase id="20">水位を</phrase>
+   <phrase id="51">調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="61" type="targeted-action">
+   <phrase id="20">水位を</phrase>
+   <phrase id="52">調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="62" type="targeted-action">
+   <phrase id="20">水位を</phrase>
+   <phrase id="53">調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="63" type="targeted-action">
+   <phrase id="20">水位を</phrase>
+   <phrase id="55">調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="64" type="targeted-action">
+   <phrase id="44">水位を調整することで、</phrase>
+   <phrase id="30">適正になる</phrase>
+  </phrase>
+  <phrase id="65" type="verb">
+   <phrase id="57">水位を調整することで、適正に</phrase>
+   <phrase id="15">なる</phrase>
+  </phrase>
+  <phrase id="66" type="verb-end">
+   <phrase id="60">水位を調整することで、適正になる</phrase>
+   <phrase id="16">。</phrase>
+  </phrase>
+  <phrase id="67" type="ab-verb">
+   <phrase id="19">ユーザーが</phrase>
+   <phrase id="60">水位を調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="68" type="ab-verb">
+   <phrase id="19">ユーザーが</phrase>
+   <phrase id="61">水位を調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="69" type="ab-verb">
+   <phrase id="19">ユーザーが</phrase>
+   <phrase id="62">水位を調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="70" type="ab-verb">
+   <phrase id="19">ユーザーが</phrase>
+   <phrase id="63">水位を調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="71" type="ab-verb">
+   <phrase id="19">ユーザーが</phrase>
+   <phrase id="64">水位を調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="72" type="targeted-action">
+   <phrase id="19">ユーザーが</phrase>
+   <phrase id="65">水位を調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="73" type="verb-end">
+   <phrase id="67">ユーザーが水位を調整することで、適正になる</phrase>
+   <phrase id="16">。</phrase>
+  </phrase>
+  <phrase id="74" type="ab-verb">
+   <phrase id="18">センサは</phrase>
+   <phrase id="72">ユーザーが水位を調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="75" type="ab-verb">
+   <phrase id="26">水位センサは</phrase>
+   <phrase id="72">ユーザーが水位を調整することで、適正になる</phrase>
+  </phrase>
+  <phrase id="76" type="verb-end">
+   <phrase id="74">センサはユーザーが水位を調整することで、適正になる</phrase>
+   <phrase id="16">。</phrase>
+  </phrase>
+  <phrase id="77" type="verb-end">
+   <phrase id="75">水位センサはユーザーが水位を調整することで、適正になる</phrase>
+   <phrase id="16">。</phrase>
   </phrase>
  </sentence>
  <sentence id="3">
+  <token id="1">
+   <word>給湯</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>一般</morpheme>
+  </token>
+  <token id="2">
+   <word>ボタン</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>一般</morpheme>
+  </token>
+  <token id="3">
+   <word>を</word>
+   <part-of-speech>particle</part-of-speech>
+   <morpheme>格助詞</morpheme>
+  </token>
+  <token id="4">
+   <word>押す</word>
+   <part-of-speech>verb</part-of-speech>
+   <morpheme>自立</morpheme>
+  </token>
+  <token id="5">
+   <word>と</word>
+   <part-of-speech>particle</part-of-speech>
+   <morpheme>接続助詞</morpheme>
+  </token>
+  <token id="6">
+   <word>給湯</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>一般</morpheme>
+  </token>
+  <token id="7">
+   <word>さ</word>
+   <part-of-speech>verb</part-of-speech>
+   <morpheme>自立</morpheme>
+  </token>
+  <token id="8">
+   <word>れる</word>
+   <part-of-speech>verb</part-of-speech>
+   <morpheme>接尾</morpheme>
+  </token>
+  <phrase id="9" type="noun">
+   <phrase id="1">給湯</phrase>
+   <phrase id="2">ボタン</phrase>
+  </phrase>
+  <phrase id="10" type="target">
+   <phrase id="2">ボタン</phrase>
+   <phrase id="3">を</phrase>
+  </phrase>
+  <phrase id="11" type="trigger-end">
+   <phrase id="4">押す</phrase>
+   <phrase id="5">と</phrase>
+  </phrase>
+  <phrase id="12" type="verb">
+   <phrase id="6">給湯</phrase>
+   <phrase id="7">さ</phrase>
+  </phrase>
+  <phrase id="13" type="passive">
+   <phrase id="7">さ</phrase>
+   <phrase id="8">れる</phrase>
+  </phrase>
+  <phrase id="14" type="target">
+   <phrase id="9">給湯ボタン</phrase>
+   <phrase id="3">を</phrase>
+  </phrase>
+  <phrase id="15" type="targeted-action">
+   <phrase id="10">ボタンを</phrase>
+   <phrase id="4">押す</phrase>
+  </phrase>
+  <phrase id="16" type="verb">
+   <phrase id="5">と</phrase>
+   <phrase id="12">給湯さ</phrase>
+  </phrase>
+  <phrase id="17" type="verb">
+   <phrase id="12">給湯さ</phrase>
+   <phrase id="8">れる</phrase>
+  </phrase>
+  <phrase id="18" type="targeted-action">
+   <phrase id="14">給湯ボタンを</phrase>
+   <phrase id="4">押す</phrase>
+  </phrase>
+  <phrase id="19" type="trigger" subinfo="動作対象付き">
+   <phrase id="10">ボタンを</phrase>
+   <phrase id="11">押すと</phrase>
+  </phrase>
+  <phrase id="20" type="verb">
+   <phrase id="4">押す</phrase>
+   <phrase id="16">と給湯さ</phrase>
+  </phrase>
+  <phrase id="21" type="verb">
+   <phrase id="5">と</phrase>
+   <phrase id="17">給湯される</phrase>
+  </phrase>
+  <phrase id="22" type="verb">
+   <phrase id="16">と給湯さ</phrase>
+   <phrase id="8">れる</phrase>
+  </phrase>
+  <phrase id="23" type="trigger" subinfo="動作対象付き">
+   <phrase id="14">給湯ボタンを</phrase>
+   <phrase id="11">押すと</phrase>
+  </phrase>
+  <phrase id="24" type="verb">
+   <phrase id="4">押す</phrase>
+   <phrase id="21">と給湯される</phrase>
+  </phrase>
+  <phrase id="25" type="verb">
+   <phrase id="4">押す</phrase>
+   <phrase id="22">と給湯される</phrase>
+  </phrase>
+  <phrase id="26" type="verb">
+   <phrase id="20">押すと給湯さ</phrase>
+   <phrase id="8">れる</phrase>
+  </phrase>
+  <phrase id="27" type="targeted-action">
+   <phrase id="10">ボタンを</phrase>
+   <phrase id="20">押すと給湯さ</phrase>
+  </phrase>
+  <phrase id="28" type="targeted-action">
+   <phrase id="14">給湯ボタンを</phrase>
+   <phrase id="20">押すと給湯さ</phrase>
+  </phrase>
+  <phrase id="29" type="targeted-action">
+   <phrase id="10">ボタンを</phrase>
+   <phrase id="24">押すと給湯される</phrase>
+  </phrase>
+  <phrase id="30" type="targeted-action">
+   <phrase id="10">ボタンを</phrase>
+   <phrase id="25">押すと給湯される</phrase>
+  </phrase>
+  <phrase id="31" type="targeted-action">
+   <phrase id="10">ボタンを</phrase>
+   <phrase id="26">押すと給湯される</phrase>
+  </phrase>
+  <phrase id="32" type="targeted-action">
+   <phrase id="14">給湯ボタンを</phrase>
+   <phrase id="24">押すと給湯される</phrase>
+  </phrase>
+  <phrase id="33" type="targeted-action">
+   <phrase id="14">給湯ボタンを</phrase>
+   <phrase id="25">押すと給湯される</phrase>
+  </phrase>
+  <phrase id="34" type="targeted-action">
+   <phrase id="14">給湯ボタンを</phrase>
+   <phrase id="26">押すと給湯される</phrase>
+  </phrase>
+ </sentence>
+ <sentence id="4">
   <token id="1">
    <word>閉じ</word>
    <part-of-speech>verb</part-of-speech>
@@ -482,94 +877,153 @@
    <phrase id="36">開く。</phrase>
   </phrase>
  </sentence>
- <sentence id="4">
+ <sentence id="5">
   <token id="1">
-   <word>水温</word>
+   <word>給湯</word>
    <part-of-speech>noun</part-of-speech>
    <morpheme>一般</morpheme>
   </token>
   <token id="2">
-   <word>は</word>
-   <part-of-speech>particle</part-of-speech>
-   <morpheme>係助詞</morpheme>
-  </token>
-  <token id="3">
-   <word>ポット</word>
+   <word>ボタン</word>
    <part-of-speech>noun</part-of-speech>
    <morpheme>一般</morpheme>
   </token>
-  <token id="4">
-   <word>が</word>
+  <token id="3">
+   <word>を</word>
    <part-of-speech>particle</part-of-speech>
    <morpheme>格助詞</morpheme>
   </token>
-  <token id="5">
-   <word>沸騰</word>
-   <part-of-speech>noun</part-of-speech>
-   <morpheme>サ変接続</morpheme>
-  </token>
-  <token id="6">
-   <word>中</word>
-   <part-of-speech>noun</part-of-speech>
-   <morpheme>接尾</morpheme>
-  </token>
-  <token id="7">
-   <word>で</word>
-   <part-of-speech>auxiliary-verb</part-of-speech>
-   <morpheme>*</morpheme>
-  </token>
-  <token id="8">
-   <word>あれ</word>
-   <part-of-speech>auxiliary-verb</part-of-speech>
-   <morpheme>*</morpheme>
-  </token>
-  <token id="9">
-   <word>ば</word>
-   <part-of-speech>particle</part-of-speech>
-   <morpheme>接続助詞</morpheme>
-  </token>
-  <token id="10">
-   <word>、</word>
-   <part-of-speech>punctuation</part-of-speech>
-   <morpheme>comma</morpheme>
-  </token>
-  <token id="11">
-   <word>高く</word>
-   <part-of-speech>adjective</part-of-speech>
-   <morpheme>自立</morpheme>
-  </token>
-  <token id="12">
-   <word>なる</word>
+  <token id="4">
+   <word>押す</word>
    <part-of-speech>verb</part-of-speech>
    <morpheme>自立</morpheme>
   </token>
-  <token id="13">
-   <word>。</word>
-   <part-of-speech>punctuation</part-of-speech>
-   <morpheme>period</morpheme>
+  <token id="5">
+   <word>と</word>
+   <part-of-speech>particle</part-of-speech>
+   <morpheme>接続助詞</morpheme>
   </token>
-  <phrase id="14" type="nominative">
-   <phrase id="1">水温</phrase>
-   <phrase id="2">は</phrase>
+  <token id="6">
+   <word>給湯</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>一般</morpheme>
+  </token>
+  <token id="7">
+   <word>さ</word>
+   <part-of-speech>verb</part-of-speech>
+   <morpheme>自立</morpheme>
+  </token>
+  <token id="8">
+   <word>れる</word>
+   <part-of-speech>verb</part-of-speech>
+   <morpheme>接尾</morpheme>
+  </token>
+  <phrase id="9" type="noun">
+   <phrase id="1">給湯</phrase>
+   <phrase id="2">ボタン</phrase>
   </phrase>
-  <phrase id="15" type="nominative">
-   <phrase id="3">ポット</phrase>
-   <phrase id="4">が</phrase>
+  <phrase id="10" type="target">
+   <phrase id="2">ボタン</phrase>
+   <phrase id="3">を</phrase>
   </phrase>
-  <phrase id="16" type="state-noun">
-   <phrase id="5">沸騰</phrase>
-   <phrase id="6">中</phrase>
+  <phrase id="11" type="trigger-end">
+   <phrase id="4">押す</phrase>
+   <phrase id="5">と</phrase>
   </phrase>
-  <phrase id="17" type="with">
-   <phrase id="6">中</phrase>
-   <phrase id="7">で</phrase>
+  <phrase id="12" type="verb">
+   <phrase id="6">給湯</phrase>
+   <phrase id="7">さ</phrase>
   </phrase>
-  <phrase id="18" type="trans">
-   <phrase id="12">なる</phrase>
-   <phrase id="13">。</phrase>
+  <phrase id="13" type="passive">
+   <phrase id="7">さ</phrase>
+   <phrase id="8">れる</phrase>
+  </phrase>
+  <phrase id="14" type="target">
+   <phrase id="9">給湯ボタン</phrase>
+   <phrase id="3">を</phrase>
+  </phrase>
+  <phrase id="15" type="targeted-action">
+   <phrase id="10">ボタンを</phrase>
+   <phrase id="4">押す</phrase>
+  </phrase>
+  <phrase id="16" type="verb">
+   <phrase id="5">と</phrase>
+   <phrase id="12">給湯さ</phrase>
+  </phrase>
+  <phrase id="17" type="verb">
+   <phrase id="12">給湯さ</phrase>
+   <phrase id="8">れる</phrase>
+  </phrase>
+  <phrase id="18" type="targeted-action">
+   <phrase id="14">給湯ボタンを</phrase>
+   <phrase id="4">押す</phrase>
+  </phrase>
+  <phrase id="19" type="trigger" subinfo="動作対象付き">
+   <phrase id="10">ボタンを</phrase>
+   <phrase id="11">押すと</phrase>
+  </phrase>
+  <phrase id="20" type="verb">
+   <phrase id="4">押す</phrase>
+   <phrase id="16">と給湯さ</phrase>
+  </phrase>
+  <phrase id="21" type="verb">
+   <phrase id="5">と</phrase>
+   <phrase id="17">給湯される</phrase>
+  </phrase>
+  <phrase id="22" type="verb">
+   <phrase id="16">と給湯さ</phrase>
+   <phrase id="8">れる</phrase>
+  </phrase>
+  <phrase id="23" type="trigger" subinfo="動作対象付き">
+   <phrase id="14">給湯ボタンを</phrase>
+   <phrase id="11">押すと</phrase>
+  </phrase>
+  <phrase id="24" type="verb">
+   <phrase id="4">押す</phrase>
+   <phrase id="21">と給湯される</phrase>
+  </phrase>
+  <phrase id="25" type="verb">
+   <phrase id="4">押す</phrase>
+   <phrase id="22">と給湯される</phrase>
+  </phrase>
+  <phrase id="26" type="verb">
+   <phrase id="20">押すと給湯さ</phrase>
+   <phrase id="8">れる</phrase>
+  </phrase>
+  <phrase id="27" type="targeted-action">
+   <phrase id="10">ボタンを</phrase>
+   <phrase id="20">押すと給湯さ</phrase>
+  </phrase>
+  <phrase id="28" type="targeted-action">
+   <phrase id="14">給湯ボタンを</phrase>
+   <phrase id="20">押すと給湯さ</phrase>
+  </phrase>
+  <phrase id="29" type="targeted-action">
+   <phrase id="10">ボタンを</phrase>
+   <phrase id="24">押すと給湯される</phrase>
+  </phrase>
+  <phrase id="30" type="targeted-action">
+   <phrase id="10">ボタンを</phrase>
+   <phrase id="25">押すと給湯される</phrase>
+  </phrase>
+  <phrase id="31" type="targeted-action">
+   <phrase id="10">ボタンを</phrase>
+   <phrase id="26">押すと給湯される</phrase>
+  </phrase>
+  <phrase id="32" type="targeted-action">
+   <phrase id="14">給湯ボタンを</phrase>
+   <phrase id="24">押すと給湯される</phrase>
+  </phrase>
+  <phrase id="33" type="targeted-action">
+   <phrase id="14">給湯ボタンを</phrase>
+   <phrase id="25">押すと給湯される</phrase>
+  </phrase>
+  <phrase id="34" type="targeted-action">
+   <phrase id="14">給湯ボタンを</phrase>
+   <phrase id="26">押すと給湯される</phrase>
   </phrase>
  </sentence>
- <sentence id="5">
+ <sentence id="6">
   <token id="1">
    <word>ユーザー</word>
    <part-of-speech>noun</part-of-speech>
@@ -670,7 +1124,7 @@
    <phrase id="19">なれば、</phrase>
   </phrase>
  </sentence>
- <sentence id="6">
+ <sentence id="7">
   <token id="1">
    <word>セーフティ</word>
    <part-of-speech>noun</part-of-speech>
@@ -876,7 +1330,7 @@
    <phrase id="31">オンになる。</phrase>
   </phrase>
  </sentence>
- <sentence id="7">
+ <sentence id="8">
   <token id="1">
    <word>ユーザー</word>
    <part-of-speech>noun</part-of-speech>
@@ -1026,7 +1480,7 @@
    <phrase id="25">オンになる。</phrase>
   </phrase>
  </sentence>
- <sentence id="8">
+ <sentence id="9">
   <token id="1">
    <word>ユーザー</word>
    <part-of-speech>noun</part-of-speech>
@@ -1189,7 +1643,7 @@
    <phrase id="27">オフになる。</phrase>
   </phrase>
  </sentence>
- <sentence id="9">
+ <sentence id="10">
   <token id="1">
    <word>ポット</word>
    <part-of-speech>noun</part-of-speech>
@@ -2268,7 +2722,7 @@
    <phrase id="82">給湯する。</phrase>
   </phrase>
  </sentence>
- <sentence id="10">
+ <sentence id="11">
   <token id="1">
    <word>給湯</word>
    <part-of-speech>noun</part-of-speech>
@@ -2465,7 +2919,7 @@
    <phrase id="33">給湯を止める。</phrase>
   </phrase>
  </sentence>
- <sentence id="11">
+ <sentence id="12">
   <token id="1">
    <word>ユーザー</word>
    <part-of-speech>noun</part-of-speech>
@@ -2866,7 +3320,7 @@
    <phrase id="27">。</phrase>
   </phrase>
  </sentence>
- <sentence id="12">
+ <sentence id="13">
   <token id="1">
    <word>ユーザー</word>
    <part-of-speech>noun</part-of-speech>
@@ -3012,7 +3466,7 @@
    <phrase id="29">使用可能になる。</phrase>
   </phrase>
  </sentence>
- <sentence id="13">
+ <sentence id="14">
   <token id="1">
    <word>ユーザー</word>
    <part-of-speech>noun</part-of-speech>
@@ -3158,56 +3612,269 @@
    <phrase id="29">使用不可能になる。</phrase>
   </phrase>
  </sentence>
- <sentence id="14">
+ <sentence id="15">
   <token id="1">
-   <word>ユーザー</word>
+   <word>給湯</word>
    <part-of-speech>noun</part-of-speech>
    <morpheme>一般</morpheme>
   </token>
   <token id="2">
-   <word>が</word>
-   <part-of-speech>particle</part-of-speech>
-   <morpheme>格助詞</morpheme>
-  </token>
-  <token id="3">
-   <word>蓋</word>
+   <word>ボタン</word>
    <part-of-speech>noun</part-of-speech>
    <morpheme>一般</morpheme>
   </token>
-  <token id="4">
+  <token id="3">
    <word>を</word>
    <part-of-speech>particle</part-of-speech>
    <morpheme>格助詞</morpheme>
   </token>
-  <token id="5">
-   <word>閉め</word>
+  <token id="4">
+   <word>押す</word>
    <part-of-speech>verb</part-of-speech>
    <morpheme>自立</morpheme>
   </token>
-  <token id="6">
-   <word>て</word>
+  <token id="5">
+   <word>と</word>
    <part-of-speech>particle</part-of-speech>
    <morpheme>接続助詞</morpheme>
   </token>
-  <token id="7">
+  <token id="6">
    <word>、</word>
    <part-of-speech>punctuation</part-of-speech>
    <morpheme>comma</morpheme>
   </token>
+  <token id="7">
+   <word>設定</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>サ変接続</morpheme>
+  </token>
   <token id="8">
-   <word>アイドル</word>
+   <word>温度</word>
    <part-of-speech>noun</part-of-speech>
    <morpheme>一般</morpheme>
   </token>
   <token id="9">
-   <word>状態</word>
+   <word>は</word>
+   <part-of-speech>particle</part-of-speech>
+   <morpheme>係助詞</morpheme>
+  </token>
+  <token id="10">
+   <word>６</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>数</morpheme>
+  </token>
+  <token id="11">
+   <word>５</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>数</morpheme>
+  </token>
+  <token id="12">
+   <word>度</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>接尾</morpheme>
+  </token>
+  <token id="13">
+   <word>に</word>
+   <part-of-speech>particle</part-of-speech>
+   <morpheme>格助詞</morpheme>
+  </token>
+  <token id="14">
+   <word>なる</word>
+   <part-of-speech>verb</part-of-speech>
+   <morpheme>自立</morpheme>
+  </token>
+  <token id="15">
+   <word>。</word>
+   <part-of-speech>punctuation</part-of-speech>
+   <morpheme>period</morpheme>
+  </token>
+  <phrase id="16" type="noun">
+   <phrase id="1">給湯</phrase>
+   <phrase id="2">ボタン</phrase>
+  </phrase>
+  <phrase id="17" type="target">
+   <phrase id="2">ボタン</phrase>
+   <phrase id="3">を</phrase>
+  </phrase>
+  <phrase id="18" type="trigger-end">
+   <phrase id="4">押す</phrase>
+   <phrase id="5">と</phrase>
+  </phrase>
+  <phrase id="19" type="noun">
+   <phrase id="7">設定</phrase>
+   <phrase id="8">温度</phrase>
+  </phrase>
+  <phrase id="20" type="nominative">
+   <phrase id="8">温度</phrase>
+   <phrase id="9">は</phrase>
+  </phrase>
+  <phrase id="21" type="noun">
+   <phrase id="11">５</phrase>
+   <phrase id="12">度</phrase>
+  </phrase>
+  <phrase id="22" type="target">
+   <phrase id="12">度</phrase>
+   <phrase id="13">に</phrase>
+  </phrase>
+  <phrase id="23" type="trans">
+   <phrase id="14">なる</phrase>
+   <phrase id="15">。</phrase>
+  </phrase>
+  <phrase id="24" type="target">
+   <phrase id="16">給湯ボタン</phrase>
+   <phrase id="3">を</phrase>
+  </phrase>
+  <phrase id="25" type="targeted-action">
+   <phrase id="17">ボタンを</phrase>
+   <phrase id="4">押す</phrase>
+  </phrase>
+  <phrase id="26" type="trigger-end">
+   <phrase id="18">押すと</phrase>
+   <phrase id="6">、</phrase>
+  </phrase>
+  <phrase id="27" type="nominative">
+   <phrase id="19">設定温度</phrase>
+   <phrase id="9">は</phrase>
+  </phrase>
+  <phrase id="28" type="target">
+   <phrase id="21">５度</phrase>
+   <phrase id="13">に</phrase>
+  </phrase>
+  <phrase id="29" type="verb">
+   <phrase id="22">度に</phrase>
+   <phrase id="14">なる</phrase>
+  </phrase>
+  <phrase id="30" type="targeted-action">
+   <phrase id="24">給湯ボタンを</phrase>
+   <phrase id="4">押す</phrase>
+  </phrase>
+  <phrase id="31" type="trigger" subinfo="動作対象付き">
+   <phrase id="17">ボタンを</phrase>
+   <phrase id="18">押すと</phrase>
+  </phrase>
+  <phrase id="32" type="verb">
+   <phrase id="11">５</phrase>
+   <phrase id="29">度になる</phrase>
+  </phrase>
+  <phrase id="33" type="verb">
+   <phrase id="28">５度に</phrase>
+   <phrase id="14">なる</phrase>
+  </phrase>
+  <phrase id="34" type="verb-end">
+   <phrase id="29">度になる</phrase>
+   <phrase id="15">。</phrase>
+  </phrase>
+  <phrase id="35" type="trigger" subinfo="動作対象付き">
+   <phrase id="24">給湯ボタンを</phrase>
+   <phrase id="18">押すと</phrase>
+  </phrase>
+  <phrase id="36" type="trigger" subinfo="動作対象付き">
+   <phrase id="17">ボタンを</phrase>
+   <phrase id="26">押すと、</phrase>
+  </phrase>
+  <phrase id="37" type="verb">
+   <phrase id="10">６</phrase>
+   <phrase id="32">５度になる</phrase>
+  </phrase>
+  <phrase id="38" type="verb">
+   <phrase id="10">６</phrase>
+   <phrase id="33">５度になる</phrase>
+  </phrase>
+  <phrase id="39" type="verb-end">
+   <phrase id="32">５度になる</phrase>
+   <phrase id="15">。</phrase>
+  </phrase>
+  <phrase id="40" type="trigger" subinfo="動作対象付き">
+   <phrase id="24">給湯ボタンを</phrase>
+   <phrase id="26">押すと、</phrase>
+  </phrase>
+  <phrase id="41" type="verb-end">
+   <phrase id="37">６５度になる</phrase>
+   <phrase id="15">。</phrase>
+  </phrase>
+  <phrase id="42" type="targeted-action">
+   <phrase id="20">温度は</phrase>
+   <phrase id="37">６５度になる</phrase>
+  </phrase>
+  <phrase id="43" type="targeted-action">
+   <phrase id="20">温度は</phrase>
+   <phrase id="38">６５度になる</phrase>
+  </phrase>
+  <phrase id="44" type="targeted-action">
+   <phrase id="27">設定温度は</phrase>
+   <phrase id="37">６５度になる</phrase>
+  </phrase>
+  <phrase id="45" type="targeted-action">
+   <phrase id="27">設定温度は</phrase>
+   <phrase id="38">６５度になる</phrase>
+  </phrase>
+  <phrase id="46" type="verb-end">
+   <phrase id="42">温度は６５度になる</phrase>
+   <phrase id="15">。</phrase>
+  </phrase>
+  <phrase id="47" type="verb-end">
+   <phrase id="44">設定温度は６５度になる</phrase>
+   <phrase id="15">。</phrase>
+  </phrase>
+  <phrase id="48" type="sentence">
+   <phrase id="36">ボタンを押すと、</phrase>
+   <phrase id="47">設定温度は６５度になる。</phrase>
+  </phrase>
+  <phrase id="49" type="sentence">
+   <phrase id="40">給湯ボタンを押すと、</phrase>
+   <phrase id="47">設定温度は６５度になる。</phrase>
+  </phrase>
+ </sentence>
+ <sentence id="16">
+  <token id="1">
+   <word>給湯</word>
    <part-of-speech>noun</part-of-speech>
    <morpheme>一般</morpheme>
   </token>
-  <token id="10">
-   <word>で</word>
+  <token id="2">
+   <word>中</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>接尾</morpheme>
+  </token>
+  <token id="3">
+   <word>に</word>
    <part-of-speech>particle</part-of-speech>
    <morpheme>格助詞</morpheme>
+  </token>
+  <token id="4">
+   <word>蓋</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>一般</morpheme>
+  </token>
+  <token id="5">
+   <word>センサ</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>一般</morpheme>
+  </token>
+  <token id="6">
+   <word>が</word>
+   <part-of-speech>particle</part-of-speech>
+   <morpheme>格助詞</morpheme>
+  </token>
+  <token id="7">
+   <word>off</word>
+   <part-of-speech>noun</part-of-speech>
+   <morpheme>一般</morpheme>
+  </token>
+  <token id="8">
+   <word>に</word>
+   <part-of-speech>particle</part-of-speech>
+   <morpheme>格助詞</morpheme>
+  </token>
+  <token id="9">
+   <word>なっ</word>
+   <part-of-speech>verb</part-of-speech>
+   <morpheme>自立</morpheme>
+  </token>
+  <token id="10">
+   <word>たら</word>
+   <part-of-speech>接続詞</part-of-speech>
+   <morpheme>条件</morpheme>
   </token>
   <token id="11">
    <word>、</word>
@@ -3215,302 +3882,181 @@
    <morpheme>comma</morpheme>
   </token>
   <token id="12">
-   <word>水位</word>
-   <part-of-speech>noun</part-of-speech>
-   <morpheme>一般</morpheme>
-  </token>
-  <token id="13">
-   <word>が</word>
-   <part-of-speech>particle</part-of-speech>
-   <morpheme>格助詞</morpheme>
-  </token>
-  <token id="14">
-   <word>適正</word>
-   <part-of-speech>noun</part-of-speech>
-   <morpheme>形容動詞語幹</morpheme>
-  </token>
-  <token id="15">
-   <word>で</word>
-   <part-of-speech>auxiliary-verb</part-of-speech>
-   <morpheme>*</morpheme>
-  </token>
-  <token id="16">
-   <word>あっ</word>
-   <part-of-speech>auxiliary-verb</part-of-speech>
-   <morpheme>*</morpheme>
-  </token>
-  <token id="17">
-   <word>た</word>
-   <part-of-speech>auxiliary-verb</part-of-speech>
-   <morpheme>*</morpheme>
-  </token>
-  <token id="18">
-   <word>場合</word>
-   <part-of-speech>noun</part-of-speech>
-   <morpheme>副詞可能</morpheme>
-  </token>
-  <token id="19">
-   <word>、</word>
-   <part-of-speech>punctuation</part-of-speech>
-   <morpheme>comma</morpheme>
-  </token>
-  <token id="20">
-   <word>沸騰</word>
-   <part-of-speech>noun</part-of-speech>
-   <morpheme>サ変接続</morpheme>
-  </token>
-  <token id="21">
-   <word>を</word>
-   <part-of-speech>particle</part-of-speech>
-   <morpheme>格助詞</morpheme>
-  </token>
-  <token id="22">
-   <word>開始</word>
-   <part-of-speech>noun</part-of-speech>
-   <morpheme>サ変接続</morpheme>
-  </token>
-  <token id="23">
-   <word>する</word>
-   <part-of-speech>verb</part-of-speech>
-   <morpheme>自立</morpheme>
-  </token>
-  <token id="24">
-   <word>。</word>
-   <part-of-speech>punctuation</part-of-speech>
-   <morpheme>period</morpheme>
-  </token>
-  <phrase id="25" type="nominative">
-   <phrase id="1">ユーザー</phrase>
-   <phrase id="2">が</phrase>
-  </phrase>
-  <phrase id="26" type="target">
-   <phrase id="3">蓋</phrase>
-   <phrase id="4">を</phrase>
-  </phrase>
-  <phrase id="27" type="sentence-continue">
-   <phrase id="5">閉め</phrase>
-   <phrase id="6">て</phrase>
-  </phrase>
-  <phrase id="28" type="state-noun">
-   <phrase id="8">アイドル</phrase>
-   <phrase id="9">状態</phrase>
-  </phrase>
-  <phrase id="29" type="with">
-   <phrase id="9">状態</phrase>
-   <phrase id="10">で</phrase>
-  </phrase>
-  <phrase id="30" type="nominative">
-   <phrase id="12">水位</phrase>
-   <phrase id="13">が</phrase>
-  </phrase>
-  <phrase id="31" type="with">
-   <phrase id="14">適正</phrase>
-   <phrase id="15">で</phrase>
-  </phrase>
-  <phrase id="32" type="並列前">
-   <phrase id="18">場合</phrase>
-   <phrase id="19">、</phrase>
-  </phrase>
-  <phrase id="33" type="target">
-   <phrase id="20">沸騰</phrase>
-   <phrase id="21">を</phrase>
-  </phrase>
-  <phrase id="34" type="verb">
-   <phrase id="22">開始</phrase>
-   <phrase id="23">する</phrase>
-  </phrase>
-  <phrase id="35" type="verb-end">
-   <phrase id="23">する</phrase>
-   <phrase id="24">。</phrase>
-  </phrase>
-  <phrase id="36" type="targeted-action">
-   <phrase id="26">蓋を</phrase>
-   <phrase id="5">閉め</phrase>
-  </phrase>
-  <phrase id="37" type="sentence-continue">
-   <phrase id="27">閉めて</phrase>
-   <phrase id="7">、</phrase>
-  </phrase>
-  <phrase id="38" type="state-set">
-   <phrase id="28">アイドル状態</phrase>
-   <phrase id="10">で</phrase>
-  </phrase>
-  <phrase id="39" type="with">
-   <phrase id="29">状態で</phrase>
-   <phrase id="11">、</phrase>
-  </phrase>
-  <phrase id="40" type="noun" subinfo="並列">
-   <phrase id="32">場合、</phrase>
-   <phrase id="20">沸騰</phrase>
-  </phrase>
-  <phrase id="41" type="verb-end">
-   <phrase id="34">開始する</phrase>
-   <phrase id="24">。</phrase>
-  </phrase>
-  <phrase id="42" type="sentence-continue">
-   <phrase id="26">蓋を</phrase>
-   <phrase id="27">閉めて</phrase>
-  </phrase>
-  <phrase id="43" type="state-set">
-   <phrase id="38">アイドル状態で</phrase>
-   <phrase id="11">、</phrase>
-  </phrase>
-  <phrase id="44" type="target">
-   <phrase id="40">場合、沸騰</phrase>
-   <phrase id="21">を</phrase>
-  </phrase>
-  <phrase id="45" type="targeted-action">
-   <phrase id="33">沸騰を</phrase>
-   <phrase id="34">開始する</phrase>
-  </phrase>
-  <phrase id="46" type="ab-verb">
-   <phrase id="25">ユーザーが</phrase>
-   <phrase id="36">蓋を閉め</phrase>
-  </phrase>
-  <phrase id="47" type="sentence-continue">
-   <phrase id="26">蓋を</phrase>
-   <phrase id="37">閉めて、</phrase>
-  </phrase>
-  <phrase id="48" type="sentence-continue">
-   <phrase id="42">蓋を閉めて</phrase>
-   <phrase id="7">、</phrase>
-  </phrase>
-  <phrase id="49" type="nominative">
-   <phrase id="39">状態で、</phrase>
-   <phrase id="30">水位が</phrase>
-  </phrase>
-  <phrase id="50" type="verb-end">
-   <phrase id="45">沸騰を開始する</phrase>
-   <phrase id="24">。</phrase>
-  </phrase>
-  <phrase id="51" type="sentence-continue">
-   <phrase id="25">ユーザーが</phrase>
-   <phrase id="42">蓋を閉めて</phrase>
-  </phrase>
-  <phrase id="52" type="targeted-action">
-   <phrase id="44">場合、沸騰を</phrase>
-   <phrase id="34">開始する</phrase>
-  </phrase>
-  <phrase id="53" type="sentence-continue">
-   <phrase id="25">ユーザーが</phrase>
-   <phrase id="47">蓋を閉めて、</phrase>
-  </phrase>
-  <phrase id="54" type="sentence-continue">
-   <phrase id="25">ユーザーが</phrase>
-   <phrase id="48">蓋を閉めて、</phrase>
-  </phrase>
-  <phrase id="55" type="sentence-continue">
-   <phrase id="51">ユーザーが蓋を閉めて</phrase>
-   <phrase id="7">、</phrase>
-  </phrase>
-  <phrase id="56" type="verb-end">
-   <phrase id="52">場合、沸騰を開始する</phrase>
-   <phrase id="24">。</phrase>
-  </phrase>
- </sentence>
- <sentence id="15">
-  <token id="1">
-   <word>使用</word>
-   <part-of-speech>noun</part-of-speech>
-   <morpheme>サ変接続</morpheme>
-  </token>
-  <token id="2">
-   <word>可能</word>
-   <part-of-speech>noun</part-of-speech>
-   <morpheme>形容動詞語幹</morpheme>
-  </token>
-  <token id="3">
-   <word>で</word>
-   <part-of-speech>auxiliary-verb</part-of-speech>
-   <morpheme>*</morpheme>
-  </token>
-  <token id="4">
-   <word>あれ</word>
-   <part-of-speech>auxiliary-verb</part-of-speech>
-   <morpheme>*</morpheme>
-  </token>
-  <token id="5">
-   <word>ば</word>
-   <part-of-speech>particle</part-of-speech>
-   <morpheme>接続助詞</morpheme>
-  </token>
-  <token id="6">
-   <word>、</word>
-   <part-of-speech>punctuation</part-of-speech>
-   <morpheme>comma</morpheme>
-  </token>
-  <token id="7">
    <word>アイドル</word>
    <part-of-speech>noun</part-of-speech>
    <morpheme>一般</morpheme>
   </token>
-  <token id="8">
+  <token id="13">
    <word>状態</word>
    <part-of-speech>noun</part-of-speech>
    <morpheme>一般</morpheme>
   </token>
-  <token id="9">
+  <token id="14">
    <word>に</word>
    <part-of-speech>particle</part-of-speech>
    <morpheme>格助詞</morpheme>
   </token>
-  <token id="10">
+  <token id="15">
    <word>なる</word>
    <part-of-speech>verb</part-of-speech>
    <morpheme>自立</morpheme>
   </token>
-  <token id="11">
+  <token id="16">
    <word>。</word>
    <part-of-speech>punctuation</part-of-speech>
    <morpheme>period</morpheme>
   </token>
-  <phrase id="12" type="noun">
-   <phrase id="1">使用</phrase>
-   <phrase id="2">可能</phrase>
+  <phrase id="17" type="state-noun">
+   <phrase id="1">給湯</phrase>
+   <phrase id="2">中</phrase>
   </phrase>
-  <phrase id="13" type="with">
-   <phrase id="2">可能</phrase>
-   <phrase id="3">で</phrase>
+  <phrase id="18" type="target">
+   <phrase id="2">中</phrase>
+   <phrase id="3">に</phrase>
   </phrase>
-  <phrase id="14" type="state-noun">
-   <phrase id="7">アイドル</phrase>
-   <phrase id="8">状態</phrase>
+  <phrase id="19" type="noun">
+   <phrase id="4">蓋</phrase>
+   <phrase id="5">センサ</phrase>
   </phrase>
-  <phrase id="15" type="target">
-   <phrase id="8">状態</phrase>
-   <phrase id="9">に</phrase>
+  <phrase id="20" type="nominative">
+   <phrase id="5">センサ</phrase>
+   <phrase id="6">が</phrase>
   </phrase>
-  <phrase id="16" type="trans">
-   <phrase id="10">なる</phrase>
-   <phrase id="11">。</phrase>
+  <phrase id="21" type="target">
+   <phrase id="7">off</phrase>
+   <phrase id="8">に</phrase>
   </phrase>
-  <phrase id="17" type="with">
-   <phrase id="12">使用可能</phrase>
-   <phrase id="3">で</phrase>
+  <phrase id="22" type="trigger-end">
+   <phrase id="9">なっ</phrase>
+   <phrase id="10">たら</phrase>
   </phrase>
-  <phrase id="18" type="state-set">
-   <phrase id="14">アイドル状態</phrase>
-   <phrase id="9">に</phrase>
+  <phrase id="23" type="state-noun">
+   <phrase id="12">アイドル</phrase>
+   <phrase id="13">状態</phrase>
   </phrase>
-  <phrase id="19" type="verb">
-   <phrase id="15">状態に</phrase>
-   <phrase id="10">なる</phrase>
+  <phrase id="24" type="target">
+   <phrase id="13">状態</phrase>
+   <phrase id="14">に</phrase>
   </phrase>
-  <phrase id="20" type="verb">
-   <phrase id="7">アイドル</phrase>
-   <phrase id="19">状態になる</phrase>
+  <phrase id="25" type="trans">
+   <phrase id="15">なる</phrase>
+   <phrase id="16">。</phrase>
   </phrase>
-  <phrase id="21" type="verb-end">
-   <phrase id="19">状態になる</phrase>
-   <phrase id="11">。</phrase>
+  <phrase id="26" type="state-set">
+   <phrase id="17">給湯中</phrase>
+   <phrase id="3">に</phrase>
   </phrase>
-  <phrase id="22" type="transaction">
-   <phrase id="18">アイドル状態に</phrase>
-   <phrase id="16">なる。</phrase>
+  <phrase id="27" type="noun">
+   <phrase id="18">中に</phrase>
+   <phrase id="4">蓋</phrase>
   </phrase>
-  <phrase id="23" type="verb-end">
-   <phrase id="20">アイドル状態になる</phrase>
-   <phrase id="11">。</phrase>
+  <phrase id="28" type="nominative">
+   <phrase id="19">蓋センサ</phrase>
+   <phrase id="6">が</phrase>
+  </phrase>
+  <phrase id="29" type="targeted-action">
+   <phrase id="21">offに</phrase>
+   <phrase id="9">なっ</phrase>
+  </phrase>
+  <phrase id="30" type="trigger-end">
+   <phrase id="22">なったら</phrase>
+   <phrase id="11">、</phrase>
+  </phrase>
+  <phrase id="31" type="state-set">
+   <phrase id="23">アイドル状態</phrase>
+   <phrase id="14">に</phrase>
+  </phrase>
+  <phrase id="32" type="verb">
+   <phrase id="24">状態に</phrase>
+   <phrase id="15">なる</phrase>
+  </phrase>
+  <phrase id="33" type="trigger" subinfo="動作対象付き">
+   <phrase id="21">offに</phrase>
+   <phrase id="22">なったら</phrase>
+  </phrase>
+  <phrase id="34" type="verb">
+   <phrase id="12">アイドル</phrase>
+   <phrase id="32">状態になる</phrase>
+  </phrase>
+  <phrase id="35" type="verb-end">
+   <phrase id="32">状態になる</phrase>
+   <phrase id="16">。</phrase>
+  </phrase>
+  <phrase id="36" type="ab-verb">
+   <phrase id="20">センサが</phrase>
+   <phrase id="29">offになっ</phrase>
+  </phrase>
+  <phrase id="37" type="trigger" subinfo="動作対象付き">
+   <phrase id="21">offに</phrase>
+   <phrase id="30">なったら、</phrase>
+  </phrase>
+  <phrase id="38" type="transaction">
+   <phrase id="31">アイドル状態に</phrase>
+   <phrase id="25">なる。</phrase>
+  </phrase>
+  <phrase id="39" type="verb-end">
+   <phrase id="34">アイドル状態になる</phrase>
+   <phrase id="16">。</phrase>
+  </phrase>
+  <phrase id="40" type="ab-verb">
+   <phrase id="28">蓋センサが</phrase>
+   <phrase id="29">offになっ</phrase>
+  </phrase>
+  <phrase id="41" type="trigger" subinfo="主格付き">
+   <phrase id="20">センサが</phrase>
+   <phrase id="33">offになったら</phrase>
+  </phrase>
+  <phrase id="42" type="trigger" subinfo="主格付き">
+   <phrase id="28">蓋センサが</phrase>
+   <phrase id="33">offになったら</phrase>
+  </phrase>
+  <phrase id="43" type="trigger" subinfo="主格付き">
+   <phrase id="20">センサが</phrase>
+   <phrase id="37">offになったら、</phrase>
+  </phrase>
+  <phrase id="44" type="trigger" subinfo="主格付き">
+   <phrase id="28">蓋センサが</phrase>
+   <phrase id="37">offになったら、</phrase>
+  </phrase>
+  <phrase id="45" type="Aパート">
+   <phrase id="26">給湯中に</phrase>
+   <phrase id="42">蓋センサがoffになったら</phrase>
+  </phrase>
+  <phrase id="46" type="sentence">
+   <phrase id="37">offになったら、</phrase>
+   <phrase id="38">アイドル状態になる。</phrase>
+  </phrase>
+  <phrase id="47" type="sentence">
+   <phrase id="37">offになったら、</phrase>
+   <phrase id="39">アイドル状態になる。</phrase>
+  </phrase>
+  <phrase id="48" type="Aパート">
+   <phrase id="26">給湯中に</phrase>
+   <phrase id="44">蓋センサがoffになったら、</phrase>
+  </phrase>
+  <phrase id="49" type="sentence">
+   <phrase id="43">センサがoffになったら、</phrase>
+   <phrase id="38">アイドル状態になる。</phrase>
+  </phrase>
+  <phrase id="50" type="sentence">
+   <phrase id="43">センサがoffになったら、</phrase>
+   <phrase id="39">アイドル状態になる。</phrase>
+  </phrase>
+  <phrase id="51" type="sentence">
+   <phrase id="44">蓋センサがoffになったら、</phrase>
+   <phrase id="38">アイドル状態になる。</phrase>
+  </phrase>
+  <phrase id="52" type="sentence">
+   <phrase id="44">蓋センサがoffになったら、</phrase>
+   <phrase id="39">アイドル状態になる。</phrase>
+  </phrase>
+  <phrase id="53" type="sentence">
+   <phrase id="48">給湯中に蓋センサがoffになったら、</phrase>
+   <phrase id="38">アイドル状態になる。</phrase>
+  </phrase>
+  <phrase id="54" type="sentence">
+   <phrase id="48">給湯中に蓋センサがoffになったら、</phrase>
+   <phrase id="39">アイドル状態になる。</phrase>
   </phrase>
  </sentence>
 </sentences>

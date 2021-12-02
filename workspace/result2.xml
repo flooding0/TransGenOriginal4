@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <sentences>
- <sentence id="6">
+ <sentence id="1">
   <variables/>
   <variable-values/>
   <set_of_subinfo>
-   <subinfo>セーフティロックはユーザーがセーフティロックボタンをオンにしたら</subinfo>
+   <subinfo>ユーザーがボタンを押すと</subinfo>
+  </set_of_subinfo>
+  <transitions>
+   <transition>給湯状態</transition>
+  </transitions>
+  <inner-operations/>
+ </sentence>
+ <sentence id="1">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo>ユーザーがボタンを押すと</subinfo>
   </set_of_subinfo>
   <transitions/>
   <inner-operations/>
@@ -14,7 +25,7 @@
   <variables/>
   <variable-values/>
   <set_of_subinfo>
-   <subinfo>ユーザーが給湯ボタンを離したら</subinfo>
+   <subinfo>セーフティロックはユーザーがセーフティロックボタンをオンにしたら</subinfo>
   </set_of_subinfo>
   <transitions/>
   <inner-operations/>
@@ -23,12 +34,21 @@
   <variables/>
   <variable-values/>
   <set_of_subinfo>
+   <subinfo>ユーザーが給湯ボタンを離したら</subinfo>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
+ <sentence id="9">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
    <subinfo>ユーザーがセーフティロックボタンをオフにしたら</subinfo>
   </set_of_subinfo>
   <transitions/>
   <inner-operations/>
  </sentence>
- <sentence id="10">
+ <sentence id="11">
   <variables>
    <variable>給湯中</variable>
   </variables>
@@ -41,7 +61,7 @@
    <inner-operation>給湯を止める</inner-operation>
   </inner-operations>
  </sentence>
- <sentence id="12">
+ <sentence id="13">
   <variables/>
   <variable-values/>
   <set_of_subinfo>
@@ -50,12 +70,43 @@
   <transitions/>
   <inner-operations/>
  </sentence>
- <sentence id="13">
+ <sentence id="14">
   <variables/>
   <variable-values/>
   <set_of_subinfo>
    <subinfo>ユーザーがプラグを抜くと</subinfo>
   </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
+ <sentence id="15">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo>給湯ボタンを押すと</subinfo>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations>
+   <inner-operation>設定温度は６５度になる</inner-operation>
+  </inner-operations>
+ </sentence>
+ <sentence id="16">
+  <variables>
+   <variable>給湯中</variable>
+  </variables>
+  <variable-values/>
+  <set_of_subinfo/>
+  <transitions>
+   <transition>アイドル状態</transition>
+  </transitions>
+  <inner-operations/>
+ </sentence>
+ <sentence id="16">
+  <variables>
+   <variable>給湯中</variable>
+  </variables>
+  <variable-values/>
+  <set_of_subinfo/>
   <transitions/>
   <inner-operations/>
  </sentence>

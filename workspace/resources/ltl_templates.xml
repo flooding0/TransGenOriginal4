@@ -1,0 +1,734 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ltl_gen_rules>
+    <occurrence_patterns semantic="イベントの発生記述">
+        <absence_pattern semantic="Pしない">
+            <templates>
+                <template id="variable">P</template>
+                <template id="text">しない</template>
+            </templates>
+            <globally ltl="G (!P)" semantic="常に">
+                <templates>
+                    <template id="text">常に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="G">
+                        <token id="1" parent_id="0" str="()">
+                            <token id="2" parent_id="1" str="!">
+                                <token id="3" parent_id="2" str="P"/>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </globally>
+            <before_R ltl="F R -&gt; (!P U R)" semantic="R前に">
+                <templates>
+                    <template id="variable">R</template>
+                    <template id="text">前に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="-&gt;">
+                        <token id="1" parent_id="0" str="F">
+                            <token id="7" parent_id="1" str="R"/>
+                        </token>
+                        <token id="2" parent_id="0" str="()">
+                            <token id="3" parent_id="2" str="U">
+                                <token id="4" parent_id="3" str="!">
+                                    <token id="6" parent_id="4" str="P"/>
+                                </token>
+                                <token id="5" parent_id="3" str="R"/>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </before_R>
+            <after_Q ltl="G (Q -&gt; G (!P))" semantic="Q後に">
+                <templates>
+                    <template id="variable">Q</template>
+                    <template id="text">後に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="G">
+                        <token id="1" parent_id="0" str="()">
+                            <token id="2" parent_id="1" str="-&gt;">
+                                <token id="3" parent_id="2" str="Q"/>
+                                <token id="4" parent_id="2" str="G">
+                                    <token id="5" parent_id="4" str="()">
+                                        <token id="6" parent_id="5" str="!">
+                                            <token id="7" parent_id="6" str="P"/>
+                                        </token>
+                                    </token>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </after_Q>
+            <between_Q_and_R ltl="G ((Q &amp; !R &amp; F R) -&gt; (!P U R))" semantic="QとRの間に">
+                <templates>
+                    <template id="variable">Q</template>
+                    <template id="text">と</template>
+                    <template id="variable">R</template>
+                    <template id="text">の間に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="G">
+                        <token id="1" parent_id="0" str="()">
+                            <token id="2" parent_id="1" str="-&gt;">
+                                <token id="3" parent_id="2" str="()">
+                                    <token id="9" parent_id="3" str="&amp;">
+                                        <token id="10" parent_id="9" str="&amp;">
+                                            <token id="13" parent_id="10" str="Q"/>
+                                            <token id="14" parent_id="10" str="!">
+                                                <token id="15" parent_id="14" str="R"/>
+                                            </token>
+                                        </token>
+                                        <token id="11" parent_id="9" str="F">
+                                            <token id="12" parent_id="11" str="R"/>
+                                        </token>
+                                    </token>
+                                </token>
+                                <token id="4" parent_id="2" str="()">
+                                    <token id="5" parent_id="4" str="U">
+                                        <token id="6" parent_id="5" str="!">
+                                            <token id="8" parent_id="6" str="P"/>
+                                        </token>
+                                        <token id="7" parent_id="5" str="R"/>
+                                    </token>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </between_Q_and_R>
+            <after_Q_until_R ltl="G (Q &amp; !R -&gt; (!P W R))" semantic="Qが起こってRが起こるまで">
+                <templates>
+                    <template id="variable">Q</template>
+                    <template id="text">が起こって</template>
+                    <template id="variable">R</template>
+                    <template id="text">が起こるまで</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="G">
+                        <token id="1" parent_id="0" str="()">
+                            <token id="2" parent_id="1" str="-&gt;">
+                                <token id="3" parent_id="2" str="&amp;">
+                                    <token id="9" parent_id="3" str="Q"/>
+                                    <token id="10" parent_id="3" str="!">
+                                        <token id="11" parent_id="10" str="R"/>
+                                    </token>
+                                </token>
+                                <token id="4" parent_id="2" str="()">
+                                    <token id="5" parent_id="4" str="W">
+                                        <token id="6" parent_id="5" str="!">
+                                            <token id="8" parent_id="6" str="P"/>
+                                        </token>
+                                        <token id="7" parent_id="5" str="R"/>
+                                    </token>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </after_Q_until_R>
+        </absence_pattern>
+        <universality_pattern semantic="P">
+            <templates>
+                <template id="variable">P</template>
+            </templates>
+            <globally ltl="G (P)" semantic="常に">
+                <templates>
+                    <template id="text">常に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="G">
+                        <token id="1" parent_id="0" str="()">
+                            <token id="2" parent_id="1" str="P"/>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </globally>
+            <before_R ltl="F R -&gt; (P U R)" semantic="R前に">
+                <templates>
+                    <template id="variable">R</template>
+                    <template id="text">前に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="-&gt;">
+                        <token id="1" parent_id="0" str="F">
+                            <token id="6" parent_id="1" str="R"/>
+                        </token>
+                        <token id="2" parent_id="0" str="()">
+                            <token id="3" parent_id="2" str="U">
+                                <token id="4" parent_id="3" str="P"/>
+                                <token id="5" parent_id="3" str="R"/>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </before_R>
+            <after_Q ltl="G (Q -&gt; G (P))" semantic="Q後に">
+                <templates>
+                    <template id="variable">Q</template>
+                    <template id="text">後に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="G">
+                        <token id="1" parent_id="0" str="()">
+                            <token id="2" parent_id="1" str="-&gt;">
+                                <token id="3" parent_id="2" str="Q"/>
+                                <token id="4" parent_id="2" str="G">
+                                    <token id="5" parent_id="4" str="()">
+                                        <token id="6" parent_id="5" str="P"/>
+                                    </token>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </after_Q>
+            <between_Q_and_R ltl="G ((Q &amp; !R &amp; F R) -&gt; (P U R))" semantic="QとRの間に">
+                <templates>
+                    <template id="variable">Q</template>
+                    <template id="text">と</template>
+                    <template id="variable">R</template>
+                    <template id="text">の間に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="G">
+                        <token id="1" parent_id="0" str="()">
+                            <token id="2" parent_id="1" str="-&gt;">
+                                <token id="3" parent_id="2" str="()">
+                                    <token id="8" parent_id="3" str="&amp;">
+                                        <token id="9" parent_id="8" str="&amp;">
+                                            <token id="12" parent_id="9" str="Q"/>
+                                            <token id="13" parent_id="9" str="!">
+                                                <token id="14" parent_id="13" str="R"/>
+                                            </token>
+                                        </token>
+                                        <token id="10" parent_id="8" str="F">
+                                            <token id="11" parent_id="10" str="R"/>
+                                        </token>
+                                    </token>
+                                </token>
+                                <token id="4" parent_id="2" str="()">
+                                    <token id="5" parent_id="4" str="U">
+                                        <token id="6" parent_id="5" str="P"/>
+                                        <token id="7" parent_id="5" str="R"/>
+                                    </token>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </between_Q_and_R>
+            <after_Q_until_R ltl="G (Q &amp; !R -&gt; (P W R))" semantic="Qが起こってRが起こるまで">
+                <templates>
+                    <template id="variable">Q</template>
+                    <template id="text">が起こって</template>
+                    <template id="variable">R</template>
+                    <template id="text">が起こるまで</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="G">
+                        <token id="1" parent_id="0" str="()">
+                            <token id="2" parent_id="1" str="-&gt;">
+                                <token id="3" parent_id="2" str="&amp;">
+                                    <token id="8" parent_id="3" str="Q"/>
+                                    <token id="9" parent_id="3" str="!">
+                                        <token id="10" parent_id="9" str="R"/>
+                                    </token>
+                                </token>
+                                <token id="4" parent_id="2" str="()">
+                                    <token id="5" parent_id="4" str="W">
+                                        <token id="6" parent_id="5" str="P"/>
+                                        <token id="7" parent_id="5" str="R"/>
+                                    </token>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </after_Q_until_R>
+        </universality_pattern>
+        <existence_pattern semantic="いつかP">
+            <templates>
+                <template id="text">いつか</template>
+                <template id="variable">P</template>
+            </templates>
+            <globally ltl="F (P)" semantic="常に">
+                <templates>
+                    <template id="text">常に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="F">
+                        <token id="1" parent_id="0" str="()">
+                            <token id="2" parent_id="1" str="P"/>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </globally>
+            <before_R ltl="!R W (P &amp; !R)" semantic="R前に">
+                <templates>
+                    <template id="variable">R</template>
+                    <template id="text">前に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="W">
+                        <token id="1" parent_id="0" str="!">
+                            <token id="7" parent_id="1" str="R"/>
+                        </token>
+                        <token id="2" parent_id="0" str="()">
+                            <token id="3" parent_id="2" str="&amp;">
+                                <token id="4" parent_id="3" str="P"/>
+                                <token id="5" parent_id="3" str="!">
+                                    <token id="6" parent_id="5" str="R"/>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </before_R>
+            <after_Q ltl="G (!Q) | F (Q &amp; F P)" semantic="Q後に">
+                <templates>
+                    <template id="variable">Q</template>
+                    <template id="text">後に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="|">
+                        <token id="1" parent_id="0" str="G">
+                            <token id="8" parent_id="1" str="()">
+                                <token id="9" parent_id="8" str="!">
+                                    <token id="10" parent_id="9" str="Q"/>
+                                </token>
+                            </token>
+                        </token>
+                        <token id="2" parent_id="0" str="F">
+                            <token id="3" parent_id="2" str="()">
+                                <token id="4" parent_id="3" str="&amp;">
+                                    <token id="5" parent_id="4" str="Q"/>
+                                    <token id="6" parent_id="4" str="F">
+                                        <token id="7" parent_id="6" str="P"/>
+                                    </token>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </after_Q>
+            <between_Q_and_R ltl="G (Q &amp; !R -&gt; (!R W (P &amp; !R)))" semantic="QとRの間に">
+                <templates>
+                    <template id="variable">Q</template>
+                    <template id="text">と</template>
+                    <template id="variable">R</template>
+                    <template id="text">の間に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="G">
+                        <token id="1" parent_id="0" str="()">
+                            <token id="2" parent_id="1" str="-&gt;">
+                                <token id="3" parent_id="2" str="&amp;">
+                                    <token id="13" parent_id="3" str="Q"/>
+                                    <token id="14" parent_id="3" str="!">
+                                        <token id="15" parent_id="14" str="R"/>
+                                    </token>
+                                </token>
+                                <token id="4" parent_id="2" str="()">
+                                    <token id="5" parent_id="4" str="W">
+                                        <token id="6" parent_id="5" str="!">
+                                            <token id="12" parent_id="6" str="R"/>
+                                        </token>
+                                        <token id="7" parent_id="5" str="()">
+                                            <token id="8" parent_id="7" str="&amp;">
+                                                <token id="9" parent_id="8" str="P"/>
+                                                <token id="10" parent_id="8" str="!">
+                                                    <token id="11" parent_id="10" str="R"/>
+                                                </token>
+                                            </token>
+                                        </token>
+                                    </token>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </between_Q_and_R>
+            <after_Q_until_R ltl="G (Q &amp; !R -&gt; (!R U (P &amp; !R)))" semantic="Qが起こってRが起こるまで">
+                <templates>
+                    <template id="variable">Q</template>
+                    <template id="text">が起こって</template>
+                    <template id="variable">R</template>
+                    <template id="text">が起こるまで</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="G">
+                        <token id="1" parent_id="0" str="()">
+                            <token id="2" parent_id="1" str="-&gt;">
+                                <token id="3" parent_id="2" str="&amp;">
+                                    <token id="13" parent_id="3" str="Q"/>
+                                    <token id="14" parent_id="3" str="!">
+                                        <token id="15" parent_id="14" str="R"/>
+                                    </token>
+                                </token>
+                                <token id="4" parent_id="2" str="()">
+                                    <token id="5" parent_id="4" str="U">
+                                        <token id="6" parent_id="5" str="!">
+                                            <token id="12" parent_id="6" str="R"/>
+                                        </token>
+                                        <token id="7" parent_id="5" str="()">
+                                            <token id="8" parent_id="7" str="&amp;">
+                                                <token id="9" parent_id="8" str="P"/>
+                                                <token id="10" parent_id="8" str="!">
+                                                    <token id="11" parent_id="10" str="R"/>
+                                                </token>
+                                            </token>
+                                        </token>
+                                    </token>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </after_Q_until_R>
+        </existence_pattern>
+        <bounded_existence_pattern semantic=""/>
+    </occurrence_patterns>
+    <order_patterns semantic="イベント間の時間的な順序記述">
+        <precedence_pattern semantic="SはPに先行する">
+            <templates>
+                <template id="variable">S</template>
+                <template id="text">は</template>
+                <template id="variable">P</template>
+                <template id="text">に先行する</template>
+            </templates>
+            <globally ltl="!P W S" semantic="常に">
+                <templates>
+                    <template id="text">常に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="W">
+                        <token id="1" parent_id="0" str="!">
+                            <token id="3" parent_id="1" str="P"/>
+                        </token>
+                        <token id="2" parent_id="0" str="S"/>
+                    </token>
+                </ast_ltl>
+            </globally>
+            <before_R ltl="F R -&gt; (!P U (S | R))" semantic="R前に">
+                <templates>
+                    <template id="variable">R</template>
+                    <template id="text">前に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="-&gt;">
+                        <token id="1" parent_id="0" str="F">
+                            <token id="10" parent_id="1" str="R"/>
+                        </token>
+                        <token id="2" parent_id="0" str="()">
+                            <token id="3" parent_id="2" str="U">
+                                <token id="4" parent_id="3" str="!">
+                                    <token id="9" parent_id="4" str="P"/>
+                                </token>
+                                <token id="5" parent_id="3" str="()">
+                                    <token id="6" parent_id="5" str="|">
+                                        <token id="7" parent_id="6" str="S"/>
+                                        <token id="8" parent_id="6" str="R"/>
+                                    </token>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </before_R>
+            <after_Q ltl="G !Q | F (Q &amp; (!P W S))" semantic="Q後に">
+                <templates>
+                    <template id="variable">Q</template>
+                    <template id="text">後に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="|">
+                        <token id="1" parent_id="0" str="G">
+                            <token id="11" parent_id="1" str="!">
+                                <token id="12" parent_id="11" str="Q"/>
+                            </token>
+                        </token>
+                        <token id="2" parent_id="0" str="F">
+                            <token id="3" parent_id="2" str="()">
+                                <token id="4" parent_id="3" str="&amp;">
+                                    <token id="5" parent_id="4" str="Q"/>
+                                    <token id="6" parent_id="4" str="()">
+                                        <token id="7" parent_id="6" str="W">
+                                            <token id="8" parent_id="7" str="!">
+                                                <token id="10" parent_id="8" str="P"/>
+                                            </token>
+                                            <token id="9" parent_id="7" str="S"/>
+                                        </token>
+                                    </token>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </after_Q>
+            <between_Q_and_R ltl="G ((Q &amp; !R &amp; F R) -&gt; (!P U (S | R)))" semantic="QとRの間に">
+                <templates>
+                    <template id="variable">Q</template>
+                    <template id="text">と</template>
+                    <template id="variable">R</template>
+                    <template id="text">の間に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="G">
+                        <token id="1" parent_id="0" str="()">
+                            <token id="2" parent_id="1" str="-&gt;">
+                                <token id="3" parent_id="2" str="()">
+                                    <token id="12" parent_id="3" str="&amp;">
+                                        <token id="13" parent_id="12" str="&amp;">
+                                            <token id="16" parent_id="13" str="Q"/>
+                                            <token id="17" parent_id="13" str="!">
+                                                <token id="18" parent_id="17" str="R"/>
+                                            </token>
+                                        </token>
+                                        <token id="14" parent_id="12" str="F">
+                                            <token id="15" parent_id="14" str="R"/>
+                                        </token>
+                                    </token>
+                                </token>
+                                <token id="4" parent_id="2" str="()">
+                                    <token id="5" parent_id="4" str="U">
+                                        <token id="6" parent_id="5" str="!">
+                                            <token id="11" parent_id="6" str="P"/>
+                                        </token>
+                                        <token id="7" parent_id="5" str="()">
+                                            <token id="8" parent_id="7" str="|">
+                                                <token id="9" parent_id="8" str="S"/>
+                                                <token id="10" parent_id="8" str="R"/>
+                                            </token>
+                                        </token>
+                                    </token>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </between_Q_and_R>
+            <after_Q_until_R ltl="G (Q &amp; !R -&gt; (!P W (S | R)))" semantic="Qが起こってRが起こるまで">
+                <templates>
+                    <template id="variable">Q</template>
+                    <template id="text">が起こって</template>
+                    <template id="variable">R</template>
+                    <template id="text">が起こるまで</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="G">
+                        <token id="1" parent_id="0" str="()">
+                            <token id="2" parent_id="1" str="-&gt;">
+                                <token id="3" parent_id="2" str="&amp;">
+                                    <token id="12" parent_id="3" str="Q"/>
+                                    <token id="13" parent_id="3" str="!">
+                                        <token id="14" parent_id="13" str="R"/>
+                                    </token>
+                                </token>
+                                <token id="4" parent_id="2" str="()">
+                                    <token id="5" parent_id="4" str="W">
+                                        <token id="6" parent_id="5" str="!">
+                                            <token id="11" parent_id="6" str="P"/>
+                                        </token>
+                                        <token id="7" parent_id="5" str="()">
+                                            <token id="8" parent_id="7" str="|">
+                                                <token id="9" parent_id="8" str="S"/>
+                                                <token id="10" parent_id="8" str="R"/>
+                                            </token>
+                                        </token>
+                                    </token>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </after_Q_until_R>
+        </precedence_pattern>
+        <respose_pattern semantic="SはPに続いて起こる">
+            <templates>
+                <template id="variable">S</template>
+                <template id="text">は</template>
+                <template id="variable">P</template>
+                <template id="text">に続いて起こる</template>
+            </templates>
+            <globally ltl="G (P -&gt; F S)" semantic="常に">
+                <templates>
+                    <template id="text">常に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="G">
+                        <token id="1" parent_id="0" str="()">
+                            <token id="2" parent_id="1" str="-&gt;">
+                                <token id="3" parent_id="2" str="P"/>
+                                <token id="4" parent_id="2" str="F">
+                                    <token id="5" parent_id="4" str="S"/>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </globally>
+            <before_R ltl="F R -&gt; (P -&gt; (!R U (S &amp; !R))) U R" semantic="R前に">
+                <templates>
+                    <template id="variable">R</template>
+                    <template id="text">前に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="-&gt;">
+                        <token id="1" parent_id="0" str="F">
+                            <token id="16" parent_id="1" str="R"/>
+                        </token>
+                        <token id="2" parent_id="0" str="U">
+                            <token id="3" parent_id="2" str="()">
+                                <token id="5" parent_id="3" str="-&gt;">
+                                    <token id="6" parent_id="5" str="P"/>
+                                    <token id="7" parent_id="5" str="()">
+                                        <token id="8" parent_id="7" str="U">
+                                            <token id="9" parent_id="8" str="!">
+                                                <token id="15" parent_id="9" str="R"/>
+                                            </token>
+                                            <token id="10" parent_id="8" str="()">
+                                                <token id="11" parent_id="10" str="&amp;">
+                                                    <token id="12" parent_id="11" str="S"/>
+                                                    <token id="13" parent_id="11" str="!">
+                                                        <token id="14" parent_id="13" str="R"/>
+                                                    </token>
+                                                </token>
+                                            </token>
+                                        </token>
+                                    </token>
+                                </token>
+                            </token>
+                            <token id="4" parent_id="2" str="R"/>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </before_R>
+            <after_Q ltl="G (Q -&gt; G (P -&gt; F S))" semantic="Q後に">
+                <templates>
+                    <template id="variable">Q</template>
+                    <template id="text">後に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="G">
+                        <token id="1" parent_id="0" str="()">
+                            <token id="2" parent_id="1" str="-&gt;">
+                                <token id="3" parent_id="2" str="Q"/>
+                                <token id="4" parent_id="2" str="G">
+                                    <token id="5" parent_id="4" str="()">
+                                        <token id="6" parent_id="5" str="-&gt;">
+                                            <token id="7" parent_id="6" str="P"/>
+                                            <token id="8" parent_id="6" str="F">
+                                                <token id="9" parent_id="8" str="S"/>
+                                            </token>
+                                        </token>
+                                    </token>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </after_Q>
+            <between_Q_and_R ltl="G ((Q &amp; !R &amp; F R) -&gt; (P -&gt; (!R U (S &amp; !R))) U R)" semantic="QとRの間に">
+                <templates>
+                    <template id="variable">Q</template>
+                    <template id="text">と</template>
+                    <template id="variable">R</template>
+                    <template id="text">の間に</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="G">
+                        <token id="1" parent_id="0" str="()">
+                            <token id="2" parent_id="1" str="-&gt;">
+                                <token id="3" parent_id="2" str="()">
+                                    <token id="18" parent_id="3" str="&amp;">
+                                        <token id="19" parent_id="18" str="&amp;">
+                                            <token id="22" parent_id="19" str="Q"/>
+                                            <token id="23" parent_id="19" str="!">
+                                                <token id="24" parent_id="23" str="R"/>
+                                            </token>
+                                        </token>
+                                        <token id="20" parent_id="18" str="F">
+                                            <token id="21" parent_id="20" str="R"/>
+                                        </token>
+                                    </token>
+                                </token>
+                                <token id="4" parent_id="2" str="U">
+                                    <token id="5" parent_id="4" str="()">
+                                        <token id="7" parent_id="5" str="-&gt;">
+                                            <token id="8" parent_id="7" str="P"/>
+                                            <token id="9" parent_id="7" str="()">
+                                                <token id="10" parent_id="9" str="U">
+                                                    <token id="11" parent_id="10" str="!">
+                                                        <token id="17" parent_id="11" str="R"/>
+                                                    </token>
+                                                    <token id="12" parent_id="10" str="()">
+                                                        <token id="13" parent_id="12" str="&amp;">
+                                                            <token id="14" parent_id="13" str="S"/>
+                                                            <token id="15" parent_id="13" str="!">
+                                                                <token id="16" parent_id="15" str="R"/>
+                                                            </token>
+                                                        </token>
+                                                    </token>
+                                                </token>
+                                            </token>
+                                        </token>
+                                    </token>
+                                    <token id="6" parent_id="4" str="R"/>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </between_Q_and_R>
+            <after_Q_until_R ltl="G (Q &amp; !R -&gt; (P -&gt; (!R U (S &amp; !R))) W R)" semantic="Qが起こってRが起こるまで">
+                <templates>
+                    <template id="variable">Q</template>
+                    <template id="text">が起こって</template>
+                    <template id="variable">R</template>
+                    <template id="text">が起こるまで</template>
+                </templates>
+                <ast_ltl>
+                    <token id="0" parent_id="-1" str="G">
+                        <token id="1" parent_id="0" str="()">
+                            <token id="2" parent_id="1" str="-&gt;">
+                                <token id="3" parent_id="2" str="&amp;">
+                                    <token id="18" parent_id="3" str="Q"/>
+                                    <token id="19" parent_id="3" str="!">
+                                        <token id="20" parent_id="19" str="R"/>
+                                    </token>
+                                </token>
+                                <token id="4" parent_id="2" str="W">
+                                    <token id="5" parent_id="4" str="()">
+                                        <token id="7" parent_id="5" str="-&gt;">
+                                            <token id="8" parent_id="7" str="P"/>
+                                            <token id="9" parent_id="7" str="()">
+                                                <token id="10" parent_id="9" str="U">
+                                                    <token id="11" parent_id="10" str="!">
+                                                        <token id="17" parent_id="11" str="R"/>
+                                                    </token>
+                                                    <token id="12" parent_id="10" str="()">
+                                                        <token id="13" parent_id="12" str="&amp;">
+                                                            <token id="14" parent_id="13" str="S"/>
+                                                            <token id="15" parent_id="13" str="!">
+                                                                <token id="16" parent_id="15" str="R"/>
+                                                            </token>
+                                                        </token>
+                                                    </token>
+                                                </token>
+                                            </token>
+                                        </token>
+                                    </token>
+                                    <token id="6" parent_id="4" str="R"/>
+                                </token>
+                            </token>
+                        </token>
+                    </token>
+                </ast_ltl>
+            </after_Q_until_R>
+        </respose_pattern>
+    </order_patterns>
+</ltl_gen_rules>

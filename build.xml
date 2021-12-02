@@ -36,10 +36,13 @@
   <target name="compile" depends="init">
     <javac srcdir="${src}"
            destdir="${classes}"
-           encoding="UTF-8"
+           encoding="utf-8"
            classpathref="libraries"
-           includeAntRuntime="false">
+           includeAntRuntime="false"
+	   fork="true">
            <compilerarg value="-Xlint:unchecked" />
+           <compilerarg value="-J-Duser.language=en"/>
+           <compilerarg value="-J-Duser.locale=en"/>
     </javac>
   </target>
 

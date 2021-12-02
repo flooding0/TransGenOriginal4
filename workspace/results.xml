@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <sentences>
- <sentence id="6">
+ <sentence id="1">
   <variables/>
   <variable-values/>
   <set_of_subinfo>
-   <subinfo phraseId="44"/>
+   <subinfo phraseId="31"/>
   </set_of_subinfo>
-  <transitions/>
+  <transitions>
+   <transition phraseId="16"/>
+  </transitions>
   <inner-operations/>
  </sentence>
- <sentence id="7">
+ <sentence id="1">
   <variables/>
   <variable-values/>
   <set_of_subinfo>
@@ -19,7 +21,25 @@
   <transitions/>
   <inner-operations/>
  </sentence>
+ <sentence id="7">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo phraseId="44"/>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
  <sentence id="8">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo phraseId="31"/>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
+ <sentence id="9">
   <variables/>
   <variable-values/>
   <set_of_subinfo>
@@ -28,7 +48,7 @@
   <transitions/>
   <inner-operations/>
  </sentence>
- <sentence id="10">
+ <sentence id="11">
   <variables>
    <variable phraseId="16"/>
   </variables>
@@ -41,7 +61,7 @@
    <inner-operation phraseId="28"/>
   </inner-operations>
  </sentence>
- <sentence id="12">
+ <sentence id="13">
   <variables/>
   <variable-values/>
   <set_of_subinfo>
@@ -50,12 +70,43 @@
   <transitions/>
   <inner-operations/>
  </sentence>
- <sentence id="13">
+ <sentence id="14">
   <variables/>
   <variable-values/>
   <set_of_subinfo>
    <subinfo phraseId="31"/>
   </set_of_subinfo>
+  <transitions/>
+  <inner-operations/>
+ </sentence>
+ <sentence id="15">
+  <variables/>
+  <variable-values/>
+  <set_of_subinfo>
+   <subinfo phraseId="40"/>
+  </set_of_subinfo>
+  <transitions/>
+  <inner-operations>
+   <inner-operation phraseId="44"/>
+  </inner-operations>
+ </sentence>
+ <sentence id="16">
+  <variables>
+   <variable phraseId="17"/>
+  </variables>
+  <variable-values/>
+  <set_of_subinfo/>
+  <transitions>
+   <transition phraseId="23"/>
+  </transitions>
+  <inner-operations/>
+ </sentence>
+ <sentence id="16">
+  <variables>
+   <variable phraseId="17"/>
+  </variables>
+  <variable-values/>
+  <set_of_subinfo/>
   <transitions/>
   <inner-operations/>
  </sentence>

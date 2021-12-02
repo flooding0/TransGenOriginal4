@@ -11,5 +11,6 @@ public class window_data {
 	static ResultSpace resultspase = new ResultSpace();
 	static Map<label2,Textfield1> txmap = new LinkedHashMap<>();
 	static List<resultlabel> resultlabellist = new ArrayList<resultlabel>();
+	static List<TemplateLTLPanel> test_list = new ArrayList<TemplateLTLPanel>();
 	static Gridpanel gridpanel = new Gridpanel();
 }
