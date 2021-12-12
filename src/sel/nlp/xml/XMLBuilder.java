@@ -52,6 +52,18 @@ public class XMLBuilder  {
     return xml;
   }
 
+  public static Element comp(String comp) {
+	  Element xml = DocumentHelper.createElement("compname");
+	  xml.addText(comp);
+	  return xml;
+  }
+
+  public static Element requirement(String req) {
+	  Element xml = DocumentHelper.createElement("requirement");
+	  xml.addText(req);
+	  return xml;
+  }
+
   public static Element phrase(String id, String type,String subinfo,
                               Element phrase1, Element phrase2) {
     Element xml = DocumentHelper.createElement("phrase");

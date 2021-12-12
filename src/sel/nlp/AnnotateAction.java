@@ -162,16 +162,6 @@ public class AnnotateAction {
   }
 
   public void annotateaction() {
-	  File log= new File("log.txt");
-      try {
-		FileWriter log_writer = new FileWriter(log,true);
-		log_writer.write("\n" + "annotateAction Finish");
-		  log_writer.close();
-	} catch (IOException e) {
-		// TODO 自動生成された catch ブロック
-		e.printStackTrace();
-	}
-
     AnnotateAction annotater = new AnnotateAction();
     String[] filenames = {"annotatedtree.xml","annotatedtreeaction.xml"};
 	annotater.init(filenames);

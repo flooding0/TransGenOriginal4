@@ -244,17 +244,6 @@ public class BuildTree {
 		builder.init(filenames );
 	    builder.perform();
 	    builder.write();
-	    File log= new File("log.txt");
-		  FileWriter log_writer;
-		try {
-			log_writer = new FileWriter(log,true);
-			log_writer.write("\n" + "BuildTree Finish");
-			  log_writer.close();
-		} catch (IOException e) {
-			// TODO 自動生成された catch ブロック
-			e.printStackTrace();
-		}
-
-	  }
+	    }
 
 }

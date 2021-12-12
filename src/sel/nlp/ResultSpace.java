@@ -1,13 +1,10 @@
 package sel.nlp;
 
-import java.awt.Panel;
-
 import javax.swing.BoxLayout;
-public class ResultSpace extends Panel{
-	BoxLayout layout = new BoxLayout(this, BoxLayout.Y_AXIS);
-
+import javax.swing.JPanel;
+public class ResultSpace extends JPanel{
 	public ResultSpace() {
-		setLayout(layout);
+		setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 	}
 
 }

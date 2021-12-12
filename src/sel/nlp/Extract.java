@@ -1,8 +1,6 @@
 package sel.nlp;
 
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.List;
 
 import org.dom4j.Document;
@@ -134,16 +132,6 @@ public class Extract {
     extractor.init(args);
     extractor.perform();
     extractor.write();
-
-    File log= new File("log.txt");
-    try {
-		FileWriter log_writer = new FileWriter(log,true);
-		log_writer.write("\n" + "Extract Finish");
-		log_writer.close();
-	} catch (IOException e) {
-		// TODO 自動生成された catch ブロック
-		e.printStackTrace();
-	}
   }
 
   public void extract() {
@@ -154,16 +142,6 @@ public class Extract {
 		extractor.init(filenames );
 	    extractor.perform();
 	    extractor.write();
-
-	    File log= new File("log.txt");
-	    try {
-			FileWriter log_writer = new FileWriter(log,true);
-			log_writer.write("\n" + "Extract Finish");
-			log_writer.close();
-		} catch (IOException e) {
-			// TODO 自動生成された catch ブロック
-			e.printStackTrace();
-		}
-	  }
+  }
 
 }

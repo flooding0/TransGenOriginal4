@@ -187,14 +187,6 @@ public class Annotate {
 	    annotater.perform();
 	    annotater.write();
 
-	    File log= new File("log.txt");
-	    try {
-			FileWriter log_writer = new FileWriter(log,true);
-			log_writer.write("\n" + "Annotate Finish");
-			log_writer.close();
-		} catch (IOException e) {
-			// TODO 自動生成された catch ブロック
-			e.printStackTrace();
-		}
+
 	  }
 }

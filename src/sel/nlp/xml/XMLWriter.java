@@ -1,11 +1,13 @@
 package sel.nlp.xml;
 
-import sel.nlp.xml.*;
-
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 
 import org.dom4j.Document;
-import org.dom4j.DocumentException;
 import org.dom4j.io.OutputFormat;
 
 /**
@@ -30,7 +32,7 @@ public class XMLWriter {
   }
 
   public void write(Document document, boolean line) {
-
+//lineの変数で改行するか否か選べる
 /*
     try {
       output.delete();

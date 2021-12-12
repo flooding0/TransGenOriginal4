@@ -29,16 +29,6 @@ public class RefreshButton extends JPanel implements ActionListener{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-//			String batpath= "analyse2.bat";
-//			try {
-//				Runtime run = Runtime.getRuntime();
-//			    Process pro = run.exec(batpath);
-//			    int ret = pro.waitFor();
-//			    System.err.println("Complete");
-//			    read.show_result();
-//			    } catch (IOException | InterruptedException e1) {
-//			      e1.printStackTrace();
-//			    }
 			read.rewrite_input2();
 			analyse.analysis();
 			buildtree.buildtree();
@@ -47,6 +37,7 @@ public class RefreshButton extends JPanel implements ActionListener{
       		annotateaction.annotateaction();
 			extract.extract();
 			extractword.extractword();
+			Frame.gridpanel.removeAll();
 			read.extract_difference();
 			System.out.println("Complete");
 			System.out.println("***************************************");

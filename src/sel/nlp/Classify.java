@@ -150,14 +150,6 @@ public class Classify {
 		classifier.init(filenames);
 	    classifier.perform();
 	    classifier.write();
-	    File log= new File("log.txt");
-	    try {
-			FileWriter log_writer = new FileWriter(log,true);
-			log_writer.write("\n" + "Classify Finish");
-			log_writer.close();
-		} catch (IOException e) {
-			// TODO 自動生成された catch ブロック
-			e.printStackTrace();
-		}
+
 	  }
 }
