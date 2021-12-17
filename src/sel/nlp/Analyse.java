@@ -7,7 +7,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 //import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -383,9 +382,7 @@ public class Analyse {
     try {
 //      int count = 0;//ここに解析したい文の番号を入れる。いらなかったら下のif文とともにコメントアウト
 
-        File log= new File("log.txt");
 //        FileWriter log_writer = new FileWriter(log);
-        FileWriter log_writer = new FileWriter(log,true);
       String line;
       int count = analyser.count_rule();//ルール数のカウント
       while ((line = reader.readLine()) != null) {
@@ -403,10 +400,6 @@ public class Analyse {
     		  analyser.performMorphologicalAnalysis(line);
     		  analyser.parse();
          }
-      String cnt = "" + count;
-      log_writer.write(cnt);
-      log_writer.write("\n"+"Analyse Finish");
-	  log_writer.close();
     } catch (IOException e) {
       e.printStackTrace();
     }

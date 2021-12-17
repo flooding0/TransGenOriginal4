@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<input>
+ <sentence id="1">
+  <compname>水位センサ </compname>
+  <requirement>水位センサはユーザーが水位を調整することで、適正になる。</requirement>
+ </sentence>
+ <sentence id="2">
+  <compname>蓋 </compname>
+  <requirement>蓋は開いている時にユーザーが閉めれば、閉まる。</requirement>
+ </sentence>
+ <sentence id="3">
+  <compname>蓋 </compname>
+  <requirement>閉じている時、ポットが沸騰中でも給湯中でもない場合、ユーザーが開ければ、開く。</requirement>
+ </sentence>
+ <sentence id="4">
+  <compname>水温 </compname>
+  <requirement>水温はポットが沸騰中であれば、高くなる。</requirement>
+ </sentence>
+ <sentence id="5">
+  <compname>水温 </compname>
+  <requirement>ユーザーが待機状態になれば、低くなる。</requirement>
+ </sentence>
+ <sentence id="6">
+  <compname>セーフティロック </compname>
+  <requirement>セーフティロックはユーザーがセーフティロックボタンをオンにしたら、オンになる。</requirement>
+ </sentence>
+ <sentence id="7">
+  <compname>セーフティロック </compname>
+  <requirement>ユーザーが給湯ボタンを離したら、オンになる。</requirement>
+ </sentence>
+ <sentence id="8">
+  <compname>セーフティロック </compname>
+  <requirement>ユーザーがセーフティロックボタンをオフにしたら、オフになる。</requirement>
+ </sentence>
+ <sentence id="9">
+  <compname>制御部 </compname>
+  <requirement>ポットはユーザーが給湯ボタンを押し続け、水温が高く、ポットが使用不可能状態でなく、蓋が閉まっており、セーフティロックが解除されている場合、給湯する。</requirement>
+ </sentence>
+ <sentence id="10">
+  <compname>制御部 </compname>
+  <requirement>給湯中に、ユーザーが給湯ボタンを離すと給湯を止める。</requirement>
+ </sentence>
+ <sentence id="11">
+  <compname>制御部 </compname>
+  <requirement>ユーザーが給湯ボタンを押し、水位が適正で、水温も低く、蓋が閉まっていた場合、沸騰する。</requirement>
+ </sentence>
+ <sentence id="12">
+  <compname>制御部 </compname>
+  <requirement>ユーザーがプラグを挿すと、使用可能になる。</requirement>
+ </sentence>
+ <sentence id="13">
+  <compname>制御部 </compname>
+  <requirement>ユーザーがプラグを抜くと、使用不可能になる。</requirement>
+ </sentence>
+ <sentence id="14">
+  <compname>制御部 </compname>
+  <requirement>ユーザーが蓋を閉めて、アイド正であった場合、沸騰を開始する。</requirement>
+ </sentence>
+ <sentence id="15">
+  <compname>制御部 </compname>
+  <requirement>使用可能であれば、アイドル</requirement>
+ </sentence>
+ <sentence id="16">
+  <compname>水位センサ </compname>
+  <requirement>動く</requirement>
+ </sentence>
+ <sentence id="17">
+  <compname>水位センサ </compname>
+  <requirement>動く</requirement>
+ </sentence>
+ <sentence id="18">
+  <compname>水位センサ </compname>
+  <requirement>動く</requirement>
+ </sentence>
+ <sentence id="19">
+  <compname>水位センサ </compname>
+  <requirement>動く可能性がある</requirement>
+ </sentence>
+ <sentence id="20">
+  <compname>水位センサ </compname>
+  <requirement>動く</requirement>
+ </sentence>
+ <sentence id="21">
+  <compname>水位センサ </compname>
+  <requirement>動く</requirement>
+ </sentence>
+ <sentence id="22">
+  <compname>水位センサ </compname>
+  <requirement>動く</requirement>
+ </sentence>
+ <sentence id="23">
+  <compname>水位センサ </compname>
+  <requirement>efwaiudhfoae</requirement>
+ </sentence>
+ <sentence id="24">
+  <compname>水位センサ </compname>
+  <requirement>動く</requirement>
+ </sentence>
+ <sentence id="25">
+  <compname>なにか</compname>
+  <requirement>fewaf@plaw</requirement>
+ </sentence>
+</input>

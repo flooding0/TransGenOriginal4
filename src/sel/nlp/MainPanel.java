@@ -4,13 +4,14 @@ public class MainPanel extends XboxrayoutPanel{
 
 
 
+
 	public MainPanel() {
 	}
 
 	public void MainPanel_empty() {
 		MainPanel main = new MainPanel();
 
-		 Label2 numl = new Label2("");
+		 sentencenumLabel numl = new sentencenumLabel("");
 		 Label2 coml = new Label2("なにか");
 		 Textfield1 tx = new Textfield1("");
 

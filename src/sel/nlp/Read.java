@@ -1,58 +1,52 @@
 package sel.nlp;
 
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.util.List;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.Node;
+import org.dom4j.io.SAXReader;
 
 
 
 public class Read {
 
-	static File input_file = new File("input2.txt");
+	static File analyzed_file = new File("input2.txt");
+	static File xml_input = new File("input2.xml");
 	static int fin_row = 0;
+	static Document input_document;
 	//入力ファイル設定
 
 public static void main(String[] args) {
-    String excelread = "read3.xlsx";
-	XSSFWorkbook workbook  = null;
-	try{
-		workbook = new XSSFWorkbook(excelread);
-		Sheet sheet = workbook.getSheetAt(0);
-		String variable = null ;
-		FileWriter writer = new FileWriter(input_file);
-		int sentence_number = 0;
-	for (int i=2 ; sheet.getRow(i).getCell(1).getStringCellValue()!="" ;i++) {
-		String num = "";
-		//文番号取得
-		sentence_number++;
-		num+=sentence_number;
-		Label2 numlabel = new Label2(num);
-		//要素名取得
-		Row row0 = sheet.getRow(i);
-		Cell cell0 = row0.getCell(0);
-		if(cell0.getStringCellValue()!="") {
-			variable = cell0.getStringCellValue();
-		}else {
-
+	SAXReader reader = new SAXReader();
+	try {
+		input_document = reader.read(xml_input);
+		List<Node> sentenceNodes = input_document.selectNodes("//sentence");
+		for(Node sentenceid : sentenceNodes) {
+			Gridpanel_compornent.sentence_num_list.add(new sentencenumLabel(((Element)sentenceid).attribute("id").getValue()));
 		}
-		//input_fileにexcelのデータをぶち込む
-		Cell cell1 = row0.getCell(1);
-		writer.write(cell1.getStringCellValue() + "\n");
-		//文の記述をexcelからtextfield上に取得
-		Textfield1 tb = new Textfield1(cell1.getStringCellValue());
-		Label2 variable_name = new Label2(variable+" ");
-		Gridpanel_compornent.sentence_num_list.add(numlabel);
-		Gridpanel_compornent.compornent_name_list.add(variable_name);
-		Gridpanel_compornent.txlist.add(tb);
-		fin_row = i+1;
-	}
+		for(Node node : sentenceNodes) {
+			List<Node> compnamenode = node.selectNodes("./compname");
+			List<Node> requirementnode = node.selectNodes("./requirement");
 
-int i = 0;
+			for(Node compname : compnamenode) {
+				Gridpanel_compornent.compornent_name_list.add(new Label2(((Element)compname).getText()));
+				//System.out.println(((Element)compname).getText());
+			}
+			for(Node requirement : requirementnode) {
+				Gridpanel_compornent.txlist.add(new Textfield1(((Element)requirement).getText()));
+				//System.out.println(((Element)requirement).getText());
+			}
+		}
+
+	} catch (DocumentException e1) {
+		// TODO 自動生成された catch ブロック
+		e1.printStackTrace();
+	}
+	try{
+		int i = 0;
 	for (Label2 label: Gridpanel_compornent.compornent_name_list) {
 //コンポーネント名の数だけループ
 		MainPanel p4 = new MainPanel();
@@ -70,27 +64,16 @@ int i = 0;
 	}
 
 	    Window_data.frm.setVisible(true);
-	    writer.close();
-    }catch(IOException e){
-      System.out.println(e.toString());
+
     }finally{
-      try {
-        if (workbook != null) {
-            	workbook.close();
-          }
-      }catch(IOException e){
-        System.out.println(e.toString());
-      }
     }
-    System.out.println(fin_row);
-    //Excel_write.excel_write();
 }
 
 
 public void show_result() {
 
 	int i = 0;
-	for (Label2 label: Gridpanel_compornent.sentence_num_list) {
+	for (sentencenumLabel label: Gridpanel_compornent.sentence_num_list) {
 		//コンポーネント名の数だけループ
 				MainPanel p4 = new MainPanel();
 			    p4.add(Gridpanel_compornent.sentence_num_list.get(i));
@@ -132,16 +115,7 @@ public void extract_difference() {
 public void rewrite_input2() {
 	//input2ファイルを新しく入力されたテキストフィールドの文章に書き直す
 
-		try {
-			FileWriter rewriter = new FileWriter(input_file);
-			for (Textfield1 tx : Gridpanel_compornent.txlist) {
-				rewriter.write(tx.getText()+"\n");
-			}
-			rewriter.close();
-		} catch (IOException e) {
-			// TODO 自動生成された catch ブロック
-			e.printStackTrace();
-		}
-
+    Xml_write.input_write();
+    Text_write.text_rewrite(analyzed_file);
 }
 }

@@ -18,7 +18,8 @@ public class SaveButton extends JPanel implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-
+		Xml_write.input_write();
+		System.out.println("保存しました。");
 	}
 
 }

@@ -5,27 +5,53 @@ import java.io.FileOutputStream;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 
+import sel.nlp.xml.XMLBuilder;
 import sel.nlp.xml.XMLWriter;
 
 public class Xml_write {
-	static XSSFWorkbook workbook;
-	static FileOutputStream out;
-	static Document newDocument;
-	static XMLWriter writer;
-	static Document document;
+	XSSFWorkbook workbook;
+	FileOutputStream out;
+	XMLWriter writer;
+	Document document;
+	Element input;
+
+
 
 	  public Xml_write() {
-		  Xml_write.writer = new XMLWriter(new File("input.xml"));
+		  //コンストラクタ
+		  writer = new XMLWriter(new File("input2.xml"));
+		  input = DocumentHelper.createElement("input");
+		  document = DocumentHelper.createDocument();
+		  document.add(input);
 	  }
 
 	  void write() {
-		    Xml_write.writer.write(Xml_write.newDocument, true);
+		  writer.write(document, true);
 		  }
 
 
+	void perform() {
+
+		for (sentencenumLabel num : Gridpanel_compornent.sentence_num_list) {
+			Element sentence = DocumentHelper.createElement("sentence");
+			sentence.addAttribute("id",num.getText());
+			int id = Integer.valueOf(num.getText());
+			Element compname = XMLBuilder.comp(Gridpanel_compornent.compornent_name_list.get(id-1).getText());
+			Element requirement = XMLBuilder.requirement(Gridpanel_compornent.txlist.get(id-1).getText());
+			sentence.add(compname);
+			sentence.add(requirement);
+			input.add(sentence);
+		}
+
+
+	}
+
 	static void input_write() {
-
-
+		Xml_write writer = new Xml_write();
+		writer.perform();
+		writer.write();
 	}
 }
