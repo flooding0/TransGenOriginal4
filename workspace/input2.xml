@@ -3,7 +3,7 @@
 <input>
  <sentence id="1">
   <compname>水位センサ </compname>
-  <requirement>水位センサはユーザーが水位を調整することで、適正になる。</requirement>
+  <requirement>n水位センサはユーザーが水位を調整することで、適正になる。</requirement>
  </sentence>
  <sentence id="2">
   <compname>蓋 </compname>
@@ -55,50 +55,10 @@
  </sentence>
  <sentence id="14">
   <compname>制御部 </compname>
-  <requirement>ユーザーが蓋を閉めて、アイド正であった場合、沸騰を開始する。</requirement>
+  <requirement>ユーザーが蓋を閉めて、アイドル状態で、水位が正常であった場合、沸騰を開始する。</requirement>
  </sentence>
  <sentence id="15">
   <compname>制御部 </compname>
-  <requirement>使用可能であれば、アイドル</requirement>
- </sentence>
- <sentence id="16">
-  <compname>水位センサ </compname>
-  <requirement>動く</requirement>
- </sentence>
- <sentence id="17">
-  <compname>水位センサ </compname>
-  <requirement>動く</requirement>
- </sentence>
- <sentence id="18">
-  <compname>水位センサ </compname>
-  <requirement>動く</requirement>
- </sentence>
- <sentence id="19">
-  <compname>水位センサ </compname>
-  <requirement>動く可能性がある</requirement>
- </sentence>
- <sentence id="20">
-  <compname>水位センサ </compname>
-  <requirement>動く</requirement>
- </sentence>
- <sentence id="21">
-  <compname>水位センサ </compname>
-  <requirement>動く</requirement>
- </sentence>
- <sentence id="22">
-  <compname>水位センサ </compname>
-  <requirement>動く</requirement>
- </sentence>
- <sentence id="23">
-  <compname>水位センサ </compname>
-  <requirement>efwaiudhfoae</requirement>
- </sentence>
- <sentence id="24">
-  <compname>水位センサ </compname>
-  <requirement>動く</requirement>
- </sentence>
- <sentence id="25">
-  <compname>なにか</compname>
-  <requirement>fewaf@plaw</requirement>
+  <requirement>使用可能であれば、アイドル状態になる。</requirement>
  </sentence>
 </input>

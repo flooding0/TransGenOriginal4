@@ -1,5 +1,6 @@
 package sel.nlp;
 
+import java.awt.Color;
 import java.io.File;
 import java.io.FileOutputStream;
 
@@ -34,8 +35,12 @@ public class Xml_write {
 
 
 	void perform() {
-
+		int i = 0;
 		for (sentencenumLabel num : Gridpanel_compornent.sentence_num_list) {
+			if(Gridpanel_compornent.DB_list.get(i).getBackground()== Color.GRAY) {
+				num.setText(Integer.valueOf(i+1).toString());
+
+				//ここで削除した文抜きで文番号を整える
 			Element sentence = DocumentHelper.createElement("sentence");
 			sentence.addAttribute("id",num.getText());
 			int id = Integer.valueOf(num.getText());
@@ -44,6 +49,10 @@ public class Xml_write {
 			sentence.add(compname);
 			sentence.add(requirement);
 			input.add(sentence);
+			}else if(Gridpanel_compornent.DB_list.get(i).getBackground()== Color.RED){
+				}
+			i++;
+
 		}
 
 

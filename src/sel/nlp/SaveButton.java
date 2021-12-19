@@ -1,16 +1,18 @@
 package sel.nlp;
 
-import java.awt.Button;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
+import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class SaveButton extends JPanel implements ActionListener{
 
 	public SaveButton() {
-		Button btn = new Button("保存");
+		JButton btn = new JButton("保存(S)");
 		btn.setSize(20,12);
+		btn.setMnemonic(KeyEvent.VK_S);
 		btn.addActionListener(this);
 		add(btn);
     setSize(30,15);
