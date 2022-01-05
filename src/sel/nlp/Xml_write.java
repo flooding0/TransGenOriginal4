@@ -36,20 +36,20 @@ public class Xml_write {
 
 	void perform() {
 		int i = 0;
-		for (sentencenumLabel num : Gridpanel_compornent.sentence_num_list) {
-			if(Gridpanel_compornent.DB_list.get(i).getBackground()== Color.GRAY) {
+		for (sentencenumLabel num : CompornentData.sentence_num_list) {
+			if(CompornentData.DB_list.get(i).getBackground()== Color.GRAY) {
 				num.setText(Integer.valueOf(i+1).toString());
 
 				//ここで削除した文抜きで文番号を整える
 			Element sentence = DocumentHelper.createElement("sentence");
 			sentence.addAttribute("id",num.getText());
 			int id = Integer.valueOf(num.getText());
-			Element compname = XMLBuilder.comp(Gridpanel_compornent.compornent_name_list.get(id-1).getText());
-			Element requirement = XMLBuilder.requirement(Gridpanel_compornent.txlist.get(id-1).getText());
+			Element compname = XMLBuilder.comp(CompornentData.compornent_name_list.get(id-1).getText());
+			Element requirement = XMLBuilder.requirement(CompornentData.txlist.get(id-1).getText());
 			sentence.add(compname);
 			sentence.add(requirement);
 			input.add(sentence);
-			}else if(Gridpanel_compornent.DB_list.get(i).getBackground()== Color.RED){
+			}else if(CompornentData.DB_list.get(i).getBackground()== Color.RED){
 				}
 			i++;
 

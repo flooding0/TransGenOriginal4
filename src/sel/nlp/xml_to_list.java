@@ -20,20 +20,21 @@ public class xml_to_list {
 			input_document = reader.read(xml_input);
 			List<Node> sentenceNodes = input_document.selectNodes("//sentence");
 			for(Node sentenceid : sentenceNodes) {
-				Gridpanel_compornent.sentence_num_list.add(new sentencenumLabel(((Element)sentenceid).attribute("id").getValue()));
-				Gridpanel_compornent.DB_list.add(new DeleteButton());
+				CompornentData.sentence_num_list.add(new sentencenumLabel(((Element)sentenceid).attribute("id").getValue()));
+				CompornentData.DB_list.add(new DeleteSwitch());
 			}
 			for(Node node : sentenceNodes) {
 				List<Node> compnamenode = node.selectNodes("./compname");
 				List<Node> requirementnode = node.selectNodes("./requirement");
 
 				for(Node compname : compnamenode) {
-					Gridpanel_compornent.compornent_name_list.add(new Label2(((Element)compname).getText()));
-					//System.out.println(((Element)compname).getText());
+					CompornentData.compornent_name_list.add(new Label2(((Element)compname).getText()));
+					if(!CompornentData.compstring.contains(((Element)compname).getText())) {
+					CompornentData.compstring.add(((Element)compname).getText());
+					}
 				}
 				for(Node requirement : requirementnode) {
-					Gridpanel_compornent.txlist.add(new Textfield1(((Element)requirement).getText()));
-					//System.out.println(((Element)requirement).getText());
+					CompornentData.txlist.add(new Textfield1(((Element)requirement).getText()));
 				}
 			}
 

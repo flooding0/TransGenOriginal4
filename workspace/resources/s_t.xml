@@ -9,7 +9,7 @@ common
  1つのみ記述できる
 
 
-condition
+condition 状態
  common 以下の子ノードで適合する構文をXPATHで記述する
  conditionは複数記すことができる
  複数ある場合はすべて満たすようなときにルールが適用されるとする (AND)
@@ -28,32 +28,14 @@ decision
 <!-- objectは"前状態"、actionは"条件"を示す。頭のなかで変換してほしい。混乱しないように気を付けて -->
 <!-- 名称を変えてない理由は、プログラム側の変更方法が分からず、泥沼になりそうだったからである。 -->
 <rules>
-   <rule><!-- -->
-    <common expression="//sentence[not(@decision='definition')]/phrase[@type='sentence']/phrase[@type='transaction']"/>
- 	<match decision="transition" expression=".//phrase[@type='state-noun']"/>
-  </rule>
-   <rule><!-- -->
-    <common expression="//sentence[not(@decision='definition')]/phrase[@type='sentence']/phrase[@type='a-transaction']"/>
- 	<match decision="transition" expression=".//phrase[@type='transaction']//phrase[@type='state-noun']"/>
-  </rule>
-  <rule> <!--  -->
-    <common expression="//sentence[@decision='processing' or @decision='processing, definition']//phrase[@type='trigger-end']"/>
-	<condition expression=".//phrase[@type='trigger-end']/token/word[text()='と']"/>
-	<match decision="subinfo" expression="./phrase[@type='ab-verb']"/>
-  </rule>
-  <rule> <!--  -->
-    <common expression="//sentence[@decision='processing' or @decision='processing, definition']//phrase[@type='Aパート']"/>
-    <condition expression=".//phrase[@type='trigger-end']/token/word[text()='と']"/>
-	<match decision="subinfo" expression="./phrase[@type='trigger']"/>
-  </rule>
-  <rule> <!--  -->
-    <common expression="//sentence[@decision='processing' or @decision='processing, definition']"/>
-	<match decision="subinfo" expression=".//phrase[1][@type='trigger']"/>
-  </rule>
-
-
-    <rule> <!-- 新しく作った要素。これはまだxmlに出力していない。適宜出力する -->
+　<rule><!-- -->
     <common expression="//sentence[@decision='processing' or @decision='processing, definition']/phrase[@type='sentence']"/>
-	<match decision="inner-operation" expression="./phrase[@type='targeted-action']"/>
+ 	<match decision="subinfo" expression=".//phrase[@type='単文']"/>
+ 	<match decision="user_operation" expression=".//phrase[@type='ab-verb']/phrase[@type='targeted-action']"/>
+  </rule>
+
+  <rule> <!--  -->
+    <common expression="//sentence[@decision='definition']/phrase[@type='sentence']"/>
+	<match decision="user_operation" expression=".//phrase[@type='targeted-action']"/>
   </rule>
 </rules>

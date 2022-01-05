@@ -78,7 +78,7 @@ public class Extract {
       List<Node> valNodes = node.selectNodes(".//phrase[@decision='variable-value']");//変数値
       List<Node> subinfos = node.selectNodes(".//phrase[@action-decision='subinfo']");//action
       List<Node> transitions = node.selectNodes(".//phrase[@action-decision='transition']");//transition
-      List<Node> inneroperations = node.selectNodes(".//phrase[@action-decision='inner-operation']");//inneroperation
+      List<Node> inneroperations = node.selectNodes(".//phrase[@action-decision='user_operation']");//inneroperation
 //xmlへの出力処理(状態変数)
       Element variables = DocumentHelper.createElement("variables");
       for (Node varNode: varNodes) {
@@ -109,9 +109,9 @@ public class Extract {
       }
 
 //xmlへの出力処理(transition)
-      Element inneroperation = DocumentHelper.createElement("inner-operations");
+      Element inneroperation = DocumentHelper.createElement("user_operations");
       for (Node inneroperationNode: inneroperations) {
-        Element inneroperationE = DocumentHelper.createElement("inner-operation");
+        Element inneroperationE = DocumentHelper.createElement("user_operation");
         inneroperationE.addAttribute("phraseId",((Element)inneroperationNode).attribute("id").getValue());
         inneroperation.add(inneroperationE);
       }

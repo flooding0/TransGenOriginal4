@@ -40,29 +40,16 @@ aliasは現状 morphemeの各値には原則対応していない
   注意 morphemeの値のうち 句点、読点には対応した。
 
 -->
-<!-- ～は ↓-->
-  <rule>
-    <goal>条件終端表現</goal> <!-- ～ても -->
-    <condition seq="0" morpheme="接続助詞">助詞</condition>
-    <condition seq="1" morpheme="係助詞">助詞</condition>
-  </rule>
-  <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0" text="とき">名詞</condition>
-    <condition seq="1" morpheme="読点">記号</condition>
-  </rule>
-  <rule>
+ <rule>
     <goal>主格</goal>
     <condition seq="0">名詞</condition>
     <condition seq="1" text="は">助詞</condition>
   </rule>
   <rule>
-    <goal>主格</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1" text="しか">助詞</condition>
+    <goal>ユーザー宣言</goal>
+    <condition seq="0" text ="ユーザー">名詞</condition>
+    <condition seq="1" text="が">助詞</condition>
   </rule>
-<!-- ～は ↑-->
-<!-- ～が ↓-->
   <rule>
     <goal>主格</goal>
     <condition seq="0">名詞</condition>
@@ -73,8 +60,7 @@ aliasは現状 morphemeの各値には原則対応していない
     <condition seq="0">状態名詞</condition>
     <condition seq="1" text="が">助詞</condition>
   </rule>
-<!-- ～が ↑-->
-  <rule>
+    <rule>
     <goal>主格</goal>
     <condition seq="0">補足</condition>
     <condition seq="1">主格</condition>
@@ -84,7 +70,8 @@ aliasは現状 morphemeの各値には原則対応していない
     <condition seq="0">主格</condition>
     <condition seq="1" morpheme="読点">記号</condition>
   </rule>
-    <rule>
+  <!-- 主格 -->
+   <rule>
     <goal>連体詞</goal>
     <condition seq="0">所有格</condition>
     <condition seq="1">形容詞</condition>
@@ -94,7 +81,8 @@ aliasは現状 morphemeの各値には原則対応していない
     <condition seq="0">名詞</condition>
     <condition seq="1" text="な">助動詞</condition>
   </rule>
-  <rule>
+  <!-- 連体詞 -->
+    <rule>
     <goal>専属</goal>
     <condition seq="0">専属</condition>
     <condition seq="1" text="の">助詞</condition>
@@ -107,29 +95,20 @@ aliasは現状 morphemeの各値には原則対応していない
    <rule>
     <goal>所有格</goal>
     <condition seq="0">名詞</condition>
-    <condition seq="1" morpheme="接尾" text="用">名詞</condition>
+    <condition seq="1" morpheme="" text="用">名詞</condition>
   </rule>
+  <!-- 所有格 -->
   <rule>
-    <goal>所有格</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1" text="の">助詞</condition>
-  </rule>
-  <rule><!-- ～状態 -->
     <goal>状態名詞</goal>
     <condition seq="0">名詞</condition>
     <condition seq="1" text="状態" >名詞</condition>
   </rule>
-  <rule><!-- ～中 -->
+  <rule>
     <goal>状態名詞</goal>
     <condition seq="0">名詞</condition>
     <condition seq="1" text="中" >名詞</condition>
   </rule>
-    <rule><!-- ～時 -->
-    <goal>状態設定終端</goal>
-    <condition seq="0" text="設定">名詞</condition>
-    <condition seq="1" text="時" >名詞</condition>
-  </rule>
-    <rule>
+  <rule>
     <goal>索引</goal>
     <condition seq="0" text="第">接頭詞</condition>
     <condition seq="1">名詞</condition>
@@ -154,7 +133,6 @@ aliasは現状 morphemeの各値には原則対応していない
     <condition seq="0">可能節</condition>
     <condition seq="1" morpheme="一般">名詞</condition>
   </rule>
-  <!-- サ変接続が連なる名詞の認識ルール -->
   <rule>
     <goal>名詞</goal>
     <condition seq="0" morpheme="サ変接続">名詞</condition>
@@ -170,13 +148,12 @@ aliasは現状 morphemeの各値には原則対応していない
     <condition seq="0">名詞</condition>
     <condition seq="1" morpheme="サ変接続">名詞</condition>
   </rule>
-  <!-- サ変接続が連なる名詞の認識ルール -->
   <rule>
     <goal>名詞</goal>
     <condition seq="0" morpheme="一般">名詞</condition>
     <condition seq="1" morpheme="一般">名詞</condition>
   </rule>
-    <rule>
+  <rule>
     <goal>名詞</goal><!-- 	この条件のせいで"～とき"が名詞として認識される。対策必要 -->
     <condition seq="0">動詞</condition>
     <condition seq="1" text="こと">名詞</condition>
@@ -196,26 +173,10 @@ aliasは現状 morphemeの各値には原則対応していない
     <condition seq="0">連体詞</condition>
     <condition seq="1">名詞</condition>
   </rule>
-
-  <rule><!-- 動詞汎用規則-->
-    <goal>動詞</goal>
-    <condition seq="0">動作対象</condition>
-    <condition seq="1" text="なった">動詞</condition>
-  </rule>
-  <rule><!-- 動詞＋助動詞の汎用規則-->
-    <goal>動詞</goal>
-    <condition seq="0">動作対象</condition>
-    <condition seq="1" text="なる">動詞</condition>
-  </rule>
   <rule><!-- target+noun -->
     <goal>名詞</goal>
     <condition seq="0">動作対象</condition>
     <condition seq="1" morpheme="一般">名詞</condition>
-  </rule>
-  <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0">受動態</condition>
-    <condition seq="1" text="場合">名詞</condition>
   </rule>
   <rule>
     <goal>名詞</goal>
@@ -229,7 +190,7 @@ aliasは現状 morphemeの各値には原則対応していない
   </rule>
   <rule>
     <goal>名詞</goal>
-    <condition seq="0">補足付き受動態</condition>
+    <condition seq="0">受動態</condition>
     <condition seq="1">名詞</condition>
   </rule>
   <rule>
@@ -241,6 +202,11 @@ aliasは現状 morphemeの各値には原則対応していない
     <goal>名詞</goal>
     <condition seq="0">不可能動詞</condition>
     <condition seq="1">名詞</condition>
+  </rule>
+  <rule>
+    <goal>名詞</goal>
+    <condition seq="0">名詞</condition>
+    <condition seq="1">修飾</condition>
   </rule>
   <rule><!-- ～状態 -->
     <goal>名詞</goal>
@@ -262,7 +228,17 @@ aliasは現状 morphemeの各値には原則対応していない
     <condition seq="0" morpheme="数">名詞</condition>
     <condition seq="1" morpheme="サ変接続" text="℃" >名詞</condition>
   </rule>
-
+  <rule><!-- ～機能 -->
+    <goal>名詞</goal>
+    <condition seq="0">名詞</condition>
+    <condition seq="1" morpheme="サ変接続" text="℃" >名詞</condition>
+  </rule>
+  <!--  しもかわ -->
+  <rule>
+    <goal>名詞</goal>
+    <condition seq="0" morpheme="数">名詞</condition>
+    <condition seq="1">名詞</condition>
+  </rule>
   <rule><!-- ～名詞＋接尾名詞 -->
     <goal>名詞</goal>
     <condition seq="0">名詞</condition>
@@ -273,373 +249,50 @@ aliasは現状 morphemeの各値には原則対応していない
     <condition seq="0">名詞</condition>
     <condition seq="1" text="ボタン" morpheme='一般' >名詞</condition>
   </rule>
-  <!-- このルールは名詞の並列表現に条件節の終端が含まれないようにするためのものである -->
   <rule>
-    <goal>状態設定</goal>
-    <condition seq="0">状態名詞</condition>
-    <condition seq="1" text="に">助詞</condition>
+    <goal>連体修飾語</goal>
+    <condition seq="0">名詞</condition>
+    <condition seq="1" morpheme = "連体化" text="の">助詞</condition>
+  </rule>
+  <!-- 名詞の認識ルール -->
+  <rule>
+    <goal>否定動詞</goal>
+    <condition seq="0" text="で">助動詞</condition>
+    <condition seq="1" text="ない">助動詞</condition>
   </rule>
     <rule>
-    <goal>状態設定</goal>
-    <condition seq="0">主格</condition>
-    <condition seq="1">状態設定</condition>
-  </rule>
-      <rule>
-    <goal>状態設定</goal>
-    <condition seq="0">動作対象</condition>
-    <condition seq="1">状態設定終端</condition>
-  </rule>
-  <rule>
-    <goal>状態設定</goal>
-    <condition seq="0">状態名詞</condition>
-    <condition seq="1" text="で">助詞</condition>
-  </rule>
-    <rule>
-    <goal>状態設定</goal>
-    <condition seq="0">状態名詞</condition>
-    <condition seq="1" text="は">助詞</condition>
-  </rule>
-  <rule>
-    <goal>状態設定</goal>
-    <condition seq="0">状態設定</condition>
-    <condition seq="1" morpheme="読点">記号</condition>
-  </rule>
-    <rule>
-    <goal>Aパート</goal>
-    <condition seq="0">状態設定</condition>
-    <condition seq="1">条件節</condition>
-  </rule>
-  <rule>
-    <goal>遷移節</goal>
-    <condition seq="0" text="なる">動詞</condition>
-    <condition seq="1" morpheme="句点">記号</condition>
-  </rule>
-  <rule>
-    <goal>遷移節</goal>
-    <condition seq="0" text="移行する">動詞</condition>
-    <condition seq="1" morpheme="句点">記号</condition>
-  </rule>
-  <rule>
-    <goal>遷移節</goal>
-    <condition seq="0" text="設定する">動詞</condition>
-    <condition seq="1" morpheme="句点">記号</condition>
-  </rule>
-  <rule>
-    <goal>遷移節</goal>
-    <condition seq="0" text="セットする">動詞</condition>
-    <condition seq="1" morpheme="句点">記号</condition>
-  </rule>
-  <rule>
-    <goal>状態遷移節</goal>
-    <condition seq="0">状態設定</condition>
-    <condition seq="1">遷移節</condition>
-  </rule>
-
-    <rule>
-    <goal>定義条件節終端</goal>
-    <condition seq="0">定義語尾</condition>
-    <condition seq="1" morpheme="非自立" text="とき">名詞</condition>
-  </rule>
-    <rule>
-    <goal>定義条件節終端</goal>
-    <condition seq="0">定義語尾</condition>
-    <condition seq="1" text="時">名詞</condition>
-  </rule>
-  <rule>
-    <goal>定義条件節終端</goal>
-    <condition seq="0">定義語尾</condition>
-    <condition seq="1" text="場合">名詞</condition>
-  </rule>
-    <rule>
-    <goal>状態設定</goal>
-    <condition seq="0">状態名詞</condition>
-    <condition seq="1">定義条件節終端</condition>
-  </rule>
-      <rule>
-    <goal>定義条件節終端</goal>
-    <condition seq="0">定義条件節終端</condition>
-    <condition seq="1" morpheme="読点">記号</condition>
-  </rule>
-  <rule>
-    <goal>定義条件節終端</goal>
-    <condition seq="0">定義条件節終端</condition>
-    <condition seq="1" text="は">助詞</condition>
+    <goal>動詞語尾</goal>
+    <condition seq="0" text = "て">助詞</condition>
+    <condition seq="1" text = "いる">動詞</condition>
   </rule>
    <rule>
-    <goal>定義条件節終端</goal>
-    <condition seq="0">定義条件節終端</condition>
-    <condition seq="1" text="に">助詞</condition>
-  </rule>
-  <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0">動詞</condition>
-    <condition seq="1" morpheme="非自立" text="とき">名詞</condition>
-  </rule>
-    <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0">動詞</condition>
-    <condition seq="1" morpheme="接続助詞" text="ば">助詞</condition>
-  </rule>
-  <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0">可能動詞</condition>
-    <condition seq="1" morpheme="非自立" text="とき">名詞</condition>
-  </rule>
-  <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0">不可能動詞</condition>
-    <condition seq="1" morpheme="非自立" text="とき">名詞</condition>
-  </rule>
-  <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0">不可能節</condition>
-    <condition seq="1" morpheme="非自立" text="とき">名詞</condition>
-  </rule>
-  <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0">動詞</condition>
-    <condition seq="1" text="場合">名詞</condition>
-  </rule>
-  <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0">動詞</condition>
-    <condition seq="1" text="と">助詞</condition>
-  </rule>
-    <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0">動詞</condition>
-    <condition seq="1" text="時">名詞</condition>
-  </rule>
-    <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0">動詞</condition>
-    <condition seq="1">条件終端表現</condition>
-  </rule>
-  <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0">動詞</condition>
-    <condition seq="1" morpheme="条件">接続詞</condition>
-  </rule>
-  <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0">受動態</condition>
-    <condition seq="1" morpheme="非自立" text="とき">名詞</condition>
-  </rule>
-  <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0">受動態</condition>
-    <condition seq="1" text="時">名詞</condition>
-  </rule>
-    <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0">受動態</condition>
-    <condition seq="1" text="と">助詞</condition>
-  </rule>
-  <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0">条件節終端</condition>
-    <condition seq="1" morpheme="読点">記号</condition>
-  </rule>
- <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0">条件節終端</condition>
-    <condition seq="1" text="は">助詞</condition>
-  </rule>
-   <rule>
-    <goal>条件節終端</goal>
-    <condition seq="0">条件節終端</condition>
-    <condition seq="1" text="に">助詞</condition>
-  </rule>
-  <!-- ・・ -->
-  <rule>
-    <goal>並列前</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1" morpheme="並立助詞" text="と">助詞</condition>
-  </rule>
-  <rule>
-    <goal>並列前</goal><!-- 構文解析の段階で条件を付けたい。この場合だと「とき、」が適用される -->
-    <condition seq="0">名詞</condition>
-    <condition seq="1" morpheme="読点">記号</condition>
-  </rule>
-  <rule>
-    <goal>名詞</goal>
-    <subinfo>並列</subinfo>
-    <condition seq="0">並列前</condition>
-    <condition seq="1">名詞</condition>
+    <goal>後変数節終端</goal>
+    <condition seq="0" text = "に">助詞</condition>
+    <condition seq="1" text = "なる">動詞</condition>
   </rule>
 
-  <!-- ～に -->
-    <rule>
-    <goal>比喩接続</goal>
-    <condition seq="0" text="よう" morpheme="非自立">名詞</condition>
-    <condition seq="1" text="に">助詞</condition>
-  </rule>
-  <rule>
-    <goal>連体詞</goal>
-    <condition seq="0">所有格</condition>
-    <condition seq="1" >比喩接続</condition>
-  </rule>
-  <!-- ～へ -->
-  <rule>
-    <goal>動作対象</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1" text="へ">助詞</condition>
-  </rule>
-  <!-- ～を -->
-  <rule>
-    <goal>動作対象</goal><!-- 動作対象の並列を許容するための規則 -->
-    <subinfo>並列</subinfo>
+  <!-- 動詞語尾表現 -->
+   <rule>
+    <goal>動詞</goal>
     <condition seq="0">動作対象</condition>
-    <condition seq="1">動作対象</condition>
+    <condition seq="1" text="なった">動詞</condition>
   </rule>
   <rule>
-    <goal>動作対象</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1" text="を">助詞</condition>
-  </rule>
-  <rule>
-    <goal>動作対象</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1" text="も">助詞</condition>
-  </rule>
-  <rule>
-    <goal>動作対象</goal><!-- "～ように"は含めないように↑に比喩接続として認識させてある。どうやらルールの優先順位はこのXMLの記述順序に依存するらしい -->
-    <condition seq="0">名詞</condition>
-    <condition seq="1" text="に">助詞</condition>
-  </rule>
-  <rule>
-    <goal>動作対象</goal><!-- 動作対象の連体修飾を許容するための規則 -->
-    <condition seq="0">連体詞</condition>
-    <condition seq="1">動作対象</condition>
-  </rule>
-  <rule>
-    <goal>動作対象</goal>
-    <condition seq="0">動作対象</condition>
-    <condition seq="1" morpheme="読点">記号</condition>
-  </rule>
- <rule>
-    <goal>動作対象</goal>
-    <condition seq="0">補足</condition>
-    <condition seq="1">動作対象</condition>
-  </rule>
- <rule>
-    <goal>動作対象</goal>
-    <condition seq="0">動作対象</condition>
-    <condition seq="1">補足</condition>
-  </rule>
-    <!-- 補足 -->
-  <!-- ～と -->
-  <rule>
-    <goal>補足終端</goal>
-    <condition seq="0" text="に">助詞</condition>
-    <condition seq="1" text="は">助詞</condition>
-  </rule>
-  <rule>
-    <goal>補足</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1" text="と">助詞</condition>
-  </rule>
-  <rule>
-    <goal>補足</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1" >補足終端</condition>
-  </rule>
-  <rule>
-    <goal>補足</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1" text="で">助詞</condition>
-  </rule>
-  <rule>
-    <goal>補足</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1" text="で">助動詞</condition>
-  </rule>
-  <rule>
-    <goal>補足</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1" text="から">助詞</condition>
-  </rule>
-  <rule>
-    <goal>補足</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1" text="により">助詞</condition>
-  </rule>
-  <rule>
-    <goal>補足</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1" text="に対する">助詞</condition>
-  </rule>
-  <rule>
-    <goal>補足</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1">比較表現</condition>
-  </rule>
-    <rule>
-    <goal>補足</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1">修飾</condition>
-  </rule>
-  <rule>
-    <goal>補足</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1" text="によって">助詞</condition>
-  </rule>
-  <rule>
-    <goal>補足</goal>
-    <condition seq="0">補足</condition>
-    <condition seq="1" morpheme="読点">記号</condition>
-  </rule>
-  <rule>
-    <goal>受動態語尾</goal>
-    <condition seq="0" text="れ">動詞</condition>
-    <condition seq="1" text="た">助動詞</condition>
-  </rule>
-  <rule>
-    <goal>受動態語尾</goal>
-    <condition seq="0" text="さ">動詞</condition>
-    <condition seq="1" text="れた">受動態語尾</condition>
-  </rule>
-  <rule>
-    <goal>受動態語尾</goal>
-    <condition seq="0" text="られ">動詞</condition>
-    <condition seq="1" text="た">助動詞</condition>
-  </rule>
-  <rule>
-    <goal>補足付き受動態</goal>
-    <condition seq="0">補足</condition>
-    <condition seq="1" >受動態</condition>
-  </rule>
-  <rule><!-- ～が～られる:～が～された -->
-    <goal>主格付き受動態</goal>
-    <condition seq="0">主格</condition>
-    <condition seq="1" >受動態</condition>
-  </rule>
-  <rule><!-- 動詞＋動詞の受動態専門規則 -->
-    <goal>受動態</goal>
-    <condition seq="0" morpheme="自立">動詞</condition>
-    <condition seq="1" morpheme="接尾" text="られる">動詞</condition>
-  </rule>
-  <rule><!-- 動詞＋動詞の受動態専門規則 -->
-    <goal>受動態</goal>
-    <condition seq="0" morpheme="自立">動詞</condition>
-    <condition seq="1" morpheme="接尾" text="れる">動詞</condition>
-  </rule>
-  <rule><!-- 動詞＋受動態語尾の受動態専門規則 -->
-    <goal>受動態</goal>
-    <condition seq="0" morpheme="自立">動詞</condition>
-    <condition seq="1">受動態語尾</condition>
-  </rule>
-  <rule><!-- 動詞＋動詞の汎用規則-->
     <goal>動詞</goal>
     <condition seq="0">動詞</condition>
-    <condition seq="1" >動詞</condition>
+    <condition seq="1" text="とき">名詞</condition>
   </rule>
-  <rule><!-- 動詞＋助動詞の汎用規則-->
+   <rule>
+    <goal>動詞</goal>
+    <condition seq="0">動作対象</condition>
+    <condition seq="1" text="なる">動詞</condition>
+  </rule>
+   <rule>
     <goal>動詞</goal>
     <condition seq="0">動詞</condition>
-    <condition seq="1" >助動詞</condition>
+    <condition seq="1">動詞語尾</condition>
   </rule>
-  <rule>
+   <rule>
     <goal>動詞</goal><!-- 名詞＋する 利用する など-->
     <condition seq="0" morpheme="サ変接続">名詞</condition>
     <condition seq="1" >動詞</condition><!-- ”する”とか”し”とか-->
@@ -649,350 +302,108 @@ aliasは現状 morphemeの各値には原則対応していない
     <condition seq="0" morpheme="接続助詞">助詞</condition>
     <condition seq="1" >動詞</condition><!-- いない いる とか-->
   </rule>
+  <!-- 動詞汎用規則-->
   <rule>
-    <goal>可能動詞</goal>
-    <condition seq="0" >名詞</condition>
-    <condition seq="1" text="できる">可能動詞</condition>
-  </rule>
-  <rule>
-    <goal>不可能動詞</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1" text="できない">不可能動詞</condition>
-  </rule>
-  <rule><!-- ～ている -->
-    <goal>動詞語尾</goal>
-    <condition seq="0" text="て">助詞</condition>
-    <condition seq="1" text="いる">動詞</condition>
-  </rule>
- <rule><!-- 動詞＋動詞の汎用規則-->
-    <goal>動詞</goal>
-    <condition seq="0" morpheme="自立">動詞</condition>
-    <condition seq="1">動詞語尾</condition>
-  </rule>
-  <rule><!-- 名詞＋動詞の汎用規則-->
-    <goal>動詞</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1">動詞</condition>
-  </rule>
-  <rule><!-- 動詞＋形容詞の汎用規則-->
-    <goal>動詞</goal>
-    <condition seq="0">動詞</condition>
-    <condition seq="1">形容詞</condition>
-  </rule>
-<!--"～であり"、"～て"系の文の継続を処理する ↓-->
-
-   <!-- 動詞以外の継続規則はここより上で記述する -->
-  <rule>
-    <goal>途中文継続</goal>
-    <condition seq="0">動詞</condition>
-    <condition seq="1" morpheme="読点">記号</condition>
-  </rule>
-    <rule>
-    <goal>途中文継続</goal>
-    <condition seq="0">動詞</condition>
-    <condition seq="1" text="て">助詞</condition>
+    <goal>主動文</goal>
+    <condition seq="0" >主格</condition>
+    <condition seq="1" >動詞</condition>
   </rule>
   <rule>
-    <goal>途中文継続</goal>
-    <condition seq="0">途中文継続</condition>
-    <condition seq="1" morpheme="読点">記号</condition>
+    <goal>ユーザー動作文</goal>
+    <condition seq="0" >ユーザー宣言</condition>
+    <condition seq="1" >動詞</condition>
   </rule>
+  <!-- 細かいユニット -->
   <rule>
-    <goal>途中文継続</goal>
-    <condition seq="0">動作対象</condition>
-    <condition seq="1">途中文継続</condition>
-  </rule>
-  <rule>
-    <goal>途中文継続</goal>
-    <condition seq="0">主格</condition>
-    <condition seq="1">途中文継続</condition>
-  </rule>
-  <rule>
-    <goal>途中文継続</goal>
-    <condition seq="0">途中文継続</condition>
-    <condition seq="1">途中文継続</condition>
-  </rule>
-  <rule>
-    <goal>途中文継続</goal>
-    <condition seq="0">途中文継続</condition>
-    <condition seq="1">条件節</condition>
-  </rule>
-<!--"～かどうか"系の文の継続を処理する(名詞化する) ↓-->
-  <rule>
-    <goal>名詞</goal>
-    <condition seq="0">対象あり動作文</condition>
-    <condition seq="1">yes-or-no</condition>
-  </rule>
-  <rule>
-    <goal>名詞</goal>
-    <condition seq="0">主格-対象あり動作文</condition>
-    <condition seq="1">yes-or-no</condition>
-  </rule>
-  <rule>
-    <goal>名詞</goal>
-    <condition seq="0">動詞</condition>
-    <condition seq="1">yes-or-no</condition>
-  </rule>
-<!--"～かどうか"系の文の継続を処理する ↑-->
-<!--"～であり"系の文の継続を処理する ↑-->
-  <rule>
-    <goal>対象あり動作文</goal>
-    <condition seq="0">動作対象</condition>
-    <condition seq="1">動詞</condition>
-  </rule>
-  <rule>
-    <goal>対象あり動作文</goal>
-    <condition seq="0">補足</condition>
-    <condition seq="1">動詞</condition>
-  </rule>
-  <rule>
-    <goal>対象あり動作文</goal>
-    <condition seq="0">主格</condition>
-    <condition seq="1">動詞</condition>
-  </rule>
-  <rule>
-    <goal>主格-対象あり動作文</goal>
-    <condition seq="0">主格</condition>
-    <condition seq="1">対象あり動作文</condition>
-  </rule>
-  <rule>
-    <goal>動作文終端</goal>
-    <condition seq="0">対象あり動作文</condition>
-    <condition seq="1" morpheme="句点">記号</condition>
-  </rule>
-    <rule>
-    <goal>動作文終端</goal>
-    <condition seq="0">主格-対象あり動作文</condition>
-    <condition seq="1" morpheme="句点">記号</condition>
-  </rule>
-  <rule>
-    <goal>動作文終端</goal>
-    <condition seq="0">動詞</condition>
-    <condition seq="1" morpheme="句点">記号</condition>
-  </rule>
-    <rule>
-    <goal>動作文終端</goal>
-    <condition seq="0">途中文継続</condition>
-    <condition seq="1">動作文終端</condition>
-  </rule>
-    <rule>
-    <goal>否定表現</goal>
-    <condition seq="0" text="なかっ">助動詞</condition>
-    <condition seq="1" text="た">助動詞</condition>
-  </rule>
-  <rule>
-    <goal>定義語尾</goal>
-    <condition seq="0" text="で">助動詞</condition>
-    <condition seq="1" text="ある">助動詞</condition>
-  </rule>
-    <rule>
-    <goal>定義語尾</goal>
-    <condition seq="0" text="で">助動詞</condition>
-    <condition seq="1">否定表現</condition>
-  </rule>
-    <rule>
-    <goal>定義語尾</goal>
-    <condition seq="0" text="で">助動詞</condition>
-    <condition seq="1" text="ない">助動詞</condition>
-  </rule>
-  <rule>
-    <goal>定義語尾部品</goal>
-    <condition seq="0" text="で">助動詞</condition>
-    <condition seq="1" text="は">助詞</condition>
-  </rule>
-    <rule>
-    <goal>定義語尾</goal>
-    <condition seq="0">定義語尾部品</condition>
-    <condition seq="1" text="ない">助動詞</condition>
-  </rule>
-
-
-<!-- 可能化に関する規則↓ -->
-
-  <rule><!-- ～することができる等 -->
-    <goal>可能節</goal>
-    <condition seq="0">主格</condition>
-    <condition seq="1">可能動詞</condition>
-  </rule>
-  <rule><!-- ～することができない等 -->
-    <goal>不可能節</goal>
-    <condition seq="0">主格</condition>
-    <condition seq="1">不可能動詞</condition>
-  </rule>
-  <rule><!-- ～で…できる等 -->
-    <goal>可能節</goal>
-    <condition seq="0">補足</condition>
-    <condition seq="1">可能動詞</condition>
-  </rule>
-  <rule><!-- ～で…できる等 -->
-    <goal>可能節</goal>
-    <condition seq="0">動作対象</condition>
-    <condition seq="1">可能動詞</condition>
-  </rule>
-  <rule><!--  -->
-    <goal>不可能節</goal>
-    <condition seq="0">動作対象</condition>
-    <condition seq="1">不可能動詞</condition>
-  </rule>
-  <rule><!-- ～で…できない等 -->
-    <goal>不可能節</goal>
-    <condition seq="0">補足</condition>
-    <condition seq="1">不可能動詞</condition>
-  </rule>
-  <!-- 可能系表現終端↓ -->
-  <rule>
-    <goal>可能文終端</goal>
-    <condition seq="0">可能動詞</condition>
-    <condition seq="1" morpheme="句点">記号</condition>
-  </rule>
-  <rule>
-    <goal>不可能文終端</goal>
-    <condition seq="0">不可能動詞</condition>
-    <condition seq="1" morpheme="句点">記号</condition>
-  </rule>
-  <rule><!-- 主語あり -->
-    <goal>可能文終端</goal>
-    <condition seq="0">可能節</condition>
-    <condition seq="1" morpheme="句点">記号</condition>
-  </rule>
-  <rule><!-- 主語あり -->
-    <goal>不可能文終端</goal>
-    <condition seq="0">不可能節</condition>
-    <condition seq="1" morpheme="句点">記号</condition>
-  </rule>
-<!-- 可能化に関する規則↑ -->
-<!-- 比較表現に関する規則↓ -->
-  <rule>
-    <goal>比較表現</goal>
-    <condition seq="0" text="より">助詞</condition>
-    <condition seq="1" text="も">助詞</condition>
-  </rule>
-<!-- 比較表現に関する規則↑ -->
-
-<!-- 条件に関する規則↓ -->
-
- <rule><!-- Aである場合 -->
-    <goal>内容付き条件節終端</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1">定義条件節終端</condition>
-  </rule>
- <rule>
     <goal>条件節</goal>
-    <subinfo>主格付き</subinfo>
-    <condition seq="0">主格</condition>
-    <condition seq="1">内容付き条件節終端</condition>
+    <condition seq="0">主動文</condition>
+    <condition seq="1" text="場合">名詞</condition>
   </rule>
- <rule>
+  <rule>
     <goal>条件節</goal>
-    <subinfo>主格付き</subinfo>
-    <condition seq="0">主格</condition>
-    <condition seq="1">条件節終端</condition>
-  </rule>
- <rule>
-    <goal>条件節</goal>
-    <subinfo>補足付き</subinfo>
-    <condition seq="0">補足</condition>
-    <condition seq="1">条件節終端</condition>
-  </rule>
- <rule>
-    <goal>条件節</goal>
-    <subinfo>動作対象付き</subinfo>
-    <condition seq="0">動作対象</condition>
-    <condition seq="1">条件節終端</condition>
-  </rule>
-
-
- <rule>
-    <goal>条件節</goal>
-    <subinfo>連立</subinfo>
     <condition seq="0">条件節</condition>
-    <condition seq="1">条件節</condition>
+    <condition seq="1" text="、">記号</condition>
   </rule>
+  <!-- 条件節 -->
+<rule>
+    <goal>ユーザー動作節</goal>
+    <condition seq="0" >ユーザー動作文</condition>
+    <condition seq="1" text = "と">助詞</condition>
+  </rule>
+<rule>
+    <goal>ユーザー動作節</goal>
+    <condition seq="0" >ユーザー動作節</condition>
+    <condition seq="1" text = "、">記号</condition>
+  </rule>
+
+
+  <!-- ユーザー動作節 -->
+
+  <rule>
+    <goal>後変数節</goal>
+    <condition seq="0">名詞</condition>
+    <condition seq="1">後変数節終端</condition>
+  </rule>
+  <rule>
+    <goal>後変数節</goal>
+    <condition seq="0">後変数節</condition>
+    <condition seq="1" morpheme="句点">記号</condition>
+  </rule>
+
+  <!-- 後変数節 -->
+  <rule>
+    <goal>否定文</goal>
+    <condition seq="0">名詞</condition>
+    <condition seq="1" >否定動詞</condition>
+  </rule>
+  <rule>
+    <goal>前変数節</goal>
+    <condition seq="0">否定文</condition>
+    <condition seq="1" text = "とき">名詞</condition>
+  </rule>
+  <rule>
+    <goal>前変数節</goal>
+    <condition seq="0">否定文</condition>
+    <condition seq="1" text = "時">名詞</condition>
+  </rule>
+  <rule>
+    <goal>前変数節</goal>
+    <condition seq="0">前変数節</condition>
+    <condition seq="1" text = "、">記号</condition>
+  </rule>
+
+  <!-- 前変数節 -->
+  <rule>
+  <goal>文</goal>
+  <condition seq="0">主格</condition>
+  <condition seq="1">文</condition>
+  </rule>
+
    <rule>
-    <goal>条件節</goal>
-    <subinfo>主格付き</subinfo>
-    <condition seq="0">主格</condition>
-    <condition seq="1">条件節</condition>
+  <goal>文</goal>
+  <condition seq="0">Aユニット</condition>
+  <condition seq="1">Bユニット</condition>
   </rule>
-  <!-- 条件に関する規則↑ -->
-<!-- 文の終端に関する規則 ↓-->
- <rule>
-    <goal>入場動作付き状態遷移節</goal>
-    <condition seq="0">途中文継続</condition>
-    <condition seq="1">状態遷移節</condition>
-  </rule>
+
   <rule>
-    <goal>体言止め文終端</goal>
-    <condition seq="0">名詞</condition>
-    <condition seq="1" morpheme="句点">記号</condition>
+  <goal>Aユニット</goal>
+  <condition seq="0">前変数節</condition>
+  <condition seq="1">条件節</condition>
+  </rule>
+
+   <rule>
+  <goal>Bユニット</goal>
+  <condition seq="0">ユーザー動作節</condition>
+  <condition seq="1">後変数節</condition>
   </rule>
 
 
-    <!-- Aパート＝前状態＋条件節 -->
-	<!-- 前状態＋条件節＋遷移節 (動作 なし)-->
-  <rule>
-    <goal>文</goal>
-    <condition seq="0">Aパート</condition>
-    <condition seq="1">状態遷移節</condition>
-  </rule>
-  <rule>
-    <goal>文</goal>
-    <condition seq="0">Aパート</condition>
-    <condition seq="1">入場動作付き状態遷移節</condition>
-  </rule>
-  <!-- 条件節＋遷移節 （前状態and動作 なし）-->
-    <rule>
-    <goal>文</goal>
-    <condition seq="0">条件節</condition>
-    <condition seq="1">状態遷移節</condition>
-  </rule>
-    <rule>
-    <goal>文</goal>
-    <condition seq="0">内容付き条件節終端</condition>
-    <condition seq="1">状態遷移節</condition>
-  </rule>
-  <!-- 条件+動作文 (前状態 and 遷移節なし)-->
-  <rule>
-    <goal>文</goal>
-    <condition seq="0">条件節</condition>
-    <condition seq="1">動作文終端</condition>
-  </rule>
-  <rule>
-    <goal>文</goal>
-    <condition seq="0">Aパート</condition>
-    <condition seq="1">動作文終端</condition>
-  </rule>
-        <rule>
-    <goal>文</goal>
-    <condition seq="0">状態設定</condition>
-    <condition seq="1">可能文終端</condition>
-  </rule>
-  <rule>
-    <goal>文</goal>
-    <condition seq="0">状態設定</condition>
-    <condition seq="1">不可能文終端</condition>
-  </rule>
-  <rule>
-    <goal>文</goal>
-    <condition seq="0">状態設定</condition>
-    <condition seq="1">動作文終端</condition>
-  </rule>
-    <rule>
-    <goal>文</goal>
-    <condition seq="0">内容付き条件節終端</condition>
-    <condition seq="1">動作文終端</condition>
-  </rule>
 <!-- 状態宣言文 -->
-
-
-
-
-<!-- 文に関する規則 ↑-->
 </rules>
 <aliases>
     <alias japanese="連体詞" english="adnominal"/> <!--***-->
     <alias japanese="文" english="sentence"/>
-    <alias japanese="単純文" english="simple-sentence"/>
+    <alias japanese="単純文" english="smple-sentence"/>
     <alias japanese="単純文継続" english="simple-sentence-contd"/>
     <alias japanese="修飾節" english="modification-phrase"/>
     <alias japanese="名詞句" english="noun-phrase"/>
@@ -1032,6 +443,7 @@ aliasは現状 morphemeの各値には原則対応していない
 	<alias japanese="不可能動詞" english="not-able-verb"/> <!--***-->
 	<alias japanese="処理節" english="processing-phrase"/> <!--***-->
 	<alias japanese="途中文付き動作文終端" english="verb-end-with-continue"/> <!--***-->
+	<alias japanese="状態変数名" english="state-variable"></alias>
 	<alias japanese="状態名詞" english="state-noun"/> <!--***-->
     <alias japanese="主格-対象あり動作文" english="ab-verb"/> <!--***-->
     <alias japanese="状態遷移節" english="transaction"/> <!--***-->
@@ -1044,9 +456,22 @@ aliasは現状 morphemeの各値には原則対応していない
 	<alias japanese="否定表現" english="negative-expression"/> <!--***-->
 
 
+　　<alias japanese="遷移前" english="before-transition"></alias>
+	<alias japanese="遷移後" english="after-transition"></alias>
+	<alias japanese="条件" english="guard"></alias>
+	<alias japanese="遷移動作" english="event"></alias>
 
-
-<!-- 総数 ???-->
+	<alias japanese="完成遷移前" english="pefect-before"></alias>
+	<alias japanese="完成条件" english="pefect-guard"></alias>
+	<alias japanese="完成遷移動作" english="pefect-action"></alias>
+	<alias japanese="完成遷移後" english="pefect-after"></alias>
+ 　　
+	<alias japanese="動作-遷移後" english="ea"></alias>
+	<alias japanese="条件-動作-遷移後" english="gat"></alias>
+	<alias japanese="遷移前-条件-動作-遷移後" english="bgat"></alias>
+	<alias japanese="状態-遷移前-条件-動作-遷移後" english="sbgat"></alias>
+	<alias japanese="状態-動作-遷移後" english="sat"></alias>
+<!-- 総 ???-->
 
 
 

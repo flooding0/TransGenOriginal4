@@ -9,7 +9,7 @@ public class Text_write {
 	static void text_rewrite(File analyzed_file) {
 		try {
 			FileWriter rewriter = new FileWriter(analyzed_file);
-			for (Textfield1 tx : Gridpanel_compornent.txlist) {
+			for (Textfield1 tx : CompornentData.txlist) {
 				rewriter.write(tx.getText()+"\n");
 			}
 			rewriter.close();

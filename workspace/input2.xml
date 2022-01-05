@@ -2,63 +2,11 @@
 
 <input>
  <sentence id="1">
-  <compname>水位センサ </compname>
-  <requirement>n水位センサはユーザーが水位を調整することで、適正になる。</requirement>
+  <compname>水位</compname>
+  <requirement>水位は適正でないとき、蓋が開いている場合、ユーザーが調整すると、適正になる。</requirement>
  </sentence>
  <sentence id="2">
-  <compname>蓋 </compname>
-  <requirement>蓋は開いている時にユーザーが閉めれば、閉まる。</requirement>
- </sentence>
- <sentence id="3">
-  <compname>蓋 </compname>
-  <requirement>閉じている時、ポットが沸騰中でも給湯中でもない場合、ユーザーが開ければ、開く。</requirement>
- </sentence>
- <sentence id="4">
-  <compname>水温 </compname>
-  <requirement>水温はポットが沸騰中であれば、高くなる。</requirement>
- </sentence>
- <sentence id="5">
-  <compname>水温 </compname>
-  <requirement>ユーザーが待機状態になれば、低くなる。</requirement>
- </sentence>
- <sentence id="6">
-  <compname>セーフティロック </compname>
-  <requirement>セーフティロックはユーザーがセーフティロックボタンをオンにしたら、オンになる。</requirement>
- </sentence>
- <sentence id="7">
-  <compname>セーフティロック </compname>
-  <requirement>ユーザーが給湯ボタンを離したら、オンになる。</requirement>
- </sentence>
- <sentence id="8">
-  <compname>セーフティロック </compname>
-  <requirement>ユーザーがセーフティロックボタンをオフにしたら、オフになる。</requirement>
- </sentence>
- <sentence id="9">
-  <compname>制御部 </compname>
-  <requirement>ポットはユーザーが給湯ボタンを押し続け、水温が高く、ポットが使用不可能状態でなく、蓋が閉まっており、セーフティロックが解除されている場合、給湯する。</requirement>
- </sentence>
- <sentence id="10">
-  <compname>制御部 </compname>
-  <requirement>給湯中に、ユーザーが給湯ボタンを離すと給湯を止める。</requirement>
- </sentence>
- <sentence id="11">
-  <compname>制御部 </compname>
-  <requirement>ユーザーが給湯ボタンを押し、水位が適正で、水温も低く、蓋が閉まっていた場合、沸騰する。</requirement>
- </sentence>
- <sentence id="12">
-  <compname>制御部 </compname>
-  <requirement>ユーザーがプラグを挿すと、使用可能になる。</requirement>
- </sentence>
- <sentence id="13">
-  <compname>制御部 </compname>
-  <requirement>ユーザーがプラグを抜くと、使用不可能になる。</requirement>
- </sentence>
- <sentence id="14">
-  <compname>制御部 </compname>
-  <requirement>ユーザーが蓋を閉めて、アイドル状態で、水位が正常であった場合、沸騰を開始する。</requirement>
- </sentence>
- <sentence id="15">
-  <compname>制御部 </compname>
-  <requirement>使用可能であれば、アイドル状態になる。</requirement>
+  <compname>水位</compname>
+  <requirement>適正でないとき、蓋が開いている場合、ユーザーが調整すると、適正になる。</requirement>
  </sentence>
 </input>

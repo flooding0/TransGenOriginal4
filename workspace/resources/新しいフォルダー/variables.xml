@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+処理文、定義文の判定論理を XPATHを使って記述する。
+
+
+common => コンテストノード設定??
+ sentencnces 以下の子ノードで適合する構文をXPATHで記述する.
+ 1つのみ記述できる
+
+
+condition => 前提条件みたいなもの??
+ common 以下の子ノードで適合する構文をXPATHで記述する
+ conditionは複数記すことができる
+ 複数ある場合はすべて満たすようなときにルールが適用されるとする (AND)
+
+match => 最終条件と判定結果(decision)
+ common 以下で適合するtokenノードの位置をXPATHで記述する
+ 同一 ruleないで記述されている conditionがすべて成り立つときに
+ match が評価され、当該tokenが抜き出される。
+match は複数記述できない
+
+	[decision]
+ 	 match で指定するtokenノードがあれば
+ 	 当該 tokenがこのタグで指定された 属性 decisiosn に対する値として持つ
+
+-->
+<!-- variableは"状態変数"、variable-valueは"変数値"を示す。 -->
+<!-- sub-infoは遷移条件、transitionは遷移後の変数値を示す。 -->
+<!-- processing -->
+<rules>
+  <rule> <!--  -->
+    <common expression="//sentence[@decision='processing' or @decision='processing, definition']//phrase[@type='Aパート']/phrase[@type='state-set']"/>
+	<match decision="variable" expression="./phrase[@type='state-noun']"/>
+	<match decision="variable" expression="./phrase[@type='nominative']/phrase[@type='noun']"/>
+	<match decision="variable-value" expression="./phrase[@type='state-set']/phrase[@type='state-noun']"/>
+  </rule>
+
+  <rule>
+  	<common expression="//sentence/phrase[@type='sentence']"/>
+  	<match decision="variable" expression="./phrase[@type='state-set']"/>
+  </rule>
+   <rule><!-- -->
+    <common expression="//sentence[not(@decision='definition')]/phrase[@type='sentence']/phrase[@type='transaction']"/>
+ 	<match decision="transition" expression=".//phrase[@type='state-noun']"/>
+  </rule>
+   <rule><!-- -->
+    <common expression="//sentence[not(@decision='definition')]/phrase[@type='sentence']/phrase[@type='a-transaction']"/>
+ 	<match decision="transition" expression=".//phrase[@type='transaction']//phrase[@type='state-noun']"/>
+  </rule>
+  <rule> <!--  -->
+    <common expression="//sentence[@decision='processing' or @decision='processing, definition']//phrase[@type='trigger-end']"/>
+	<condition expression=".//phrase[@type='trigger-end']/token/word[text()='と']"/>
+	<match decision="subinfo" expression="./phrase[@type='ab-verb']"/>
+  </rule>
+  <rule> <!--  -->
+    <common expression="//sentence[@decision='processing' or @decision='processing, definition']//phrase[@type='Aパート']"/>
+    <condition expression=".//phrase[@type='trigger-end']/token/word[text()='と']"/>
+	<match decision="subinfo" expression="./phrase[@type='trigger']"/>
+  </rule>
+  <rule> <!--  -->
+    <common expression="//sentence[@decision='processing' or @decision='processing, definition']"/>
+	<match decision="subinfo" expression=".//phrase[1][@type='trigger']"/>
+  </rule>
+
+
+    <rule> <!-- 新しく作った要素。これはまだxmlに出力していない。適宜出力する -->
+    <common expression="//sentence[@decision='processing' or @decision='processing, definition']/phrase[@type='sentence']"/>
+	<match decision="inner-operation" expression="./phrase[@type='targeted-action']"/>
+  </rule>
+
+</rules>

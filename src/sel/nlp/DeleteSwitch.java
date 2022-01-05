@@ -8,8 +8,8 @@ import java.awt.event.MouseListener;
 import javax.swing.JLabel;
 import javax.swing.border.LineBorder;
 
-public class DeleteButton extends JLabel implements  MouseListener{
-	public DeleteButton() {
+public class DeleteSwitch extends JLabel implements  MouseListener{
+	public DeleteSwitch() {
 		setText("削除");
 	    LineBorder line2 = new LineBorder(Color.black);
 	    setBorder(line2);
@@ -20,14 +20,13 @@ public class DeleteButton extends JLabel implements  MouseListener{
 	}
 
 	static void check_status() {
-		Gridpanel_compornent.deleteData();
+		CompornentData.deleteData();
 	}
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO 自動生成されたメソッド・スタブ
 		if(getBackground()==Color.GRAY) {
-
 			setBackground(Color.RED);
 		}else {
 		setBackground(Color.GRAY);

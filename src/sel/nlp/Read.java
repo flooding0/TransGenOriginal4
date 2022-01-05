@@ -17,7 +17,7 @@ public static void main(String[] args) {
 		xml_to_list.perform();
 		MainPanel.CreateMainPanel();
 
-		for (Label2 label : Gridpanel_compornent.compornent_name_list) {
+		for (Label2 label : CompornentData.compornent_name_list) {
 			Pre_result.texts.add("");
 		}
 
@@ -31,12 +31,10 @@ public void show_result() {
 	Frame.resultspace.removeAll();
 }
 
-
-
 public void extract_difference() {
 	//変更のある文を特定して、show_resultを呼び出してresultspaceを更新する
 	int i=0;
-	for (Textfield1 tx :Gridpanel_compornent.txlist) {
+	for (Textfield1 tx :CompornentData.txlist) {
 		if(!Pre_result.texts.get(i).equals(tx.getText())) {
 			System.out.println(tx.getText());
 			//変更のあった文を出力
@@ -44,7 +42,7 @@ public void extract_difference() {
 		i++;
 	}
 	Pre_result.texts.clear();
-	for (Textfield1 tx : Gridpanel_compornent.txlist) {
+	for (Textfield1 tx : CompornentData.txlist) {
 		Pre_result.texts.add(tx.getText());
 	}
 	//この時点でtextsの中にtextfieldの新情報がぶち込まれる

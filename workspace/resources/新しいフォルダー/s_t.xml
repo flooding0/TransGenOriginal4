@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+判定論理を XPATHを使って記述する。
+
+
+common
+ sentencnces 以下の子ノードで適合する構文をXPATHで記述する.
+ 1つのみ記述できる
+
+
+condition
+ common 以下の子ノードで適合する構文をXPATHで記述する
+ conditionは複数記すことができる
+ 複数ある場合はすべて満たすようなときにルールが適用されるとする (AND)
+
+match
+ common 以下で適合するtokenノードの位置をXPATHで記述する
+ 同一 ruleないで記述されている conditionがすべて成り立つときに
+ match が評価され、当該tokenが抜き出される。
+match は複数記されたとしてもそれぞれ独立に評価される (OR)
+
+decision
+ match で指定するtokenノードがあれば
+ 当該 tokenがこのタグで指定された 属性 decisiosn に対する値として持つ
+
+-->
+<!-- objectは"前状態"、actionは"条件"を示す。頭のなかで変換してほしい。混乱しないように気を付けて -->
+<!-- 名称を変えてない理由は、プログラム側の変更方法が分からず、泥沼になりそうだったからである。 -->
+<rules>
+   <rule><!-- -->
+    <common expression="//sentence[not(@decision='definition')]/phrase[@type='sentence']/phrase[@type='transaction']"/>
+ 	<match decision="transition" expression=".//phrase[@type='state-noun']"/>
+  </rule>
+   <rule><!-- -->
+    <common expression="//sentence[not(@decision='definition')]/phrase[@type='sentence']/phrase[@type='a-transaction']"/>
+ 	<match decision="transition" expression=".//phrase[@type='transaction']//phrase[@type='state-noun']"/>
+  </rule>
+  <rule> <!--  -->
+    <common expression="//sentence[@decision='processing' or @decision='processing, definition']//phrase[@type='trigger-end']"/>
+	<condition expression=".//phrase[@type='trigger-end']/token/word[text()='と']"/>
+	<match decision="subinfo" expression="./phrase[@type='ab-verb']"/>
+  </rule>
+  <rule> <!--  -->
+    <common expression="//sentence[@decision='processing' or @decision='processing, definition']//phrase[@type='Aパート']"/>
+    <condition expression=".//phrase[@type='trigger-end']/token/word[text()='と']"/>
+	<match decision="subinfo" expression="./phrase[@type='trigger']"/>
+  </rule>
+  <rule> <!--  -->
+    <common expression="//sentence[@decision='processing' or @decision='processing, definition']"/>
+	<match decision="subinfo" expression=".//phrase[1][@type='trigger']"/>
+  </rule>
+
+
+    <rule> <!-- 新しく作った要素。これはまだxmlに出力していない。適宜出力する -->
+    <common expression="//sentence[@decision='processing' or @decision='processing, definition']/phrase[@type='sentence']"/>
+	<match decision="transition" expression="./phrase[@type='targeted-action']"/>
+  </rule>
+</rules>

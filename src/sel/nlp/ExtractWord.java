@@ -63,13 +63,14 @@ public class ExtractWord {
 	      List<Node> valNodes = node.selectNodes("./variable-values/value");//変数値
 	      List<Node> subinfoNodes = node.selectNodes("./set_of_subinfo/subinfo");//subinfo
 	      List<Node> transitions = node.selectNodes("./transitions/transition");//transition
-	      List<Node> inneroperations = node.selectNodes("./inner-operations/inner-operation");//inner-operation
+	      List<Node> inneroperations = node.selectNodes("./user_operations/user_operation");//inner-operation
 	      Element variables = DocumentHelper.createElement("variables");
 
 
 	      for(Node var:varNodes) {
 	    	  String phraseid = ((Element)var).attribute("phraseId").getValue();
-	    	  Element variable = DocumentHelper.createElement("variable");
+	    	  String Elementname = "variable";
+	    	  Element variable = DocumentHelper.createElement(Elementname);
 	    	  Node node2 = sentenceNodes2.get(i);
 	    	  List<Node> variable_components = node2.selectNodes(".//phrase[@id='" + phraseid + "']//token");
 	    	  //phraseId以下の単語全てをリストにぶち込む
@@ -78,14 +79,15 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
-
+	    	  ResultSpace.create_result(sentenceid,Elementname, word);
 	    	  variable.addText(word);
 	    	  variables.add(variable);
 	      }
 	      Element variable_variables = DocumentHelper.createElement("variable-values");
 	      for(Node val:valNodes) {
 	    	  String phraseid = ((Element)val).attribute("phraseId").getValue();
-	    	  Element value = DocumentHelper.createElement("value");
+	    	  String Elementname = "value";
+	    	  Element value = DocumentHelper.createElement(Elementname);
 	    	  Node node2 = sentenceNodes2.get(i);
 	    	  List<Node> value_components = node2.selectNodes(".//phrase[@id='" + phraseid + "']//token");
 	    	  String word ="";
@@ -93,8 +95,7 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
-
-
+	    	  ResultSpace.create_result(sentenceid,Elementname, word);
 	    	  value.addText(word);
 	    	  variable_variables.add(value);
 	      }
@@ -102,7 +103,8 @@ public class ExtractWord {
 	      Element set_of_subinfo = DocumentHelper.createElement("set_of_subinfo");
 	      for(Node subinfo:subinfoNodes) {
 	    	  String phraseid = ((Element)subinfo).attribute("phraseId").getValue();
-	    	  Element subinfoE = DocumentHelper.createElement("subinfo");
+	    	  String Elementname = "subinfo";
+	    	  Element subinfoE = DocumentHelper.createElement(Elementname);
 	    	  Node node2 = sentenceNodes2.get(i);
 	    	  List<Node> subinfo_components = node2.selectNodes(".//phrase[@id='" + phraseid + "']//token");
 	    	  String word ="";
@@ -114,6 +116,7 @@ public class ExtractWord {
 
 
 	    	  //文番号、要素の種類、要素記述の情報を有するLinkedHashMapデータができる
+	    	  ResultSpace.create_result(sentenceid,Elementname, word);
 	    	  subinfoE.addText(word);
 	          set_of_subinfo.add(subinfoE);
 	      }
@@ -121,7 +124,8 @@ public class ExtractWord {
 	      Element transitionsE = DocumentHelper.createElement("transitions");
 	      for(Node transition:transitions) {
 	    	  String phraseid = ((Element)transition).attribute("phraseId").getValue();
-	    	  Element TE = DocumentHelper.createElement("transition");
+	    	  String Elementname = "transition";
+	    	  Element TE = DocumentHelper.createElement(Elementname);
 	    	  Node node2 = sentenceNodes2.get(i);
 	    	  List<Node> transition_components = node2.selectNodes(".//phrase[@id='" + phraseid + "']//token");
 	    	  String word ="";
@@ -129,15 +133,16 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 	    	  }
-
+	    	  ResultSpace.create_result(sentenceid,Elementname, word);
 	    	  TE.addText(word);
 	    	  transitionsE.add(TE);
 	      }
 
-	      Element inneroperationsE = DocumentHelper.createElement("inner-operations");
+	      Element inneroperationsE = DocumentHelper.createElement("user_operations");
 	      for(Node inneroperation:inneroperations) {
 	    	  String phraseid = ((Element)inneroperation).attribute("phraseId").getValue();
-	    	  Element IE = DocumentHelper.createElement("inner-operation");
+	    	  String Elementname = "user_operation";
+	    	  Element IE = DocumentHelper.createElement(Elementname);
 	    	  Node node2 = sentenceNodes2.get(i);
 	    	  List<Node> inneroperation_components = node2.selectNodes(".//phrase[@id='" + phraseid + "']//token");
 	    	  String word ="";
@@ -145,10 +150,12 @@ public class ExtractWord {
 	    		  List<Element> tokenE = ((Element)token).elements("word");
 	    		  word = word + tokenE.get(0).getText();
 		    	  }
-
+	    	  ResultSpace.create_result(sentenceid,Elementname, word);
 	    	  IE.addText(word);
 	    	  inneroperationsE.add(IE);
 	      }
+
+	      ResultSpace.gridpanel.add(new Label2("--------------------------------------------------------------------",200));
 
 	      newSentence.add(variables);
 	      newSentence.add(variable_variables);
